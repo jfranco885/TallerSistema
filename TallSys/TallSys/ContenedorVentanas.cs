@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TallSys
 {
-    public partial class MenuMantenimientos : ContenedorVentanas
+    public partial class ContenedorVentanas : Form
     {
-        public MenuMantenimientos()
+        public ContenedorVentanas()
         {
             InitializeComponent();
-        }
-
-        private void MenuMantenimientos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
