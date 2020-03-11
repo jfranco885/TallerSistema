@@ -247,6 +247,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuMantenimientos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuMantenimientos";
             this.Load += new System.EventHandler(this.MenuMantenimientos_Load);
             this.groupBox1.ResumeLayout(false);

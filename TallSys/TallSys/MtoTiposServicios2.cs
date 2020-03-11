@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace TallSys
 {
-    public partial class AgregarServicios : Form
+    public partial class MtoTiposServicios2 : Form
     {
-        public AgregarServicios()
+        public MtoTiposServicios2()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AgregarServicios_Load(object sender, EventArgs e)
+        private void MtoTiposServicios2_Load(object sender, EventArgs e)
         {
 
         }

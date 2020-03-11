@@ -17,12 +17,10 @@ namespace TallSys
             InitializeComponent();
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
+        private void btnMantenimientos_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menuprincipal = new MenuPrincipal();
-            this.Hide();
-            this.Show();
-          
+            MenuMantenimientos menuMantenimientos =new MenuMantenimientos();
+            menuMantenimientos.Show();
         }
     }
 }

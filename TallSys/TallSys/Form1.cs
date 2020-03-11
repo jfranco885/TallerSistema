@@ -17,19 +17,12 @@ namespace TallSys
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MenuPrincipal menuprincipal = new MenuPrincipal();
-            this.Hide();
-            this.Show();
-       
-        }
-
+        
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             MenuPrincipal menuPrincipal = new MenuPrincipal();
             this.Hide();
-            this.Show();
+            menuPrincipal.Show();
         }
     }
 }
