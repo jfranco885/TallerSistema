@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TallSys
 {
-    public partial class Form1 : Form
+    public partial class MenuMantenimientos : Form
     {
-        public Form1()
+        public MenuMantenimientos()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
