@@ -27,7 +27,9 @@ namespace TallSys
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
+            MenuPrincipal menuPrincipal = new MenuPrincipal();
+            this.Hide();
+            this.Show();
         }
     }
 }
