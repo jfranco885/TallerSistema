@@ -22,5 +22,11 @@ namespace TallSys
             MenuMantenimientos menuMantenimientos =new MenuMantenimientos();
             menuMantenimientos.Show();
         }
+
+        private void btnAgregarServ_Click(object sender, EventArgs e)
+        {
+            AgregarServicios agregarServicios = new AgregarServicios();
+            agregarServicios.Show();
+        }
     }
 }

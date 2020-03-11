@@ -37,7 +37,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnMantenimientos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarServ = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,17 +129,18 @@
             this.btnMantenimientos.UseVisualStyleBackColor = true;
             this.btnMantenimientos.Click += new System.EventHandler(this.btnMantenimientos_Click);
             // 
-            // button1
+            // btnAgregarServ
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(145, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(283, 307);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "SERVICIOS";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregarServ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarServ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAgregarServ.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarServ.Image")));
+            this.btnAgregarServ.Location = new System.Drawing.Point(145, 156);
+            this.btnAgregarServ.Name = "btnAgregarServ";
+            this.btnAgregarServ.Size = new System.Drawing.Size(283, 307);
+            this.btnAgregarServ.TabIndex = 16;
+            this.btnAgregarServ.Text = "SERVICIOS";
+            this.btnAgregarServ.UseVisualStyleBackColor = true;
+            this.btnAgregarServ.Click += new System.EventHandler(this.btnAgregarServ_Click);
             // 
             // MenuPrincipal
             // 
@@ -150,7 +151,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnMantenimientos);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgregarServ);
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -171,6 +172,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnMantenimientos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregarServ;
     }
 }

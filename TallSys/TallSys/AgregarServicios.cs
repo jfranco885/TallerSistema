@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TallSys
 {
-    public partial class AgregarServicios : Form
+    public partial class AgregarServicios : ContenedorVentanas
     {
         public AgregarServicios()
         {

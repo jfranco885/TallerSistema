@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnServ = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.btnServ);
             this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.button6);
@@ -164,14 +164,15 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Tipo Servicio";
             // 
-            // button9
+            // btnServ
             // 
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(63, 259);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 69);
-            this.button9.TabIndex = 8;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnServ.Image = ((System.Drawing.Image)(resources.GetObject("btnServ.Image")));
+            this.btnServ.Location = new System.Drawing.Point(63, 259);
+            this.btnServ.Name = "btnServ";
+            this.btnServ.Size = new System.Drawing.Size(75, 69);
+            this.btnServ.TabIndex = 8;
+            this.btnServ.UseVisualStyleBackColor = true;
+            this.btnServ.Click += new System.EventHandler(this.btnAgregarServ_Click);
             // 
             // button8
             // 
@@ -275,7 +276,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnServ;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
