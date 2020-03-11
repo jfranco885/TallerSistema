@@ -16,5 +16,10 @@ namespace TallSys
         {
             InitializeComponent();
         }
+
+        private void MenuMantenimientos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

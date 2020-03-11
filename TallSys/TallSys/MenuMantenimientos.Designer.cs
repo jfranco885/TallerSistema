@@ -248,6 +248,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuMantenimientos";
             this.Text = "MenuMantenimientos";
+            this.Load += new System.EventHandler(this.MenuMantenimientos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
