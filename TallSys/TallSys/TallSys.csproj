@@ -52,6 +52,24 @@
     <Compile Include="AgregarServicios.Designer.cs">
       <DependentUpon>AgregarServicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignarMecanicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarMecanicos.Designer.cs">
+      <DependentUpon>AsignarMecanicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignarTipoServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarTipoServicio.Designer.cs">
+      <DependentUpon>AsignarTipoServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContenedorMantenimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContenedorMantenimientos.Designer.cs">
+      <DependentUpon>ContenedorMantenimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContenedorVentanas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +94,65 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="MtoTiposServicios2.cs">
+    <Compile Include="MtoCargos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MtoTiposServicios2.Designer.cs">
-      <DependentUpon>MtoTiposServicios2.cs</DependentUpon>
+    <Compile Include="MtoCargos.Designer.cs">
+      <DependentUpon>MtoCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoClientes.Designer.cs">
+      <DependentUpon>MtoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoEmpleados.Designer.cs">
+      <DependentUpon>MtoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoEspecialidades.Designer.cs">
+      <DependentUpon>MtoEspecialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoEstadoServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoEstadoServicios.Designer.cs">
+      <DependentUpon>MtoEstadoServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoNaves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoNaves.Designer.cs">
+      <DependentUpon>MtoNaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoServicios.Designer.cs">
+      <DependentUpon>MtoServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoTipoServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoTipoServicios.Designer.cs">
+      <DependentUpon>MtoTipoServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoUsuarios.Designer.cs">
+      <DependentUpon>MtoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MtoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoVentas.Designer.cs">
+      <DependentUpon>MtoVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +164,15 @@
     </Compile>
     <EmbeddedResource Include="AgregarServicios.resx">
       <DependentUpon>AgregarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignarMecanicos.resx">
+      <DependentUpon>AsignarMecanicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignarTipoServicio.resx">
+      <DependentUpon>AsignarTipoServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContenedorMantenimientos.resx">
+      <DependentUpon>ContenedorMantenimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContenedorVentanas.resx">
       <DependentUpon>ContenedorVentanas.cs</DependentUpon>
@@ -105,8 +186,35 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MtoTiposServicios2.resx">
-      <DependentUpon>MtoTiposServicios2.cs</DependentUpon>
+    <EmbeddedResource Include="MtoCargos.resx">
+      <DependentUpon>MtoCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoClientes.resx">
+      <DependentUpon>MtoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoEmpleados.resx">
+      <DependentUpon>MtoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoEspecialidades.resx">
+      <DependentUpon>MtoEspecialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoEstadoServicios.resx">
+      <DependentUpon>MtoEstadoServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoNaves.resx">
+      <DependentUpon>MtoNaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoServicios.resx">
+      <DependentUpon>MtoServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoTipoServicios.resx">
+      <DependentUpon>MtoTipoServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoUsuarios.resx">
+      <DependentUpon>MtoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoVentas.resx">
+      <DependentUpon>MtoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +224,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
@@ -132,6 +241,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

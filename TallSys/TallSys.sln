@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.12
+VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallSys", "TallSys\TallSys.csproj", "{50EC8BEB-1FF1-47E1-9E48-D83B0A2BD19E}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {03374B1E-F1FA-4617-B18B-0804CBD3CC99}
+		SolutionGuid = {B2ED9532-9F0E-4C3C-966F-D031ACBEBEC9}
 	EndGlobalSection
 EndGlobal

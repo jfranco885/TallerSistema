@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TallSys
 {
-    public partial class MtoTiposServicios2 : Form
+    public partial class MtoEmpleados : ContenedorMantenimientos
     {
-        public MtoTiposServicios2()
+        public MtoEmpleados()
         {
             InitializeComponent();
         }
 
-        private void MtoTiposServicios2_Load(object sender, EventArgs e)
+        private void MtoEmpleados_Load(object sender, EventArgs e)
         {
 
         }
