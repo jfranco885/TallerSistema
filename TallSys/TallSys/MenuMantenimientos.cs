@@ -24,8 +24,63 @@ namespace TallSys
 
         private void btnAgregarServ_Click(object sender, EventArgs e)
         {
-           
+            MtoServicios mtoServicios = new MtoServicios();
+            mtoServicios.Show();
 
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            MtoUsuarios mtoUsuarios = new MtoUsuarios();
+            mtoUsuarios.Show();
+        }
+
+        private void btnTipoServicio_Click(object sender, EventArgs e)
+        {
+            MtoTipoServicios mtoTipoServicios = new MtoTipoServicios();
+            mtoTipoServicios.Show();
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            MtoEmpleados mtoEmpleados = new MtoEmpleados();
+            mtoEmpleados.Show();
+        }
+
+        private void btnNaves_Click(object sender, EventArgs e)
+        {
+            MtoNaves mtoNaves = new MtoNaves();
+            mtoNaves.Show();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            MtoClientes mtoClientes = new MtoClientes();
+            mtoClientes.Show();
+        }
+
+        private void btnEspecialidad_Click(object sender, EventArgs e)
+        {
+            MtoEspecialidades mtoEspecialidades = new MtoEspecialidades();
+            mtoEspecialidades.Show();
+        }
+
+        private void btnCargos_Click(object sender, EventArgs e)
+        {
+            MtoCargos mtoCargos = new MtoCargos();
+            mtoCargos.Show();
+        }
+
+        private void btnEstadoServicio_Click(object sender, EventArgs e)
+        {
+            MtoEstadoServicios mtoEstadoServicios = new MtoEstadoServicios();
+            mtoEstadoServicios.Show();
+        }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+            MtoFacturacion mtoFacturacion = new MtoFacturacion();
+            mtoFacturacion.Show();
         }
     }
 }

@@ -124,6 +124,12 @@
     <Compile Include="MtoEstadoServicios.Designer.cs">
       <DependentUpon>MtoEstadoServicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="MtoFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoFacturacion.Designer.cs">
+      <DependentUpon>MtoFacturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="MtoNaves.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,12 +153,6 @@
     </Compile>
     <Compile Include="MtoUsuarios.Designer.cs">
       <DependentUpon>MtoUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MtoVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MtoVentas.Designer.cs">
-      <DependentUpon>MtoVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -201,6 +201,9 @@
     <EmbeddedResource Include="MtoEstadoServicios.resx">
       <DependentUpon>MtoEstadoServicios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MtoFacturacion.resx">
+      <DependentUpon>MtoFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MtoNaves.resx">
       <DependentUpon>MtoNaves.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,9 +215,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MtoUsuarios.resx">
       <DependentUpon>MtoUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MtoVentas.resx">
-      <DependentUpon>MtoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -250,6 +250,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eliminar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconventa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vehiculo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
