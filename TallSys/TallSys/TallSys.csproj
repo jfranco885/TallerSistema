@@ -100,6 +100,12 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="MtoCambioPiezas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoCambioPiezas.Designer.cs">
+      <DependentUpon>MtoCambioPiezas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MtoCargos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,24 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeleccionServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionServicios.Designer.cs">
+      <DependentUpon>SeleccionServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioEnProceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServicioEnProceso.Designer.cs">
+      <DependentUpon>ServicioEnProceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiciosEjecutandose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiciosEjecutandose.Designer.cs">
+      <DependentUpon>ServiciosEjecutandose.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarServicios.resx">
       <DependentUpon>AgregarServicios.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoCambioPiezas.resx">
+      <DependentUpon>MtoCambioPiezas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MtoCargos.resx">
       <DependentUpon>MtoCargos.cs</DependentUpon>
@@ -235,6 +262,15 @@
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionServicios.resx">
+      <DependentUpon>SeleccionServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicioEnProceso.resx">
+      <DependentUpon>ServicioEnProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiciosEjecutandose.resx">
+      <DependentUpon>ServiciosEjecutandose.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -263,6 +299,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vehiculo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nservicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ejecuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cambioPieza.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

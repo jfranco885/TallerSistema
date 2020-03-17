@@ -25,8 +25,8 @@ namespace TallSys
 
         private void btnAgregarServ_Click(object sender, EventArgs e)
         {
-            AgregarServicios agregarServicios = new AgregarServicios();
-            agregarServicios.Show();
+            SeleccionServicios seleccionServicios = new SeleccionServicios();
+            seleccionServicios.Show();
         }
     }
 }

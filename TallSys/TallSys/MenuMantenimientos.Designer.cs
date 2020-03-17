@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuMantenimientos));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -39,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCambioPieza = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnVehiculos = new System.Windows.Forms.Button();
             this.btnFacturas = new System.Windows.Forms.Button();
             this.btnServicios = new System.Windows.Forms.Button();
@@ -50,8 +54,6 @@
             this.btnNaves = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnTipoServicio = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +64,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnCambioPieza);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.btnVehiculos);
@@ -90,6 +94,24 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mantenimientos";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(430, 241);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Vehículos";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(236, 241);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Ventas";
             // 
             // label9
             // 
@@ -171,6 +193,25 @@
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Tipo Servicio";
+            // 
+            // btnCambioPieza
+            // 
+            this.btnCambioPieza.AutoSize = true;
+            this.btnCambioPieza.Location = new System.Drawing.Point(603, 241);
+            this.btnCambioPieza.Name = "btnCambioPieza";
+            this.btnCambioPieza.Size = new System.Drawing.Size(71, 13);
+            this.btnCambioPieza.TabIndex = 23;
+            this.btnCambioPieza.Text = "Cambio Pieza";
+            // 
+            // button1
+            // 
+            this.button1.Image = global::TallSys.Properties.Resources.cambioPieza;
+            this.button1.Location = new System.Drawing.Point(603, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 72);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnVehiculos
             // 
@@ -281,24 +322,6 @@
             this.btnTipoServicio.UseVisualStyleBackColor = true;
             this.btnTipoServicio.Click += new System.EventHandler(this.btnTipoServicio_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(236, 241);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Ventas";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(430, 241);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Vehículos";
-            // 
             // MenuMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,5 +365,7 @@
         private System.Windows.Forms.Button btnVehiculos;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label btnCambioPieza;
     }
 }

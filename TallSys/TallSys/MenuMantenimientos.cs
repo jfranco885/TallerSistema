@@ -82,5 +82,11 @@ namespace TallSys
             MtoFacturacion mtoFacturacion = new MtoFacturacion();
             mtoFacturacion.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MtoCambioPiezas mtoCambioPiezas = new MtoCambioPiezas();
+            mtoCambioPiezas.Show();
+        }
     }
 }
