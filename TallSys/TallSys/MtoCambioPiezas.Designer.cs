@@ -39,7 +39,7 @@
             // 
             // button5
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
             // 
             // label2
             // 
@@ -104,13 +104,13 @@
             this.Text = "MtoCambioPiezas";
             this.Load += new System.EventHandler(this.MtoCambioPiezas_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button3, 0);
-            this.Controls.SetChildIndex(this.button4, 0);
-            this.Controls.SetChildIndex(this.button5, 0);
+            this.Controls.SetChildIndex(this.btnEditar, 0);
+            this.Controls.SetChildIndex(this.btnEliminar, 0);
+            this.Controls.SetChildIndex(this.btnGuardar, 0);
+            this.Controls.SetChildIndex(this.btnNuevo, 0);
+            this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
+            this.Controls.SetChildIndex(this.edtBuscar, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
             this.Controls.SetChildIndex(this.label3, 0);

@@ -21,5 +21,30 @@ namespace TallSys
         {
 
         }
-    }
-}
+
+        public virtual void editar()
+        {
+
+        }
+        public virtual void eliminar()
+        {
+
+        }
+        public virtual void nuevo()
+        {
+
+        }
+        public virtual void buscar()
+        {
+
+        }
+        public virtual void listar()
+        {
+
+        }
+        public virtual Boolean guardar()
+        {
+            return false;
+        }
+    }//fin class
+}//fin Tallsys
