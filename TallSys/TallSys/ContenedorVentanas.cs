@@ -46,5 +46,17 @@ namespace TallSys
         {
             
         }
+        //VALIDAR CAMPO VACÍO
+
+        public Boolean validarCampo(TextBox campo)
+        {
+            Boolean vacio = false;
+            if (campo.Text == "")
+            {
+                vacio = true;
+                errorProvider1.SetError(campo, "Debe ingresar datos");
+            }
+            return vacio;
+        }//fin validar campo vacío
     }//fin class
 }//fin tallsys

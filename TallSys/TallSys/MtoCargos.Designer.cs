@@ -33,6 +33,7 @@
             this.edtIdCargo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
@@ -49,6 +50,7 @@
             this.edtCargo.Name = "edtCargo";
             this.edtCargo.Size = new System.Drawing.Size(283, 20);
             this.edtCargo.TabIndex = 19;
+            this.edtCargo.TextChanged += new System.EventHandler(this.edtCargo_TextChanged);
             // 
             // label3
             // 
@@ -101,6 +103,7 @@
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.edtCargo, 0);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
