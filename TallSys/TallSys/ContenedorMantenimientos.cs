@@ -22,29 +22,39 @@ namespace TallSys
 
         }
 
-        public virtual void editar()
+        private void btnEditar_Click(object sender, EventArgs e)
         {
 
         }
-        public virtual void eliminar()
+
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
 
         }
-        public virtual void nuevo()
+
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
 
         }
-        public virtual void buscar()
+
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
 
         }
-        public virtual void listar()
+
+        private void tabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-        public virtual Boolean guardar()
+
+        private void edtBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            return false;
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }//fin class
 }//fin Tallsys

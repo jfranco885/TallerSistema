@@ -47,6 +47,7 @@
             this.edtBuscar.Name = "edtBuscar";
             this.edtBuscar.Size = new System.Drawing.Size(201, 21);
             this.edtBuscar.TabIndex = 14;
+            this.edtBuscar.SelectedIndexChanged += new System.EventHandler(this.edtBuscar_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -67,6 +68,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(56, 36);
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
@@ -76,6 +78,7 @@
             this.btnNuevo.TabIndex = 11;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
@@ -85,6 +88,7 @@
             this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
@@ -94,6 +98,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -103,6 +108,7 @@
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // tabla
             // 
@@ -111,6 +117,7 @@
             this.tabla.Name = "tabla";
             this.tabla.Size = new System.Drawing.Size(875, 150);
             this.tabla.TabIndex = 15;
+            this.tabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_CellContentClick);
             // 
             // ContenedorMantenimientos
             // 
