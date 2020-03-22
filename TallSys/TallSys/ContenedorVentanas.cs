@@ -16,5 +16,35 @@ namespace TallSys
         {
             InitializeComponent();
         }
-    }
-}
+
+        private void ContenedorVentanas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void editar()
+        {
+
+        }
+        public virtual void eliminar()
+        {
+
+        }
+        public virtual void nuevo()
+        {
+
+        }
+        public virtual void buscar()
+        {
+
+        }
+        public virtual void listar()
+        {
+
+        }
+        public virtual void guardar()
+        {
+            
+        }
+    }//fin class
+}//fin tallsys

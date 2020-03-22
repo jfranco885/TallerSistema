@@ -24,22 +24,23 @@ namespace TallSys
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            editar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            eliminar();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        public void btnGuardar_Click(object sender, EventArgs e)
         {
+            guardar();
 
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            nuevo();
         }
 
         private void tabla_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -61,6 +61,7 @@
             this.Name = "ContenedorVentanas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContenedorVentanas";
+            this.Load += new System.EventHandler(this.ContenedorVentanas_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
