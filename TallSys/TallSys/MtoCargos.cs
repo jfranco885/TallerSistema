@@ -15,7 +15,11 @@ namespace TallSys
     {
         public MtoCargos()
         {
+            
             InitializeComponent();
+            edtIdCargo.Enabled = false;
+            edtCargo.Enabled = false;
+
         }
 
         private void MtoCargos_Load(object sender, EventArgs e)
@@ -50,6 +54,15 @@ namespace TallSys
             }       
             }
 
-       
+        private void edtIdCargo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            edtCargo.Enabled = true;
+            edtCargo.Focus();
+        }
     }//final class
 }//final tallsys

@@ -39,9 +39,9 @@
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             // 
-            // btnGuardar
+            // btnNuevo
             // 
-           // this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // edtCargo
             // 
@@ -65,6 +65,7 @@
             this.edtIdCargo.Name = "edtIdCargo";
             this.edtIdCargo.Size = new System.Drawing.Size(283, 20);
             this.edtIdCargo.TabIndex = 17;
+            this.edtIdCargo.TextChanged += new System.EventHandler(this.edtIdCargo_TextChanged);
             // 
             // label2
             // 
