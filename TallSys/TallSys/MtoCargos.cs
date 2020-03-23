@@ -17,8 +17,11 @@ namespace TallSys
         {
             
             InitializeComponent();
+
             edtIdCargo.Enabled = false;
             edtCargo.Enabled = false;
+            
+            tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
 
         }
 
@@ -58,11 +61,22 @@ namespace TallSys
                 MessageBox.Show("Este cargo ya existe");
             }       
             }
-        }
-       
-         
 
-       
+            limpiarCampos();
+        }
+
+
+        public override void eliminar()
+        {
+            DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+            if (resul == DialogResult.Yes)
+            {
+                Utilidades.eliminarRegistro("Cargo", edtIdCargo.Text);
+                limpiarCampos();
+            }
+           
+        }
+
 
         private void edtCargo_TextChanged(object sender, EventArgs e)
         {
@@ -71,9 +85,12 @@ namespace TallSys
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            limpiarCampos();
             edtCargo.Enabled = true;
             edtCargo.Focus();
             btnGuardar.Enabled = true;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -93,6 +110,11 @@ namespace TallSys
                 {
                     edtIdCargo.Text=(dt.Tables[0].Rows[0]["idcargo"].ToString().Trim());
                     edtCargo.Text = (dt.Tables[0].Rows[0]["cargo"].ToString().Trim());
+
+                    edtCargo.Enabled = true;
+                    btnEditar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                    btnGuardar.Enabled = false;
                 }
                 else
                 {
@@ -103,19 +125,12 @@ namespace TallSys
             }
         }
 
-        private void edtBuscar_SelectedIndexChanged(object sender, EventArgs e)
+       
+        private void limpiarCampos()
         {
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGuardar_Click_1(object sender, EventArgs e)
-        {
-
+            edtBuscar.Text=("");
+            edtIdCargo.Text = ("");
+            edtCargo.Text = ("");
         }
     }//final class
 }//final tallsys

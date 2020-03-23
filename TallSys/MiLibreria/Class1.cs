@@ -47,6 +47,23 @@ namespace MiLibreria
             }
         }//Fin Existe
 
+        //Método para llenar dataset y ocuparlo en la tabla
+        public static DataSet datasetLista(String tablaDbNombreProcedure)
+        {
+            DataSet dt;
+            String consulta = String.Format("exec listar"+ tablaDbNombreProcedure);
+            dt = Ejecutar(consulta);
+
+            return dt;
+        }
+
+        //Eliminar registro
+        public static void eliminarRegistro(String tablaDbNombreProcedure, String id)
+        {
+            String consulta = String.Format("exec eliminar"+ tablaDbNombreProcedure + " '{0}'",id);
+            Ejecutar(consulta);
+            MessageBox.Show("Se ha eliminado el registro");
+        }
       
     }//fin clase
 }//Min mi libreria

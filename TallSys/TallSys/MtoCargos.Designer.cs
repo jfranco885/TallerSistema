@@ -50,11 +50,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+           
             // 
             // edtCargo
             // 
