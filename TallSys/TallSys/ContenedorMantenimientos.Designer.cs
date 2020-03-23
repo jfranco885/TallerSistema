@@ -107,10 +107,12 @@
             // 
             // tabla
             // 
+            this.tabla.AllowUserToAddRows = false;
             this.tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabla.Location = new System.Drawing.Point(36, 312);
             this.tabla.Name = "tabla";
+            this.tabla.RowHeadersVisible = false;
             this.tabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tabla.Size = new System.Drawing.Size(875, 150);
             this.tabla.TabIndex = 15;

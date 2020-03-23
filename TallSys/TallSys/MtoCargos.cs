@@ -50,7 +50,8 @@ namespace TallSys
                     Utilidades.Ejecutar(consulta);
                     MessageBox.Show("Se han guardado los datos");
                         edtCargo.Enabled = false;
-                }
+                        tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+                    }
                 catch (Exception e)
                 {
                     MessageBox.Show("Ha ocurrido un error" + e.Message);
@@ -75,6 +76,7 @@ namespace TallSys
                 Utilidades.eliminarRegistro("Cargo", edtIdCargo.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
                 limpiarCampos();
                 edtCargo.Enabled = false;
+                tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
             }
            
         }
@@ -147,6 +149,7 @@ namespace TallSys
                     Utilidades.Ejecutar(consulta);
                     MessageBox.Show("Se actualizaron los datos");
                     edtCargo.Enabled = false;
+                    tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
                 }
                 catch (Exception error)
                 {
