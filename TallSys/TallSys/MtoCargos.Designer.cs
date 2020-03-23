@@ -36,9 +36,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // edtBuscar
-            // 
-            // 
             // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
@@ -48,9 +45,9 @@
             // 
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnGuardar
+            // btnEditar
             // 
-           
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // edtCargo
             // 

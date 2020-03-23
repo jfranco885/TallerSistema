@@ -49,6 +49,7 @@ namespace TallSys
                     String consulta = String.Format("EXEC insertarCargo '{0}'", edtcargo);
                     Utilidades.Ejecutar(consulta);
                     MessageBox.Show("Se han guardado los datos");
+                        edtCargo.Enabled = false;
                 }
                 catch (Exception e)
                 {
@@ -71,8 +72,9 @@ namespace TallSys
             DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
-                Utilidades.eliminarRegistro("Cargo", edtIdCargo.Text);
+                Utilidades.eliminarRegistro("Cargo", edtIdCargo.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
                 limpiarCampos();
+                edtCargo.Enabled = false;
             }
            
         }
@@ -131,6 +133,27 @@ namespace TallSys
             edtBuscar.Text=("");
             edtIdCargo.Text = ("");
             edtCargo.Text = ("");
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
+            if (resul == DialogResult.Yes)
+            {
+                try
+                {
+
+                    String consulta = String.Format("EXEC actualizarCargo '{0}','{1}'",edtIdCargo.Text, edtCargo.Text);
+                    Utilidades.Ejecutar(consulta);
+                    MessageBox.Show("Se actualizaron los datos");
+                    edtCargo.Enabled = false;
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ha ocurrido un error" + error.Message);
+                }
+                limpiarCampos();
+            }
         }
     }//final class
 }//final tallsys
