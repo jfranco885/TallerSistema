@@ -36,13 +36,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
+            // edtBuscar
+            // 
+            // 
             // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // edtCargo
             // 
@@ -50,7 +62,6 @@
             this.edtCargo.Name = "edtCargo";
             this.edtCargo.Size = new System.Drawing.Size(283, 20);
             this.edtCargo.TabIndex = 19;
-            this.edtCargo.TextChanged += new System.EventHandler(this.edtCargo_TextChanged);
             // 
             // label3
             // 
@@ -67,7 +78,6 @@
             this.edtIdCargo.Name = "edtIdCargo";
             this.edtIdCargo.Size = new System.Drawing.Size(283, 20);
             this.edtIdCargo.TabIndex = 17;
-            this.edtIdCargo.TextChanged += new System.EventHandler(this.edtIdCargo_TextChanged);
             // 
             // label2
             // 

@@ -17,17 +17,17 @@ namespace TallSys
             InitializeComponent();
         }
 
-        private void ContenedorMantenimientos_Load(object sender, EventArgs e)
+        public void ContenedorMantenimientos_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        public void btnEditar_Click(object sender, EventArgs e)
         {
             editar();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        public void btnEliminar_Click(object sender, EventArgs e)
         {
             eliminar();
         }
@@ -38,24 +38,26 @@ namespace TallSys
 
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        public void btnNuevo_Click(object sender, EventArgs e)
         {
             nuevo();
         }
 
-        private void tabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void tabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void edtBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        public void btnBuscar_Click(object sender, EventArgs e)
         {
+           
+            buscar();
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void edtBuscar_TextChanged(object sender, EventArgs e)
         {
-
+            errorProvider1.Clear();
         }
     }//fin class
 }//fin Tallsys

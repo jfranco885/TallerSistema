@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.edtBuscar = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -36,19 +35,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.tabla = new System.Windows.Forms.DataGridView();
+            this.edtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).BeginInit();
             this.SuspendLayout();
-            // 
-            // edtBuscar
-            // 
-            this.edtBuscar.FormattingEnabled = true;
-            this.edtBuscar.Location = new System.Drawing.Point(375, 76);
-            this.edtBuscar.Name = "edtBuscar";
-            this.edtBuscar.Size = new System.Drawing.Size(201, 21);
-            this.edtBuscar.TabIndex = 14;
-            this.edtBuscar.SelectedIndexChanged += new System.EventHandler(this.edtBuscar_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -61,7 +52,6 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Enabled = false;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = global::TallSys.Properties.Resources.search;
@@ -124,13 +114,21 @@
             this.tabla.TabIndex = 15;
             this.tabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_CellContentClick);
             // 
+            // edtBuscar
+            // 
+            this.edtBuscar.Location = new System.Drawing.Point(354, 76);
+            this.edtBuscar.Name = "edtBuscar";
+            this.edtBuscar.Size = new System.Drawing.Size(222, 20);
+            this.edtBuscar.TabIndex = 16;
+            this.edtBuscar.TextChanged += new System.EventHandler(this.edtBuscar_TextChanged);
+            // 
             // ContenedorMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 490);
-            this.Controls.Add(this.tabla);
             this.Controls.Add(this.edtBuscar);
+            this.Controls.Add(this.tabla);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnNuevo);
@@ -147,8 +145,8 @@
             this.Controls.SetChildIndex(this.btnNuevo, 0);
             this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.edtBuscar, 0);
             this.Controls.SetChildIndex(this.tabla, 0);
+            this.Controls.SetChildIndex(this.edtBuscar, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).EndInit();
@@ -158,8 +156,6 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.ComboBox edtBuscar;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.Button btnNuevo;
@@ -167,5 +163,6 @@
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnEditar;
         public System.Windows.Forms.DataGridView tabla;
+        public System.Windows.Forms.TextBox edtBuscar;
     }
 }

@@ -46,6 +46,7 @@ namespace TallSys
         {
             
         }
+       
         //VALIDAR CAMPO VACÍO
 
         public Boolean validarCampo(TextBox campo)

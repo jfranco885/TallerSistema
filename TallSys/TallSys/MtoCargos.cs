@@ -59,9 +59,14 @@ namespace TallSys
             }       
             }
         }
-        private void edtIdCargo_TextChanged(object sender, EventArgs e)
-        {
+       
+         
 
+       
+
+        private void edtCargo_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -71,11 +76,46 @@ namespace TallSys
             btnGuardar.Enabled = true;
         }
 
-       
-
-        private void edtCargo_TextChanged(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            errorProvider1.Clear();
+            if (validarCampo(edtBuscar))
+            {
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
+                
+                String edtbuscar = edtBuscar.Text.Trim();
+                DataSet dt;
+                String consul = String.Format("select *from cargo where idcargo='{0}'", edtbuscar);
+              dt= Utilidades.Ejecutar(consul);
+                if (dt.Tables[0].Rows.Count > 0)
+                {
+                    edtIdCargo.Text=(dt.Tables[0].Rows[0]["idcargo"].ToString().Trim());
+                    edtCargo.Text = (dt.Tables[0].Rows[0]["cargo"].ToString().Trim());
+                }
+                else
+                {
+                    MessageBox.Show("Este cargo no existe");
+                }
+
+
+            }
+        }
+
+        private void edtBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }//final class
 }//final tallsys
