@@ -49,6 +49,7 @@ namespace TallSys
                         MessageBox.Show("Se han guardado los datos");
                         edtEspecialidad.Enabled = false;
                         btnGuardar.Enabled = false;
+                        limpiarCampos();
                         tabla.DataSource = Utilidades.datasetLista("Especialidades").Tables[0];
                     }
                     catch (Exception e)
@@ -63,7 +64,7 @@ namespace TallSys
                 }
             }
 
-            limpiarCampos();
+            
         }
 
         public override void eliminar()

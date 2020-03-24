@@ -51,6 +51,7 @@ namespace TallSys
                     MessageBox.Show("Se han guardado los datos");
                         edtCargo.Enabled = false;
                         btnGuardar.Enabled = false;
+                        limpiarCampos();
                         tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
                     }
                 catch (Exception e)
@@ -65,7 +66,7 @@ namespace TallSys
             }       
             }
 
-            limpiarCampos();
+           
         }
 
 
