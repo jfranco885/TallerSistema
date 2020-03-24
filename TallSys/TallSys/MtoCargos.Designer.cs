@@ -32,9 +32,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.edtIdCargo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(269, 79);
             // 
             // btnBuscar
             // 
@@ -55,6 +60,7 @@
             this.edtCargo.Name = "edtCargo";
             this.edtCargo.Size = new System.Drawing.Size(283, 20);
             this.edtCargo.TabIndex = 19;
+            this.edtCargo.TextChanged += new System.EventHandler(this.edtCargo_TextChanged_1);
             // 
             // label3
             // 
@@ -81,11 +87,21 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Id";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(313, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Por Id";
+            // 
             // MtoCargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 472);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.edtCargo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.edtIdCargo);
@@ -105,6 +121,7 @@
             this.Controls.SetChildIndex(this.edtIdCargo, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.edtCargo, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -118,5 +135,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox edtIdCargo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }

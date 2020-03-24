@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.edtNombres = new System.Windows.Forms.TextBox();
+            this.edtApellidos = new System.Windows.Forms.TextBox();
+            this.edtDui = new System.Windows.Forms.TextBox();
+            this.edtTelefono = new System.Windows.Forms.TextBox();
+            this.edtCorreo = new System.Windows.Forms.TextBox();
+            this.edtDireccion = new System.Windows.Forms.TextBox();
+            this.edtFecha = new System.Windows.Forms.TextBox();
+            this.edtIdCliente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,12 +44,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(245, 82);
+            // 
+            // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // label9
             // 
@@ -60,62 +75,62 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Fecha";
             // 
-            // textBox8
+            // edtNombres
             // 
-            this.textBox8.Location = new System.Drawing.Point(233, 166);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(201, 20);
-            this.textBox8.TabIndex = 38;
+            this.edtNombres.Location = new System.Drawing.Point(233, 166);
+            this.edtNombres.Name = "edtNombres";
+            this.edtNombres.Size = new System.Drawing.Size(201, 20);
+            this.edtNombres.TabIndex = 38;
             // 
-            // textBox7
+            // edtApellidos
             // 
-            this.textBox7.Location = new System.Drawing.Point(233, 207);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(201, 20);
-            this.textBox7.TabIndex = 37;
+            this.edtApellidos.Location = new System.Drawing.Point(233, 207);
+            this.edtApellidos.Name = "edtApellidos";
+            this.edtApellidos.Size = new System.Drawing.Size(201, 20);
+            this.edtApellidos.TabIndex = 37;
             // 
-            // textBox6
+            // edtDui
             // 
-            this.textBox6.Location = new System.Drawing.Point(233, 250);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(201, 20);
-            this.textBox6.TabIndex = 36;
+            this.edtDui.Location = new System.Drawing.Point(233, 250);
+            this.edtDui.Name = "edtDui";
+            this.edtDui.Size = new System.Drawing.Size(201, 20);
+            this.edtDui.TabIndex = 36;
             // 
-            // textBox5
+            // edtTelefono
             // 
-            this.textBox5.Location = new System.Drawing.Point(515, 170);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(201, 20);
-            this.textBox5.TabIndex = 35;
+            this.edtTelefono.Location = new System.Drawing.Point(515, 170);
+            this.edtTelefono.Name = "edtTelefono";
+            this.edtTelefono.Size = new System.Drawing.Size(201, 20);
+            this.edtTelefono.TabIndex = 35;
             // 
-            // textBox4
+            // edtCorreo
             // 
-            this.textBox4.Location = new System.Drawing.Point(514, 129);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(201, 20);
-            this.textBox4.TabIndex = 34;
+            this.edtCorreo.Location = new System.Drawing.Point(514, 129);
+            this.edtCorreo.Name = "edtCorreo";
+            this.edtCorreo.Size = new System.Drawing.Size(201, 20);
+            this.edtCorreo.TabIndex = 34;
             // 
-            // textBox3
+            // edtDireccion
             // 
-            this.textBox3.Location = new System.Drawing.Point(514, 196);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 48);
-            this.textBox3.TabIndex = 33;
+            this.edtDireccion.Location = new System.Drawing.Point(514, 196);
+            this.edtDireccion.Multiline = true;
+            this.edtDireccion.Name = "edtDireccion";
+            this.edtDireccion.Size = new System.Drawing.Size(201, 48);
+            this.edtDireccion.TabIndex = 33;
             // 
-            // textBox2
+            // edtFecha
             // 
-            this.textBox2.Location = new System.Drawing.Point(515, 250);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 20);
-            this.textBox2.TabIndex = 32;
+            this.edtFecha.Location = new System.Drawing.Point(515, 250);
+            this.edtFecha.Name = "edtFecha";
+            this.edtFecha.Size = new System.Drawing.Size(201, 20);
+            this.edtFecha.TabIndex = 32;
             // 
-            // textBox1
+            // edtIdCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(233, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 20);
-            this.textBox1.TabIndex = 31;
+            this.edtIdCliente.Location = new System.Drawing.Point(233, 129);
+            this.edtIdCliente.Name = "edtIdCliente";
+            this.edtIdCliente.Size = new System.Drawing.Size(201, 20);
+            this.edtIdCliente.TabIndex = 31;
             // 
             // label8
             // 
@@ -180,20 +195,30 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Código";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(282, 82);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "por DUI";
+            // 
             // MtoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 474);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.edtNombres);
+            this.Controls.Add(this.edtApellidos);
+            this.Controls.Add(this.edtDui);
+            this.Controls.Add(this.edtTelefono);
+            this.Controls.Add(this.edtCorreo);
+            this.Controls.Add(this.edtDireccion);
+            this.Controls.Add(this.edtFecha);
+            this.Controls.Add(this.edtIdCliente);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -219,16 +244,18 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
-            this.Controls.SetChildIndex(this.textBox4, 0);
-            this.Controls.SetChildIndex(this.textBox5, 0);
-            this.Controls.SetChildIndex(this.textBox6, 0);
-            this.Controls.SetChildIndex(this.textBox7, 0);
-            this.Controls.SetChildIndex(this.textBox8, 0);
+            this.Controls.SetChildIndex(this.edtIdCliente, 0);
+            this.Controls.SetChildIndex(this.edtFecha, 0);
+            this.Controls.SetChildIndex(this.edtDireccion, 0);
+            this.Controls.SetChildIndex(this.edtCorreo, 0);
+            this.Controls.SetChildIndex(this.edtTelefono, 0);
+            this.Controls.SetChildIndex(this.edtDui, 0);
+            this.Controls.SetChildIndex(this.edtApellidos, 0);
+            this.Controls.SetChildIndex(this.edtNombres, 0);
             this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,14 +264,14 @@
         #endregion
 
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox edtNombres;
+        private System.Windows.Forms.TextBox edtApellidos;
+        private System.Windows.Forms.TextBox edtDui;
+        private System.Windows.Forms.TextBox edtTelefono;
+        private System.Windows.Forms.TextBox edtCorreo;
+        private System.Windows.Forms.TextBox edtDireccion;
+        private System.Windows.Forms.TextBox edtFecha;
+        private System.Windows.Forms.TextBox edtIdCliente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -252,5 +279,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
     }
 }

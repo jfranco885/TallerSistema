@@ -40,6 +40,9 @@ namespace TallSys
 
         public void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnGuardar.Enabled = true;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
             nuevo();
         }
 

@@ -76,25 +76,22 @@ namespace TallSys
                 Utilidades.eliminarRegistro("Cargo", edtIdCargo.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
                 limpiarCampos();
                 edtCargo.Enabled = false;
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
                 tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
             }
            
         }
 
 
-        private void edtCargo_TextChanged(object sender, EventArgs e)
-        {
-            errorProvider1.Clear();
-        }
+       
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             limpiarCampos();
             edtCargo.Enabled = true;
             edtCargo.Focus();
-            btnGuardar.Enabled = true;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
+           
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -130,12 +127,7 @@ namespace TallSys
         }
 
        
-        private void limpiarCampos()
-        {
-            edtBuscar.Text=("");
-            edtIdCargo.Text = ("");
-            edtCargo.Text = ("");
-        }
+       
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
@@ -149,6 +141,8 @@ namespace TallSys
                     Utilidades.Ejecutar(consulta);
                     MessageBox.Show("Se actualizaron los datos");
                     edtCargo.Enabled = false;
+                    btnEditar.Enabled = false;
+                    btnEliminar.Enabled = false;
                     tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
                 }
                 catch (Exception error)
@@ -157,6 +151,17 @@ namespace TallSys
                 }
                 limpiarCampos();
             }
+        }
+
+        private void edtCargo_TextChanged_1(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+        private void limpiarCampos()
+        {
+            edtBuscar.Text = ("");
+            edtIdCargo.Text = ("");
+            edtCargo.Text = ("");
         }
     }//final class
 }//final tallsys
