@@ -88,7 +88,7 @@ namespace TallSys
 
        
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private new void btnNuevo_Click(object sender, EventArgs e)
         {
             limpiarCampos();
             edtCargo.Enabled = true;
@@ -96,7 +96,7 @@ namespace TallSys
            
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private new void btnBuscar_Click(object sender, EventArgs e)
         {
             if (validarCampo(edtBuscar))
             {

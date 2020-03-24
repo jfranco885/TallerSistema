@@ -7,9 +7,10 @@ namespace MiLibreria
 {
     public class Utilidades
     {
+       private static SqlConnection con;
         public static DataSet Ejecutar(String consulta)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");
+            con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");
 
             con.Open();
             //  MessageBox.Show("Conexión con éxito");
@@ -63,6 +64,29 @@ namespace MiLibreria
             String consulta = String.Format("exec eliminar"+ tablaDbNombreProcedure + " '{0}'",id);
             Ejecutar(consulta);
             MessageBox.Show("Se ha eliminado el registro");
+        }
+
+        //llenar combobox
+        public static void llenarComboBox(String consult,ComboBox cbox,String nombreCampo )
+        {
+            try
+            {
+                SqlDataReader sqlDataReader;
+                con.Open();
+                SqlCommand consulta =new SqlCommand (consult, con);
+                sqlDataReader = consulta.ExecuteReader();
+                
+                while (sqlDataReader.Read())
+                {
+                    cbox.Items.Add(sqlDataReader[nombreCampo].ToString());
+                }
+                con.Close();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error al buscar los datos en mi libreria" + er.Message);
+            }
+           
         }
       
     }//fin clase
