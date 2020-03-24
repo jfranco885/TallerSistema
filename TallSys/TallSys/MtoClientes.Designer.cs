@@ -81,6 +81,7 @@
             this.edtNombres.Name = "edtNombres";
             this.edtNombres.Size = new System.Drawing.Size(201, 20);
             this.edtNombres.TabIndex = 38;
+            this.edtNombres.TextChanged += new System.EventHandler(this.edtNombres_TextChanged);
             // 
             // edtApellidos
             // 
@@ -88,6 +89,7 @@
             this.edtApellidos.Name = "edtApellidos";
             this.edtApellidos.Size = new System.Drawing.Size(201, 20);
             this.edtApellidos.TabIndex = 37;
+            this.edtApellidos.TextChanged += new System.EventHandler(this.edtApellidos_TextChanged);
             // 
             // edtDui
             // 
@@ -95,6 +97,7 @@
             this.edtDui.Name = "edtDui";
             this.edtDui.Size = new System.Drawing.Size(201, 20);
             this.edtDui.TabIndex = 36;
+            this.edtDui.TextChanged += new System.EventHandler(this.edtDui_TextChanged);
             // 
             // edtTelefono
             // 
@@ -102,6 +105,7 @@
             this.edtTelefono.Name = "edtTelefono";
             this.edtTelefono.Size = new System.Drawing.Size(201, 20);
             this.edtTelefono.TabIndex = 35;
+            this.edtTelefono.TextChanged += new System.EventHandler(this.edtTelefono_TextChanged);
             // 
             // edtCorreo
             // 
@@ -109,6 +113,7 @@
             this.edtCorreo.Name = "edtCorreo";
             this.edtCorreo.Size = new System.Drawing.Size(201, 20);
             this.edtCorreo.TabIndex = 34;
+            this.edtCorreo.TextChanged += new System.EventHandler(this.edtCorreo_TextChanged);
             // 
             // edtDireccion
             // 
@@ -117,6 +122,7 @@
             this.edtDireccion.Name = "edtDireccion";
             this.edtDireccion.Size = new System.Drawing.Size(201, 48);
             this.edtDireccion.TabIndex = 33;
+            this.edtDireccion.TextChanged += new System.EventHandler(this.edtDireccion_TextChanged);
             // 
             // edtFecha
             // 

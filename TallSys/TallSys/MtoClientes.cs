@@ -62,6 +62,7 @@ namespace TallSys
                        
                         desactivarControlesC();
                         btnGuardar.Enabled = false;
+                        limpiarCampos();
                         tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];//actualizando tabla
                     }
                     catch (Exception errorGuardarC)
@@ -76,7 +77,7 @@ namespace TallSys
                 }
             }
 
-            limpiarCampos();
+            
         }
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
@@ -155,6 +156,7 @@ namespace TallSys
                     desactivarControlesC();
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
+                    limpiarCampos();
                     tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
                 }
                 catch (Exception error)
@@ -212,6 +214,36 @@ namespace TallSys
         private void MtoClientes_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void edtNombres_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtApellidos_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtDui_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void edtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }//fin clase
 }//fin proyecto
