@@ -61,7 +61,7 @@ namespace TallSys
                         MessageBox.Show("Se han guardado los datos");
                        
                         desactivarControlesC();
-
+                        btnGuardar.Enabled = false;
                         tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];//actualizando tabla
                     }
                     catch (Exception errorGuardarC)
@@ -181,7 +181,8 @@ namespace TallSys
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             activarControlesC();
-            limpiarCampos();
+            limpiarCampos();               
+            edtNombres.Focus();
         }
         //desactivando botones
         private void desactivarControlesC()

@@ -50,6 +50,7 @@ namespace TallSys
                     Utilidades.Ejecutar(consulta);
                     MessageBox.Show("Se han guardado los datos");
                         edtCargo.Enabled = false;
+                        btnGuardar.Enabled = false;
                         tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
                     }
                 catch (Exception e)
