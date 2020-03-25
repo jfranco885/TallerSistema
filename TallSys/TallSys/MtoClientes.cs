@@ -87,8 +87,9 @@ namespace TallSys
             }
             else
             {
-
-                String edtbuscar = edtBuscar.Text.Trim();
+                try
+                {
+                    String edtbuscar = edtBuscar.Text.Trim();
                 DataSet dt;
                 String consul = String.Format("select *from clientes where dui='{0}'", edtbuscar);
                 dt = Utilidades.Ejecutar(consul);
@@ -112,7 +113,11 @@ namespace TallSys
                 {
                     MessageBox.Show("Este cliente no existe");
                 }
-
+                }
+                catch (Exception errr)
+                {
+                    MessageBox.Show("Ha ocurrido un error" + errr.Message);
+                }
 
             }
 
@@ -123,12 +128,19 @@ namespace TallSys
             DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
-                Utilidades.eliminarRegistro("Cliente", edtIdCliente.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
+                try
+                {
+                    Utilidades.eliminarRegistro("Cliente", edtIdCliente.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
                 limpiarCampos();
                 desactivarControlesC();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
+                }
+                catch (Exception errr)
+                {
+                    MessageBox.Show("Ha ocurrido un error" + errr.Message);
+                }
             }
 
         }
@@ -151,7 +163,6 @@ namespace TallSys
                             ",'{4}','{5}','{6}'",edtidcliente, edtnombres, edtapellidos, edtdui, edttelefono, edtdireccion, edtcorreo);
                     Utilidades.Ejecutar(consulta);
 
-                    Utilidades.Ejecutar(consulta);
                     MessageBox.Show("Se actualizaron los datos");
                     desactivarControlesC();
                     btnEditar.Enabled = false;
@@ -163,7 +174,7 @@ namespace TallSys
                 {
                     MessageBox.Show("Ha ocurrido un error" + error.Message);
                 }
-                limpiarCampos();
+              
             }
         }
         //limpiar

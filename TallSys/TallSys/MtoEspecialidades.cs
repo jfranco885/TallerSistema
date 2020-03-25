@@ -72,12 +72,19 @@ namespace TallSys
             DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
+                try { 
                 Utilidades.eliminarRegistro("Especialidad", edtId.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
                 limpiarCampos();
                 edtEspecialidad.Enabled = false;
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
                 tabla.DataSource = Utilidades.datasetLista("Especialidades").Tables[0];
+
+                }
+                catch (Exception errr)
+                {
+                    MessageBox.Show("Ha ocurrido un error" + errr.Message);
+                }
             }
 
         }
@@ -96,6 +103,7 @@ namespace TallSys
             }
             else
             {
+                try { 
 
                 String edtbuscar = edtBuscar.Text.Trim();
                 DataSet dt;
@@ -115,7 +123,11 @@ namespace TallSys
                 {
                     MessageBox.Show("Esta especialidad no existe");
                 }
-
+                }
+                catch (Exception errr)
+                {
+                    MessageBox.Show("Ha ocurrido un error" + errr.Message);
+                }
 
             }
         }

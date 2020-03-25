@@ -75,13 +75,20 @@ namespace TallSys
             DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
-                Utilidades.eliminarRegistro("Cargo", edtIdCargo.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
-                limpiarCampos();
-                edtCargo.Enabled = false;
-                btnEditar.Enabled = false;
-                btnEliminar.Enabled = false;
-                tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+                try
+                {
+                    Utilidades.eliminarRegistro("Cargo", edtIdCargo.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
+                    limpiarCampos();
+                    edtCargo.Enabled = false;
+                    btnEditar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                    tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+
+                }catch (Exception errr)
+            {
+                MessageBox.Show("Ha ocurrido un error" + errr.Message);
             }
+        }
            
         }
 
@@ -104,7 +111,7 @@ namespace TallSys
             }
             else
             {
-                
+                try { 
                 String edtbuscar = edtBuscar.Text.Trim();
                 DataSet dt;
                 String consul = String.Format("select *from cargo where idcargo='{0}'", edtbuscar);
@@ -123,7 +130,11 @@ namespace TallSys
                 {
                     MessageBox.Show("Este cargo no existe");
                 }
-
+                }
+                catch (Exception errr)
+                {
+                    MessageBox.Show("Ha ocurrido un error" + errr.Message);
+                }
 
             }
         }

@@ -66,6 +66,10 @@
             // 
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            // 
             // edtDui
             // 
             this.edtDui.Location = new System.Drawing.Point(526, 129);

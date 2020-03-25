@@ -119,7 +119,130 @@ namespace TallSys
 
 
         }
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            limpiarCampos();
+            activarControlesE();
+            edtNombre.Focus();
+        }
 
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            if (validarCampo(edtBuscar))
+            {
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
+
+                String edtbuscar = edtBuscar.Text.Trim();
+                DataSet dt;
+                String consul = String.Format("Select idempleado as Código,nombres_empleado as Nombres,apellidos_empleado as Apellidos,dui as DUI,car.cargo as Cargo,esp.nombre_especialidad as Especialidad,correo as Correo,celular as Celular,estado as Estado,fecha_creacion as FechaCreación from empleados as emp inner join cargo as car on emp.idcargo=car.idcargo inner join especialidades as esp on emp.idespecialidad=esp.idespecialidad where dui='{0}'", edtbuscar);
+                dt = Utilidades.Ejecutar(consul);
+
+
+                if (dt.Tables[0].Rows.Count > 0)
+                {
+                    String estad = dt.Tables[0].Rows[0]["Estado"].ToString().Trim();
+                    if (estad == "1")
+                    {
+                        estad = "Activo";
+                    }
+                    else
+                    {
+                        estad = "InActivo";
+                    }
+
+                    edtIdEmpleado.Text = (dt.Tables[0].Rows[0]["Código"].ToString().Trim());
+                    edtNombre.Text = (dt.Tables[0].Rows[0]["Nombres"].ToString().Trim());
+                    edtApellido.Text = (dt.Tables[0].Rows[0]["Apellidos"].ToString().Trim());
+                    edtDui.Text = (dt.Tables[0].Rows[0]["DUI"].ToString().Trim());
+                    edtCelular.Text = (dt.Tables[0].Rows[0]["Celular"].ToString().Trim());
+                    edtCorreo.Text = (dt.Tables[0].Rows[0]["Correo"].ToString().Trim());
+                    cboxEspecialidad.Text = (dt.Tables[0].Rows[0]["Especialidad"].ToString().Trim());
+                    cboxCargo.Text = (dt.Tables[0].Rows[0]["Cargo"].ToString().Trim());
+                    cboxEstado.Text = (estad);
+                    edtFecha.Text = (dt.Tables[0].Rows[0]["FechaCreación"].ToString().Trim());
+
+                    activarControlesE();
+                    btnEditar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                    btnGuardar.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Este cliente no existe");
+                }
+
+
+            }
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
+            if (resul == DialogResult.Yes)
+            {
+                edtidempleado= edtIdEmpleado.Text.Trim();
+                edtnombres = edtNombre.Text.Trim();
+                edtapellidos = edtApellido.Text.Trim();
+                // cboxcargo = cboxCargo.SelectedItem.ToString();
+                cboxcargoInt = Convert.ToInt32(cboxCargo.SelectedValue);
+                cboxespecialidadInt = Convert.ToInt32(cboxEspecialidad.SelectedValue);
+                // cboxespecialidad =cboxEspecialidad.SelectedItem.ToString();
+                edtdui = edtDui.Text.Trim();
+                edtcelular = edtCelular.Text.Trim();
+                cboxestado = cboxEstado.SelectedItem.ToString();
+                if (cboxestado == "Activo" | cboxestado == "activo")
+                {
+                    cboxestadoInt = 1;
+                }
+                else
+                {
+                    cboxestadoInt = 0;
+                }
+
+                edtcorreo = edtCorreo.Text.Trim();
+                try{                  
+
+                    String consulta = String.Format("EXEC actualizarEmpleados '{0}','{1}','{2}','{3}'" +
+                            ",'{4}','{5}','{6}','{7}','{8}'", edtidempleado, edtnombres, edtapellidos, edtdui, cboxcargoInt, cboxespecialidadInt, edtcorreo,edtcelular,cboxestadoInt);
+                    Utilidades.Ejecutar(consulta);
+                 
+                    MessageBox.Show("Se actualizaron los datos");
+                    desactivarControlesE();
+                    btnEditar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                    limpiarCampos();
+                    tabla.DataSource = Utilidades.datasetLista("Empleados").Tables[0];
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ha ocurrido un error" + error.Message);
+                }
+                
+            }
+        }
+        public override void eliminar()
+        {
+            DialogResult resul = MessageBox.Show("Seguro que quiere eliminar el Registro?", "Eliminar Registro", MessageBoxButtons.YesNo);
+            if (resul == DialogResult.Yes)
+            {
+                try
+                {
+                    Utilidades.eliminarRegistro("Empleados", edtIdEmpleado.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
+                    limpiarCampos();
+                    desactivarControlesE();
+                    btnEditar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                    tabla.DataSource = Utilidades.datasetLista("Empleados").Tables[0];
+                }catch(Exception errr)
+                {
+                    MessageBox.Show("Ha ocurrido un error" + errr.Message);
+                }
+            }
+
+        }
         private void desactivarControlesE()
         {
             edtNombre.Enabled = false;
@@ -147,6 +270,7 @@ namespace TallSys
 
         private void limpiarCampos()
         {
+            edtBuscar.Text = "";
             edtIdEmpleado.Text = "";
             edtNombre.Text = "";
             edtApellido.Text = "";
@@ -160,53 +284,6 @@ namespace TallSys
 
         }
 
-        private void btnNuevo_Click_1(object sender, EventArgs e)
-        {
-            limpiarCampos();
-            activarControlesE();
-            edtNombre.Focus();
-        }
-
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-            if (validarCampo(edtBuscar))
-            {
-                //solo mandara el error provider si está vacío
-            }
-            else
-            {
-
-                String edtbuscar = edtBuscar.Text.Trim();
-                DataSet dt;
-                 String consul = String.Format("Select idempleado as Código,nombres_empleado as Nombres,apellidos_empleado as Apellidos,dui as DUI,car.cargo as Cargo,esp.nombre_especialidad as Especialidad,correo as Correo,celular as Celular,estado as Estado,fecha_creacion as FechaCreación from empleados as emp inner join cargo as car on emp.idcargo=car.idcargo inner join especialidades as esp on emp.idespecialidad=esp.idespecialidad where dui='{0}'", edtbuscar);
-                dt = Utilidades.Ejecutar(consul);
-
-
-                    if (dt.Tables[0].Rows.Count > 0)
-                     {
-                         edtIdEmpleado.Text = (dt.Tables[0].Rows[0]["Código"].ToString().Trim());
-                         edtNombre.Text = (dt.Tables[0].Rows[0]["Nombres"].ToString().Trim());
-                         edtApellido.Text = (dt.Tables[0].Rows[0]["Apellidos"].ToString().Trim());
-                         edtDui.Text = (dt.Tables[0].Rows[0]["DUI"].ToString().Trim());
-                         edtCelular.Text = (dt.Tables[0].Rows[0]["Celular"].ToString().Trim());
-                         edtCorreo.Text = (dt.Tables[0].Rows[0]["Correo"].ToString().Trim());
-                         cboxEspecialidad.Text = (dt.Tables[0].Rows[0]["Especialidad"].ToString().Trim());
-                         cboxCargo.Text = (dt.Tables[0].Rows[0]["Cargo"].ToString().Trim());
-                         cboxEstado.Text = (dt.Tables[0].Rows[0]["Estado"].ToString().Trim());
-                         edtFecha.Text = (dt.Tables[0].Rows[0]["FechaCreación"].ToString().Trim());
-
-                         activarControlesE();
-                         btnEditar.Enabled = true;
-                         btnEliminar.Enabled = true;
-                         btnGuardar.Enabled = false;
-                     }
-                     else
-                     {
-                         MessageBox.Show("Este cliente no existe");
-                     }
-                 
-
-            }
-        }
+       
     }//fin clase
 }//fin proyecto
