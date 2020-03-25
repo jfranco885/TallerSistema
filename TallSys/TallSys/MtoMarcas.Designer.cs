@@ -44,6 +44,15 @@
             // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // edtMarca
             // 
@@ -51,6 +60,7 @@
             this.edtMarca.Name = "edtMarca";
             this.edtMarca.Size = new System.Drawing.Size(283, 20);
             this.edtMarca.TabIndex = 23;
+            this.edtMarca.TextChanged += new System.EventHandler(this.edtMarca_TextChanged);
             // 
             // label3
             // 
