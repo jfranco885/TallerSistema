@@ -51,9 +51,34 @@ namespace MiLibreria
         //Método para llenar dataset y ocuparlo en la tabla
         public static DataSet datasetLista(String tablaDbNombreProcedure)
         {
-            DataSet dt;
-            String consulta = String.Format("exec listar"+ tablaDbNombreProcedure);
-            dt = Ejecutar(consulta);
+            DataSet dt=null;
+            try
+            {
+                String consulta = String.Format("exec listar" + tablaDbNombreProcedure);
+                dt = Ejecutar(consulta);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error al al hacer la consulta" + err.Message);
+            }
+
+            return dt;
+        }
+
+        public static DataSet datasetConsultarProcedure(String tablaDbNombreProcedure,String buscar)        
+        {
+            DataSet dt = null;
+            try
+            {
+                 String consulta = String.Format("exec consultar" + tablaDbNombreProcedure + " '{0}'", buscar);
+                
+                dt = Ejecutar(consulta);
+            }catch(Exception err)
+            {
+                MessageBox.Show("Error al al hacer la consulta" + err.Message);
+            }
+           
+           
 
             return dt;
         }
@@ -67,27 +92,50 @@ namespace MiLibreria
         }
 
         //llenar combobox
-        public static void llenarComboBox(String consult,ComboBox cbox,String nombreCampo )
+        public static DataTable llenarComboBox(String consult)
         {
+            DataTable dt = null;
             try
             {
-                SqlDataReader sqlDataReader;
+
+
                 con.Open();
-                SqlCommand consulta =new SqlCommand (consult, con);
-                sqlDataReader = consulta.ExecuteReader();
-                
-                while (sqlDataReader.Read())
-                {
-                    cbox.Items.Add(sqlDataReader[nombreCampo].ToString());
-                }
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = new SqlCommand(consult, con);
+                dt = new DataTable();
+                da.Fill(dt);
                 con.Close();
             }
             catch (Exception er)
             {
                 MessageBox.Show("Error al buscar los datos en mi libreria" + er.Message);
             }
-           
+            return dt;
         }
-      
+        /*   public static void llenarComboBox(String consult,ComboBox cbox,String nombreCampo,String id )
+           {
+               try
+               {
+
+                   SqlDataReader sqlDataReader;
+                   con.Open();
+                   SqlCommand consulta =new SqlCommand (consult, con);
+                   sqlDataReader = consulta.ExecuteReader();
+
+                   while (sqlDataReader.Read())
+                   {
+                       cbox.Items.Add(sqlDataReader[nombreCampo].ToString());
+                       cbox.ValueMember= sqlDataReader[id].ToString();
+                   }
+                   con.Close();
+               }
+               catch (Exception er)
+               {
+                   MessageBox.Show("Error al buscar los datos en mi libreria" + er.Message);
+               }
+
+           }
+         
+     */
     }//fin clase
 }//Min mi libreria

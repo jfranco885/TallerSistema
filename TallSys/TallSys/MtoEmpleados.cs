@@ -20,7 +20,13 @@ namespace TallSys
         String edtcelular;
         String edtfecha;
         String edtcorreo;
-        String cboxcargo, cboxespecialidad, cboxestado;
+        int cboxcargoInt;
+        int cboxespecialidadInt;
+        String cboxcargo;
+        String cboxespecialidad;
+        String cboxestado;
+
+        int cboxestadoInt;
 
         public MtoEmpleados()
         {
@@ -37,12 +43,22 @@ namespace TallSys
             cboxEstado.Items.Add("Activo");
             cboxEstado.Items.Add("Inactivo");
 
-    Utilidades.llenarComboBox("select nombre_especialidad from especialidades", cboxEspecialidad, "nombre_especialidad");
-    Utilidades.llenarComboBox("select cargo from cargo", cboxCargo, "cargo");
+             // Utilidades.llenarComboBox("select idespecialidad, nombre_especialidad from especialidades", cboxEspecialidad, "nombre_especialidad","idespecialidad");
+            //   Utilidades.llenarComboBox("select idcargo, cargo from cargo", cboxCargo, "cargo","idcargo");
+
+            cboxEspecialidad.DataSource = Utilidades.llenarComboBox("select idespecialidad,nombre_especialidad from especialidades");
+            cboxEspecialidad.DisplayMember = "nombre_especialidad";
+            cboxEspecialidad.ValueMember = "idespecialidad";
+
+            cboxCargo.DataSource = Utilidades.llenarComboBox("select idcargo,cargo from cargo");
+            cboxCargo.DisplayMember = "cargo";
+            cboxCargo.ValueMember = "idcargo";
 
         }
         public override void guardar()
         {
+
+          //  MessageBox.Show(cboxcargo = cboxCargo.SelectedValue.ToString());
             if (validarCampo(edtNombre) | validarCampo(edtApellido) | validarCampo(edtDui) |
                 validarCampo(edtCelular) | validarCampo(edtCorreo))
             {
@@ -53,11 +69,22 @@ namespace TallSys
                 Boolean existe;
                 edtnombres = edtNombre.Text.Trim();
                 edtapellidos = edtApellido.Text.Trim();
-                cboxcargo = cboxCargo.SelectedItem.ToString();
-                cboxespecialidad=cboxEspecialidad.SelectedItem.ToString();
+               // cboxcargo = cboxCargo.SelectedItem.ToString();
+                cboxcargoInt =Convert.ToInt32(cboxCargo.SelectedValue);
+                cboxespecialidadInt = Convert.ToInt32(cboxEspecialidad.SelectedValue);
+                // cboxespecialidad =cboxEspecialidad.SelectedItem.ToString();
                 edtdui = edtDui.Text.Trim();
                 edtcelular = edtCelular.Text.Trim();
                 cboxestado= cboxEstado.SelectedItem.ToString();
+                if (cboxestado == "Activo" | cboxestado == "activo")
+                {
+                    cboxestadoInt = 1;
+                }
+                else
+                {
+                    cboxestadoInt = 0;
+                }
+
                 edtcorreo = edtCorreo.Text.Trim();
 
                 String consul = String.Format("select *from empleados where dui='{0}'", edtdui);
@@ -68,8 +95,8 @@ namespace TallSys
                     try
                     {
                         String consulta = String.Format("EXEC insertarEmpleados '{0}','{1}','{2}','{3}'" +
-                            ",'{4}','{5}','{6}','{7}'", edtnombres, edtapellidos, edtdui, cboxcargo, cboxespecialidad,
-                            edtcorreo,edtcelular,cboxestado);
+                            ",'{4}','{5}','{6}','{7}'", edtnombres, edtapellidos, edtdui, cboxcargoInt, cboxespecialidadInt,
+                            edtcorreo,edtcelular,cboxestadoInt);
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se han guardado los datos");
 
@@ -138,6 +165,48 @@ namespace TallSys
             limpiarCampos();
             activarControlesE();
             edtNombre.Focus();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            if (validarCampo(edtBuscar))
+            {
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
+
+                String edtbuscar = edtBuscar.Text.Trim();
+                DataSet dt;
+                 String consul = String.Format("Select idempleado as Código,nombres_empleado as Nombres,apellidos_empleado as Apellidos,dui as DUI,car.cargo as Cargo,esp.nombre_especialidad as Especialidad,correo as Correo,celular as Celular,estado as Estado,fecha_creacion as FechaCreación from empleados as emp inner join cargo as car on emp.idcargo=car.idcargo inner join especialidades as esp on emp.idespecialidad=esp.idespecialidad where dui='{0}'", edtbuscar);
+                dt = Utilidades.Ejecutar(consul);
+
+
+                    if (dt.Tables[0].Rows.Count > 0)
+                     {
+                         edtIdEmpleado.Text = (dt.Tables[0].Rows[0]["Código"].ToString().Trim());
+                         edtNombre.Text = (dt.Tables[0].Rows[0]["Nombres"].ToString().Trim());
+                         edtApellido.Text = (dt.Tables[0].Rows[0]["Apellidos"].ToString().Trim());
+                         edtDui.Text = (dt.Tables[0].Rows[0]["DUI"].ToString().Trim());
+                         edtCelular.Text = (dt.Tables[0].Rows[0]["Celular"].ToString().Trim());
+                         edtCorreo.Text = (dt.Tables[0].Rows[0]["Correo"].ToString().Trim());
+                         cboxEspecialidad.Text = (dt.Tables[0].Rows[0]["Especialidad"].ToString().Trim());
+                         cboxCargo.Text = (dt.Tables[0].Rows[0]["Cargo"].ToString().Trim());
+                         cboxEstado.Text = (dt.Tables[0].Rows[0]["Estado"].ToString().Trim());
+                         edtFecha.Text = (dt.Tables[0].Rows[0]["FechaCreación"].ToString().Trim());
+
+                         activarControlesE();
+                         btnEditar.Enabled = true;
+                         btnEliminar.Enabled = true;
+                         btnGuardar.Enabled = false;
+                     }
+                     else
+                     {
+                         MessageBox.Show("Este cliente no existe");
+                     }
+                 
+
+            }
         }
     }//fin clase
 }//fin proyecto
