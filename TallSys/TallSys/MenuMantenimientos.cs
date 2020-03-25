@@ -88,5 +88,11 @@ namespace TallSys
             MtoCambioPiezas mtoCambioPiezas = new MtoCambioPiezas();
             mtoCambioPiezas.Show();
         }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            MtoMarcas mtoMarcas = new MtoMarcas();
+            mtoMarcas.Show();
+        }
     }
 }
