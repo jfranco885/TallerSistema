@@ -124,6 +124,7 @@ namespace TallSys
             limpiarCampos();
             activarControlesE();
             edtNombre.Focus();
+            cboxEstado.SelectedItem = "Activo";
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
@@ -284,6 +285,44 @@ namespace TallSys
 
         }
 
-       
+        private void edtIdEmpleado_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtNombre_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtApellido_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtDui_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtCelular_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void cboxEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtFecha_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
     }//fin clase
 }//fin proyecto

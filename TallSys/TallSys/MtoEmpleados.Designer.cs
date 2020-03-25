@@ -76,6 +76,7 @@
             this.edtDui.Name = "edtDui";
             this.edtDui.Size = new System.Drawing.Size(226, 20);
             this.edtDui.TabIndex = 45;
+            this.edtDui.TextChanged += new System.EventHandler(this.edtDui_TextChanged);
             // 
             // label11
             // 
@@ -92,6 +93,7 @@
             this.edtNombre.Name = "edtNombre";
             this.edtNombre.Size = new System.Drawing.Size(226, 20);
             this.edtNombre.TabIndex = 43;
+            this.edtNombre.TextChanged += new System.EventHandler(this.edtNombre_TextChanged);
             // 
             // edtApellido
             // 
@@ -99,6 +101,7 @@
             this.edtApellido.Name = "edtApellido";
             this.edtApellido.Size = new System.Drawing.Size(226, 20);
             this.edtApellido.TabIndex = 42;
+            this.edtApellido.TextChanged += new System.EventHandler(this.edtApellido_TextChanged);
             // 
             // edtFecha
             // 
@@ -106,6 +109,7 @@
             this.edtFecha.Name = "edtFecha";
             this.edtFecha.Size = new System.Drawing.Size(226, 20);
             this.edtFecha.TabIndex = 41;
+            this.edtFecha.TextChanged += new System.EventHandler(this.edtFecha_TextChanged);
             // 
             // edtCelular
             // 
@@ -113,6 +117,7 @@
             this.edtCelular.Name = "edtCelular";
             this.edtCelular.Size = new System.Drawing.Size(226, 20);
             this.edtCelular.TabIndex = 40;
+            this.edtCelular.TextChanged += new System.EventHandler(this.edtCelular_TextChanged);
             // 
             // edtCorreo
             // 
@@ -120,6 +125,7 @@
             this.edtCorreo.Name = "edtCorreo";
             this.edtCorreo.Size = new System.Drawing.Size(226, 20);
             this.edtCorreo.TabIndex = 38;
+            this.edtCorreo.TextChanged += new System.EventHandler(this.edtCorreo_TextChanged);
             // 
             // edtIdEmpleado
             // 
@@ -127,6 +133,7 @@
             this.edtIdEmpleado.Name = "edtIdEmpleado";
             this.edtIdEmpleado.Size = new System.Drawing.Size(226, 20);
             this.edtIdEmpleado.TabIndex = 37;
+            this.edtIdEmpleado.TextChanged += new System.EventHandler(this.edtIdEmpleado_TextChanged);
             // 
             // label10
             // 
@@ -148,6 +155,7 @@
             // 
             // cboxEspecialidad
             // 
+            this.cboxEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEspecialidad.FormattingEnabled = true;
             this.cboxEspecialidad.Location = new System.Drawing.Point(236, 262);
             this.cboxEspecialidad.Name = "cboxEspecialidad";
@@ -156,6 +164,7 @@
             // 
             // cboxCargo
             // 
+            this.cboxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCargo.FormattingEnabled = true;
             this.cboxCargo.Location = new System.Drawing.Point(236, 230);
             this.cboxCargo.Name = "cboxCargo";
@@ -236,11 +245,13 @@
             // 
             // cboxEstado
             // 
+            this.cboxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEstado.FormattingEnabled = true;
             this.cboxEstado.Location = new System.Drawing.Point(526, 195);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(226, 21);
             this.cboxEstado.TabIndex = 49;
+            this.cboxEstado.SelectedIndexChanged += new System.EventHandler(this.cboxEstado_SelectedIndexChanged);
             // 
             // MtoEmpleados
             // 
