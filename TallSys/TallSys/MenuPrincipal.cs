@@ -28,5 +28,15 @@ namespace TallSys
             SeleccionServicios seleccionServicios = new SeleccionServicios();
             seleccionServicios.Show();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea salir?", "Arvertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                //  this.Close();
+                Application.Exit();
+
+            }
+        }
     }
 }

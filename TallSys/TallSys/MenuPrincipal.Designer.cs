@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnMantenimientos = new System.Windows.Forms.Button();
@@ -84,15 +84,16 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Usuario:";
             // 
-            // button5
+            // btnSalir
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(747, 398);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 65);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "SALIR";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(747, 398);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(93, 65);
+            this.btnSalir.TabIndex = 20;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // button4
             // 
@@ -147,12 +148,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 544);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnMantenimientos);
             this.Controls.Add(this.btnAgregarServ);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
@@ -168,7 +170,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txtUsuario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnMantenimientos;

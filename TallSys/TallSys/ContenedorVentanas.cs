@@ -59,5 +59,15 @@ namespace TallSys
             }
             return vacio;
         }//fin validar campo vacío
+
+        public void btnSalir_Click(object sender, EventArgs e)
+        {
+           if(MessageBox.Show("¿Está seguro que desea salir?","Arvertencia",MessageBoxButtons.YesNo,MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+              //  this.Close();
+                Application.Exit();
+
+            }
+        }
     }//fin class
 }//fin tallsys
