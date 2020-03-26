@@ -204,6 +204,12 @@
     <Compile Include="ServicioEnProceso.Designer.cs">
       <DependentUpon>ServicioEnProceso.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServicioPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServicioPrincipal.Designer.cs">
+      <DependentUpon>ServicioPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServiciosEjecutandose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ServicioEnProceso.resx">
       <DependentUpon>ServicioEnProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicioPrincipal.resx">
+      <DependentUpon>ServicioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServiciosEjecutandose.resx">
       <DependentUpon>ServiciosEjecutandose.cs</DependentUpon>

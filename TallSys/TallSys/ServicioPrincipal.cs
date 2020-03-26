@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace TallSys
 {
-    public partial class AgregarServicios : ContenedorVentanas
+    public partial class ServicioPrincipal : ContenedorVentanas
     {
-        public AgregarServicios()
+        public ServicioPrincipal()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void ServicioPrincipal_Load(object sender, EventArgs e)
         {
 
         }
-
-        
     }
 }

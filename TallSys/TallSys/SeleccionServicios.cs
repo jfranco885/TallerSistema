@@ -24,9 +24,9 @@ namespace TallSys
 
         private void btnNuevoServicio_Click(object sender, EventArgs e)
         {
-            AgregarServicios agregarServicios = new AgregarServicios();
+            ServicioPrincipal servicioPrincipal = new ServicioPrincipal();
             this.Hide();
-            agregarServicios.Show();
+            servicioPrincipal.Show();
         }
 
         private void btnServEjecutandose_Click(object sender, EventArgs e)
