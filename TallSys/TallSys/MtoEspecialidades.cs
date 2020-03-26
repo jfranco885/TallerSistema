@@ -122,6 +122,8 @@ namespace TallSys
                 else
                 {
                     MessageBox.Show("Esta especialidad no existe");
+                        limpiarCampos();
+                        edtEspecialidad.Enabled=false;
                 }
                 }
                 catch (Exception errr)

@@ -111,6 +111,8 @@ namespace TallSys
                     else
                     {
                         MessageBox.Show("Esta Nave no existe");
+                        limpiarCampos();
+                        edtDescripcion.Enabled = false;
                     }
                 }
                 catch (Exception errr)

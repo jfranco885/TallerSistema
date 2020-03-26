@@ -120,6 +120,8 @@ namespace TallSys
                     else
                     {
                         MessageBox.Show("Este estado no existe");
+                        limpiarCampos();
+                        edtEstado.Enabled = false;
                     }
                 }
                 catch (Exception errr)

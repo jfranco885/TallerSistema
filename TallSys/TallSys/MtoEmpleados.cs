@@ -173,6 +173,8 @@ namespace TallSys
                 else
                 {
                     MessageBox.Show("Este Empleado no existe");
+                    limpiarCampos();
+                    desactivarControlesE();
                 }
 
 

@@ -135,6 +135,8 @@ namespace TallSys
                     else
                     {
                         MessageBox.Show("Este tipo de servicio no existe");
+                        limpiarCampos();
+                        desactivarControles();
                     }
                 }
                 catch (Exception errr)

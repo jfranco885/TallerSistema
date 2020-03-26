@@ -50,6 +50,15 @@
             // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // label2
             // 
@@ -65,12 +74,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(301, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 18;
-            this.label3.Text = "por id";
+            this.label3.Text = "por placa";
             // 
             // cboxMarca
             // 
+            this.cboxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxMarca.FormattingEnabled = true;
             this.cboxMarca.Location = new System.Drawing.Point(354, 156);
             this.cboxMarca.Name = "cboxMarca";
@@ -88,6 +98,7 @@
             // 
             // cboxModelo
             // 
+            this.cboxModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxModelo.FormattingEnabled = true;
             this.cboxModelo.Location = new System.Drawing.Point(354, 192);
             this.cboxModelo.Name = "cboxModelo";
@@ -118,6 +129,7 @@
             this.edtPlaca.Name = "edtPlaca";
             this.edtPlaca.Size = new System.Drawing.Size(222, 20);
             this.edtPlaca.TabIndex = 25;
+            this.edtPlaca.TextChanged += new System.EventHandler(this.edtPlaca_TextChanged);
             // 
             // edtFecha
             // 

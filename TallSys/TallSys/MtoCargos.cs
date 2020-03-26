@@ -129,7 +129,10 @@ namespace TallSys
                 else
                 {
                     MessageBox.Show("Este cargo no existe");
-                }
+                        limpiarCampos();
+                        edtCargo.Enabled = false;
+                   
+                    }
                 }
                 catch (Exception errr)
                 {

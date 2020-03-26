@@ -136,6 +136,9 @@ namespace TallSys
                 else
                 {
                     MessageBox.Show("Este Modelo no existe");
+                    limpiarCampos();
+                    edtModelo.Enabled = false;
+                    cboxMarca.Enabled = false;
                 }
 
 

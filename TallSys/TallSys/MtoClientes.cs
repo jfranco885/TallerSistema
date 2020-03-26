@@ -112,6 +112,8 @@ namespace TallSys
                 else
                 {
                     MessageBox.Show("Este cliente no existe");
+                        limpiarCampos();
+                        desactivarControlesC();
                 }
                 }
                 catch (Exception errr)

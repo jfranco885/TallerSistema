@@ -115,6 +115,8 @@ namespace TallSys
                     else
                     {
                         MessageBox.Show("Esta Marca no existe");
+                        limpiarCampos();
+                        edtMarca.Enabled = false;
                     }
                 }
                 catch (Exception errr)
