@@ -33,13 +33,27 @@
             this.edtId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(248, 79);
+            // 
             // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // edtEstado
             // 
@@ -47,6 +61,7 @@
             this.edtEstado.Name = "edtEstado";
             this.edtEstado.Size = new System.Drawing.Size(283, 20);
             this.edtEstado.TabIndex = 20;
+            this.edtEstado.TextChanged += new System.EventHandler(this.edtEstado_TextChanged);
             // 
             // label3
             // 
@@ -81,11 +96,21 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 16;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(288, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "por estado";
+            // 
             // MtoEstadoServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 475);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.edtEstado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.edtId);
@@ -107,6 +132,7 @@
             this.Controls.SetChildIndex(this.edtId, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.edtEstado, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -121,5 +147,6 @@
         private System.Windows.Forms.TextBox edtId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
     }
 }

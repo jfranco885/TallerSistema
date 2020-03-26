@@ -100,5 +100,11 @@ namespace TallSys
             MtoModelos mtoModelos = new MtoModelos();
             mtoModelos.Show();
         }
+
+        private void btnVehiculos_Click(object sender, EventArgs e)
+        {
+            MtoVehiculos mtoVehiculos = new MtoVehiculos();
+            mtoVehiculos.Show();
+        }
     }
 }

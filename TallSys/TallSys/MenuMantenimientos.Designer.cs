@@ -187,6 +187,7 @@
             this.btnVehiculos.Size = new System.Drawing.Size(75, 72);
             this.btnVehiculos.TabIndex = 19;
             this.btnVehiculos.UseVisualStyleBackColor = true;
+            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
             // 
             // btnFacturas
             // 
