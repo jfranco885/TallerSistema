@@ -146,35 +146,43 @@ namespace TallSys
         }
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
-            if (resul == DialogResult.Yes)
+            if (validarCampo(edtNombres) | validarCampo(edtApellidos) | validarCampo(edtDui) |
+               validarCampo(edtTelefono) | validarCampo(edtDireccion))
             {
-                try
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
+                DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
                 {
-                    edtidcliente = edtIdCliente.Text.Trim();
-                    edtnombres = edtNombres.Text.Trim();
-                    edtapellidos = edtApellidos.Text.Trim();
-                    edtdui = edtDui.Text.Trim();
-                    edttelefono = edtTelefono.Text.Trim();
-                    edtdireccion = edtDireccion.Text.Trim();
-                    edtcorreo = edtCorreo.Text.Trim();
+                    try
+                    {
+                        edtidcliente = edtIdCliente.Text.Trim();
+                        edtnombres = edtNombres.Text.Trim();
+                        edtapellidos = edtApellidos.Text.Trim();
+                        edtdui = edtDui.Text.Trim();
+                        edttelefono = edtTelefono.Text.Trim();
+                        edtdireccion = edtDireccion.Text.Trim();
+                        edtcorreo = edtCorreo.Text.Trim();
 
-                    String consulta = String.Format("EXEC actualizarClientes '{0}','{1}','{2}','{3}'" +
-                            ",'{4}','{5}','{6}'",edtidcliente, edtnombres, edtapellidos, edtdui, edttelefono, edtdireccion, edtcorreo);
-                    Utilidades.Ejecutar(consulta);
+                        String consulta = String.Format("EXEC actualizarClientes '{0}','{1}','{2}','{3}'" +
+                                ",'{4}','{5}','{6}'", edtidcliente, edtnombres, edtapellidos, edtdui, edttelefono, edtdireccion, edtcorreo);
+                        Utilidades.Ejecutar(consulta);
 
-                    MessageBox.Show("Se actualizaron los datos");
-                    desactivarControlesC();
-                    btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
-                    limpiarCampos();
-                    tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
+                        MessageBox.Show("Se actualizaron los datos");
+                        desactivarControlesC();
+                        btnEditar.Enabled = false;
+                        btnEliminar.Enabled = false;
+                        limpiarCampos();
+                        tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un error" + error.Message);
+                    }
+
                 }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Ha ocurrido un error" + error.Message);
-                }
-              
             }
         }
         //limpiar

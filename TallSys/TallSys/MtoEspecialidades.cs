@@ -134,26 +134,33 @@ namespace TallSys
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-
-            DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
-            if (resul == DialogResult.Yes)
+            if (validarCampo(edtEspecialidad))
             {
-                try
-                {
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
 
-                    String consulta = String.Format("EXEC actualizarEspecialidad '{0}','{1}'", edtId.Text, edtEspecialidad.Text);
-                    Utilidades.Ejecutar(consulta);
-                    MessageBox.Show("Se actualizaron los datos");
-                    edtEspecialidad.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Especialidades").Tables[0];
-                }
-                catch (Exception error)
+                DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
                 {
-                    MessageBox.Show("Ha ocurrido un error" + error.Message);
+                    try
+                    {
+
+                        String consulta = String.Format("EXEC actualizarEspecialidad '{0}','{1}'", edtId.Text, edtEspecialidad.Text);
+                        Utilidades.Ejecutar(consulta);
+                        MessageBox.Show("Se actualizaron los datos");
+                        edtEspecialidad.Enabled = false;
+                        btnEditar.Enabled = false;
+                        btnEliminar.Enabled = false;
+                        tabla.DataSource = Utilidades.datasetLista("Especialidades").Tables[0];
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un error" + error.Message);
+                    }
+                    limpiarCampos();
                 }
-                limpiarCampos();
             }
         }
 

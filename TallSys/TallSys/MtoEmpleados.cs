@@ -181,47 +181,56 @@ namespace TallSys
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
-            if (resul == DialogResult.Yes)
+            if (validarCampo(edtNombre) | validarCampo(edtApellido) | validarCampo(edtDui) |
+               validarCampo(edtCelular) | validarCampo(edtCorreo))
             {
-                edtidempleado= edtIdEmpleado.Text.Trim();
-                edtnombres = edtNombre.Text.Trim();
-                edtapellidos = edtApellido.Text.Trim();
-                // cboxcargo = cboxCargo.SelectedItem.ToString();
-                cboxcargoInt = Convert.ToInt32(cboxCargo.SelectedValue);
-                cboxespecialidadInt = Convert.ToInt32(cboxEspecialidad.SelectedValue);
-                // cboxespecialidad =cboxEspecialidad.SelectedItem.ToString();
-                edtdui = edtDui.Text.Trim();
-                edtcelular = edtCelular.Text.Trim();
-                cboxestado = cboxEstado.SelectedItem.ToString();
-                if (cboxestado == "Activo" | cboxestado == "activo")
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
+                DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
                 {
-                    cboxestadoInt = 1;
-                }
-                else
-                {
-                    cboxestadoInt = 0;
-                }
+                    edtidempleado = edtIdEmpleado.Text.Trim();
+                    edtnombres = edtNombre.Text.Trim();
+                    edtapellidos = edtApellido.Text.Trim();
+                    // cboxcargo = cboxCargo.SelectedItem.ToString();
+                    cboxcargoInt = Convert.ToInt32(cboxCargo.SelectedValue);
+                    cboxespecialidadInt = Convert.ToInt32(cboxEspecialidad.SelectedValue);
+                    // cboxespecialidad =cboxEspecialidad.SelectedItem.ToString();
+                    edtdui = edtDui.Text.Trim();
+                    edtcelular = edtCelular.Text.Trim();
+                    cboxestado = cboxEstado.SelectedItem.ToString();
+                    if (cboxestado == "Activo" | cboxestado == "activo")
+                    {
+                        cboxestadoInt = 1;
+                    }
+                    else
+                    {
+                        cboxestadoInt = 0;
+                    }
 
-                edtcorreo = edtCorreo.Text.Trim();
-                try{                  
+                    edtcorreo = edtCorreo.Text.Trim();
+                    try
+                    {
 
-                    String consulta = String.Format("EXEC actualizarEmpleados '{0}','{1}','{2}','{3}'" +
-                            ",'{4}','{5}','{6}','{7}','{8}'", edtidempleado, edtnombres, edtapellidos, edtdui, cboxcargoInt, cboxespecialidadInt, edtcorreo,edtcelular,cboxestadoInt);
-                    Utilidades.Ejecutar(consulta);
-                 
-                    MessageBox.Show("Se actualizaron los datos");
-                    desactivarControlesE();
-                    btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
-                    limpiarCampos();
-                    tabla.DataSource = Utilidades.datasetLista("Empleados").Tables[0];
+                        String consulta = String.Format("EXEC actualizarEmpleados '{0}','{1}','{2}','{3}'" +
+                                ",'{4}','{5}','{6}','{7}','{8}'", edtidempleado, edtnombres, edtapellidos, edtdui, cboxcargoInt, cboxespecialidadInt, edtcorreo, edtcelular, cboxestadoInt);
+                        Utilidades.Ejecutar(consulta);
+
+                        MessageBox.Show("Se actualizaron los datos");
+                        desactivarControlesE();
+                        btnEditar.Enabled = false;
+                        btnEliminar.Enabled = false;
+                        limpiarCampos();
+                        tabla.DataSource = Utilidades.datasetLista("Empleados").Tables[0];
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un error" + error.Message);
+                    }
+
                 }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Ha ocurrido un error" + error.Message);
-                }
-                
             }
         }
         public override void eliminar()

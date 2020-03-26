@@ -28,31 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.edtDescripcion = new System.Windows.Forms.TextBox();
+            this.edtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(260, 83);
+            // 
+            // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
-            // textBox2
+            // btnNuevo
             // 
-            this.textBox2.Location = new System.Drawing.Point(162, 197);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(591, 75);
-            this.textBox2.TabIndex = 25;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
-            // textBox1
+            // btnEditar
             // 
-            this.textBox1.Location = new System.Drawing.Point(263, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 24;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            // 
+            // edtDescripcion
+            // 
+            this.edtDescripcion.Location = new System.Drawing.Point(162, 197);
+            this.edtDescripcion.Multiline = true;
+            this.edtDescripcion.Name = "edtDescripcion";
+            this.edtDescripcion.Size = new System.Drawing.Size(591, 75);
+            this.edtDescripcion.TabIndex = 25;
+            this.edtDescripcion.TextChanged += new System.EventHandler(this.edtDescripcion_TextChanged);
+            // 
+            // edtId
+            // 
+            this.edtId.Location = new System.Drawing.Point(263, 132);
+            this.edtId.Name = "edtId";
+            this.edtId.Size = new System.Drawing.Size(139, 20);
+            this.edtId.TabIndex = 24;
             // 
             // label5
             // 
@@ -72,13 +88,23 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Descripción";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(306, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "por id";
+            // 
             // MtoNaves
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 484);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.edtDescripcion);
+            this.Controls.Add(this.edtId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Name = "MtoNaves";
@@ -94,18 +120,21 @@
             this.Controls.SetChildIndex(this.edtBuscar, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.edtId, 0);
+            this.Controls.SetChildIndex(this.edtDescripcion, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox edtDescripcion;
+        private System.Windows.Forms.TextBox edtId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

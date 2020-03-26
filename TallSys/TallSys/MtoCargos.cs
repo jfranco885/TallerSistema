@@ -139,33 +139,39 @@ namespace TallSys
             }
         }
 
-       
-       
+
+
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
-            if (resul == DialogResult.Yes)
+            if (validarCampo(edtCargo))
             {
-                try
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
+                DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
                 {
+                    try
+                    {
 
-                    String consulta = String.Format("EXEC actualizarCargo '{0}','{1}'",edtIdCargo.Text, edtCargo.Text);
-                    Utilidades.Ejecutar(consulta);
-                    MessageBox.Show("Se actualizaron los datos");
-                    edtCargo.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+                        String consulta = String.Format("EXEC actualizarCargo '{0}','{1}'", edtIdCargo.Text, edtCargo.Text);
+                        Utilidades.Ejecutar(consulta);
+                        MessageBox.Show("Se actualizaron los datos");
+                        edtCargo.Enabled = false;
+                        btnEditar.Enabled = false;
+                        btnEliminar.Enabled = false;
+                        tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un error" + error.Message);
+                    }
+                    limpiarCampos();
                 }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Ha ocurrido un error" + error.Message);
-                }
-                limpiarCampos();
             }
         }
-
         private void edtCargo_TextChanged_1(object sender, EventArgs e)
         {
             errorProvider1.Clear();
