@@ -161,7 +161,7 @@ namespace TallSys
         }
         private void limpiarCampos()
         {
-            edtBuscar.Text = ("");
+            edtBuscar.Text = (""); 
             edtId.Text = ("");
             edtEstado.Text = ("");
         }

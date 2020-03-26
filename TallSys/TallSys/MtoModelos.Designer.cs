@@ -46,6 +46,15 @@
             // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // cboxMarca
             // 
@@ -86,6 +95,7 @@
             this.edtModelo.Name = "edtModelo";
             this.edtModelo.Size = new System.Drawing.Size(227, 20);
             this.edtModelo.TabIndex = 21;
+            this.edtModelo.TextChanged += new System.EventHandler(this.edtModelo_TextChanged);
             // 
             // label4
             // 
@@ -119,6 +129,7 @@
             this.Controls.Add(this.cboxMarca);
             this.Name = "MtoModelos";
             this.Text = "MtoModelos";
+            this.Load += new System.EventHandler(this.MtoModelos_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.btnEliminar, 0);
