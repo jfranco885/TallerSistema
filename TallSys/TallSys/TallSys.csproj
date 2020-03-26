@@ -148,6 +148,12 @@
     <Compile Include="MtoMarcas.Designer.cs">
       <DependentUpon>MtoMarcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="MtoModelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoModelos.Designer.cs">
+      <DependentUpon>MtoModelos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MtoNaves.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MtoMarcas.resx">
       <DependentUpon>MtoMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtoModelos.resx">
+      <DependentUpon>MtoModelos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MtoNaves.resx">
       <DependentUpon>MtoNaves.cs</DependentUpon>

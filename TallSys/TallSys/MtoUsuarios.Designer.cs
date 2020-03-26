@@ -28,72 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.cboxRol = new System.Windows.Forms.ComboBox();
+            this.edtUsuario = new System.Windows.Forms.TextBox();
+            this.edtClave = new System.Windows.Forms.TextBox();
+            this.edtId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cboxEmpleado = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             // 
-            // comboBox2
+            // cboxRol
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(390, 263);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(222, 21);
-            this.comboBox2.TabIndex = 28;
+            this.cboxRol.FormattingEnabled = true;
+            this.cboxRol.Location = new System.Drawing.Point(390, 234);
+            this.cboxRol.Name = "cboxRol";
+            this.cboxRol.Size = new System.Drawing.Size(222, 21);
+            this.cboxRol.TabIndex = 28;
             // 
-            // textBox5
+            // edtUsuario
             // 
-            this.textBox5.Location = new System.Drawing.Point(390, 157);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 20);
-            this.textBox5.TabIndex = 27;
+            this.edtUsuario.Location = new System.Drawing.Point(390, 160);
+            this.edtUsuario.Name = "edtUsuario";
+            this.edtUsuario.Size = new System.Drawing.Size(222, 20);
+            this.edtUsuario.TabIndex = 26;
             // 
-            // textBox4
+            // edtClave
             // 
-            this.textBox4.Location = new System.Drawing.Point(390, 189);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 20);
-            this.textBox4.TabIndex = 26;
+            this.edtClave.Location = new System.Drawing.Point(390, 195);
+            this.edtClave.Name = "edtClave";
+            this.edtClave.Size = new System.Drawing.Size(222, 20);
+            this.edtClave.TabIndex = 25;
             // 
-            // textBox2
+            // edtId
             // 
-            this.textBox2.Location = new System.Drawing.Point(390, 224);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 20);
-            this.textBox2.TabIndex = 25;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(390, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 20);
-            this.textBox1.TabIndex = 24;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(285, 160);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Nombre";
+            this.edtId.Location = new System.Drawing.Point(390, 118);
+            this.edtId.Name = "edtId";
+            this.edtId.Size = new System.Drawing.Size(222, 20);
+            this.edtId.TabIndex = 24;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(285, 192);
+            this.label5.Location = new System.Drawing.Point(285, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 22;
@@ -102,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(285, 263);
+            this.label4.Location = new System.Drawing.Point(285, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 13);
             this.label4.TabIndex = 21;
@@ -111,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(285, 224);
+            this.label3.Location = new System.Drawing.Point(285, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 20;
@@ -126,17 +111,34 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Código";
             // 
+            // cboxEmpleado
+            // 
+            this.cboxEmpleado.FormattingEnabled = true;
+            this.cboxEmpleado.Location = new System.Drawing.Point(390, 274);
+            this.cboxEmpleado.Name = "cboxEmpleado";
+            this.cboxEmpleado.Size = new System.Drawing.Size(222, 21);
+            this.cboxEmpleado.TabIndex = 30;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(285, 274);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Empleado";
+            // 
             // MtoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboxEmpleado);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.cboxRol);
+            this.Controls.Add(this.edtUsuario);
+            this.Controls.Add(this.edtClave);
+            this.Controls.Add(this.edtId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -156,13 +158,14 @@
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.edtId, 0);
+            this.Controls.SetChildIndex(this.edtClave, 0);
+            this.Controls.SetChildIndex(this.edtUsuario, 0);
+            this.Controls.SetChildIndex(this.cboxRol, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
-            this.Controls.SetChildIndex(this.textBox4, 0);
-            this.Controls.SetChildIndex(this.textBox5, 0);
-            this.Controls.SetChildIndex(this.comboBox2, 0);
+            this.Controls.SetChildIndex(this.cboxEmpleado, 0);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,15 +173,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboxRol;
+        private System.Windows.Forms.TextBox edtUsuario;
+        private System.Windows.Forms.TextBox edtClave;
+        private System.Windows.Forms.TextBox edtId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboxEmpleado;
+        private System.Windows.Forms.Label label6;
     }
 }

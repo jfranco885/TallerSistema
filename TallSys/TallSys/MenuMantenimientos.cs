@@ -94,5 +94,11 @@ namespace TallSys
             MtoMarcas mtoMarcas = new MtoMarcas();
             mtoMarcas.Show();
         }
+
+        private void btnModelos_Click(object sender, EventArgs e)
+        {
+            MtoModelos mtoModelos = new MtoModelos();
+            mtoModelos.Show();
+        }
     }
 }
