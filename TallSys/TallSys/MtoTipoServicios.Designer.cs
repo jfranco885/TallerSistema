@@ -28,63 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.edtServicio = new System.Windows.Forms.TextBox();
+            this.edtPrecio = new System.Windows.Forms.TextBox();
+            this.edtTiempo = new System.Windows.Forms.TextBox();
+            this.edtDescripcion = new System.Windows.Forms.TextBox();
+            this.edtId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.edtFecha = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(239, 60);
+            // 
+            // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Location = new System.Drawing.Point(580, 48);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
-            // textBox5
+            // btnNuevo
             // 
-            this.textBox5.Location = new System.Drawing.Point(361, 135);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(226, 20);
-            this.textBox5.TabIndex = 27;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
             // 
-            // textBox4
+            // btnEditar
             // 
-            this.textBox4.Location = new System.Drawing.Point(361, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 20);
-            this.textBox4.TabIndex = 26;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
-            // textBox3
+            // edtBuscar
             // 
-            this.textBox3.Location = new System.Drawing.Point(361, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 20);
-            this.textBox3.TabIndex = 25;
+            this.edtBuscar.Location = new System.Drawing.Point(352, 57);
             // 
-            // textBox2
+            // edtServicio
             // 
-            this.textBox2.Location = new System.Drawing.Point(361, 237);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(317, 54);
-            this.textBox2.TabIndex = 24;
+            this.edtServicio.Location = new System.Drawing.Point(359, 116);
+            this.edtServicio.Name = "edtServicio";
+            this.edtServicio.Size = new System.Drawing.Size(226, 20);
+            this.edtServicio.TabIndex = 27;
+            this.edtServicio.TextChanged += new System.EventHandler(this.edtServicio_TextChanged);
             // 
-            // textBox1
+            // edtPrecio
             // 
-            this.textBox1.Location = new System.Drawing.Point(361, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 20);
-            this.textBox1.TabIndex = 23;
+            this.edtPrecio.Location = new System.Drawing.Point(359, 149);
+            this.edtPrecio.Name = "edtPrecio";
+            this.edtPrecio.Size = new System.Drawing.Size(226, 20);
+            this.edtPrecio.TabIndex = 26;
+            this.edtPrecio.TextChanged += new System.EventHandler(this.edtPrecio_TextChanged);
+            // 
+            // edtTiempo
+            // 
+            this.edtTiempo.Location = new System.Drawing.Point(359, 183);
+            this.edtTiempo.Name = "edtTiempo";
+            this.edtTiempo.Size = new System.Drawing.Size(226, 20);
+            this.edtTiempo.TabIndex = 25;
+            this.edtTiempo.TextChanged += new System.EventHandler(this.edtTiempo_TextChanged);
+            // 
+            // edtDescripcion
+            // 
+            this.edtDescripcion.Location = new System.Drawing.Point(359, 218);
+            this.edtDescripcion.Multiline = true;
+            this.edtDescripcion.Name = "edtDescripcion";
+            this.edtDescripcion.Size = new System.Drawing.Size(317, 54);
+            this.edtDescripcion.TabIndex = 24;
+            this.edtDescripcion.TextChanged += new System.EventHandler(this.edtDescripcion_TextChanged);
+            // 
+            // edtId
+            // 
+            this.edtId.Location = new System.Drawing.Point(359, 90);
+            this.edtId.Name = "edtId";
+            this.edtId.Size = new System.Drawing.Size(226, 20);
+            this.edtId.TabIndex = 23;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(274, 142);
+            this.label6.Location = new System.Drawing.Point(272, 123);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 22;
@@ -93,7 +119,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(274, 171);
+            this.label5.Location = new System.Drawing.Point(272, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 21;
@@ -102,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(274, 240);
+            this.label4.Location = new System.Drawing.Point(272, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 20;
@@ -111,31 +137,59 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(272, 205);
+            this.label3.Location = new System.Drawing.Point(270, 186);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Tiempo";
+            this.label3.Text = "Tiempo por hora";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(277, 112);
+            this.label2.Location = new System.Drawing.Point(275, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "Id";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(281, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "por Id";
+            // 
+            // edtFecha
+            // 
+            this.edtFecha.Location = new System.Drawing.Point(359, 286);
+            this.edtFecha.Name = "edtFecha";
+            this.edtFecha.Size = new System.Drawing.Size(226, 20);
+            this.edtFecha.TabIndex = 30;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(270, 289);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 13);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Fecha Creación";
             // 
             // MtoTipoServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 480);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.edtFecha);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.edtServicio);
+            this.Controls.Add(this.edtPrecio);
+            this.Controls.Add(this.edtTiempo);
+            this.Controls.Add(this.edtDescripcion);
+            this.Controls.Add(this.edtId);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -157,12 +211,16 @@
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
-            this.Controls.SetChildIndex(this.textBox4, 0);
-            this.Controls.SetChildIndex(this.textBox5, 0);
+            this.Controls.SetChildIndex(this.edtId, 0);
+            this.Controls.SetChildIndex(this.edtDescripcion, 0);
+            this.Controls.SetChildIndex(this.edtTiempo, 0);
+            this.Controls.SetChildIndex(this.edtPrecio, 0);
+            this.Controls.SetChildIndex(this.edtServicio, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.edtFecha, 0);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,15 +228,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox edtServicio;
+        private System.Windows.Forms.TextBox edtPrecio;
+        private System.Windows.Forms.TextBox edtTiempo;
+        private System.Windows.Forms.TextBox edtDescripcion;
+        private System.Windows.Forms.TextBox edtId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox edtFecha;
+        private System.Windows.Forms.Label label8;
     }
 }

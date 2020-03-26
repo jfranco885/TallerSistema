@@ -172,7 +172,7 @@ namespace TallSys
                 }
                 else
                 {
-                    MessageBox.Show("Este cliente no existe");
+                    MessageBox.Show("Este Empleado no existe");
                 }
 
 
