@@ -192,5 +192,11 @@ namespace TallSys
             edtBuscarC.Text = "";
             edtBuscarV.Text = "";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AgregarServicios agregarServicios = new AgregarServicios();
+            agregarServicios.Show();
+        }
     }//fin clase
 }//fin proyect

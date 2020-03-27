@@ -22,6 +22,10 @@ namespace TallSys
 
         }
 
-        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            AsignarMecanicos asignarMecanicos = new AsignarMecanicos();
+            asignarMecanicos.Show();
+        }
     }
 }
