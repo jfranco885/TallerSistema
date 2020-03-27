@@ -52,11 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarClientes.Designer.cs">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarServicios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarServicios.Designer.cs">
       <DependentUpon>AgregarServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarVehiculos.Designer.cs">
+      <DependentUpon>AgregarVehiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="AsignarMecanicos.cs">
       <SubType>Form</SubType>
@@ -216,8 +228,14 @@
     <Compile Include="ServiciosEjecutandose.Designer.cs">
       <DependentUpon>ServiciosEjecutandose.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarClientes.resx">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarServicios.resx">
       <DependentUpon>AgregarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarVehiculos.resx">
+      <DependentUpon>AgregarVehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AsignarMecanicos.resx">
       <DependentUpon>AsignarMecanicos.cs</DependentUpon>

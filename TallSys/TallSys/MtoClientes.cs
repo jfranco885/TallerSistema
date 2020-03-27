@@ -26,7 +26,7 @@ namespace TallSys
             InitializeComponent();
             tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
             edtFecha.Enabled = false;
-            edtIdCliente.Enabled = false;
+            edtId.Enabled = false;
             desactivarControlesC();
 
         }
@@ -95,7 +95,7 @@ namespace TallSys
                 dt = Utilidades.Ejecutar(consul);
                 if (dt.Tables[0].Rows.Count > 0)
                 {
-                    edtIdCliente.Text = (dt.Tables[0].Rows[0]["idcliente"].ToString().Trim());
+                    edtId.Text = (dt.Tables[0].Rows[0]["idcliente"].ToString().Trim());
                     edtNombres.Text = (dt.Tables[0].Rows[0]["nombres_cliente"].ToString().Trim());
                     edtApellidos.Text = (dt.Tables[0].Rows[0]["apellidos_cliente"].ToString().Trim());
                     edtDui.Text = (dt.Tables[0].Rows[0]["dui"].ToString().Trim());
@@ -132,7 +132,7 @@ namespace TallSys
             {
                 try
                 {
-                    Utilidades.eliminarRegistro("Cliente", edtIdCliente.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
+                    Utilidades.eliminarRegistro("Cliente", edtId.Text);//envio el complemento del nombre del proc almacenado y el id del que quiero eliminar
                 limpiarCampos();
                 desactivarControlesC();
                 btnEditar.Enabled = false;
@@ -160,7 +160,7 @@ namespace TallSys
                 {
                     try
                     {
-                        edtidcliente = edtIdCliente.Text.Trim();
+                        edtidcliente = edtId.Text.Trim();
                         edtnombres = edtNombres.Text.Trim();
                         edtapellidos = edtApellidos.Text.Trim();
                         edtdui = edtDui.Text.Trim();
@@ -191,7 +191,7 @@ namespace TallSys
         private void limpiarCampos()
         {
             edtBuscar.Text = ("");
-            edtIdCliente.Text = ("");
+            edtId.Text = ("");
             edtNombres.Text = ("");
             edtApellidos.Text = ("");
             edtDui.Text = ("");

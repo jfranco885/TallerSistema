@@ -94,15 +94,14 @@ namespace MiLibreria
         //llenar combobox
         public static DataTable llenarComboBox(String consult)
         {
-            DataTable dt = null;
+            // DataTable dt = null;
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter();
             try
             {
-
-
-                con.Open();
-                SqlDataAdapter da = new SqlDataAdapter();
+                con.Open();               
                 da.SelectCommand = new SqlCommand(consult, con);
-                dt = new DataTable();
+              //  dt = new DataTable();
                 da.Fill(dt);
                 con.Close();
             }

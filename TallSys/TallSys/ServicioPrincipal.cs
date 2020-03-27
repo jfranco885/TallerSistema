@@ -21,5 +21,17 @@ namespace TallSys
         {
 
         }
+
+        private void btnCrearCliente_Click(object sender, EventArgs e)
+        {
+            AgregarClientes agregarClientes = new AgregarClientes();
+            agregarClientes.Show();
+        }
+
+        private void btnCrearVehiculo_Click(object sender, EventArgs e)
+        {
+            AgregarVehiculos agregarVehiculos = new AgregarVehiculos();
+            agregarVehiculos.Show();
+        }
     }
 }
