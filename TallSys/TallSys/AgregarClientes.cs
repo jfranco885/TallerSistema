@@ -61,12 +61,12 @@ namespace TallSys
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se han guardado los datos");
 
-                       
+
 
                         //  desactivarControlesC();
                         //  btnGuardar.Enabled = false;
                         //   limpiarCampos();
-                        //   tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];//actualizando tabla
+                        dataGridClientes.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
                     }
                     catch (Exception errorGuardarC)
                     {
@@ -76,7 +76,7 @@ namespace TallSys
                 }
                 else//si existe
                 {
-                    MessageBox.Show("Este cargo ya existe");
+                    MessageBox.Show("Este Cliente ya existe");
                 }
             }
         }

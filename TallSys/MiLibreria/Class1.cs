@@ -7,12 +7,16 @@ namespace MiLibreria
 {
     public class Utilidades
     {
-       private static SqlConnection con;
+
+       
+        
+       public static SqlConnection con;
         public static DataSet Ejecutar(String consulta)
         {
             con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");
 
             con.Open();
+          
             //  MessageBox.Show("Conexión con éxito");
             DataSet dataSet = new DataSet();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(consulta, con);
@@ -111,6 +115,10 @@ namespace MiLibreria
             }
             return dt;
         }
+
+     
+
+
         /*   public static void llenarComboBox(String consult,ComboBox cbox,String nombreCampo,String id )
            {
                try

@@ -24,11 +24,11 @@ namespace TallSys
 
             cboxMarca.DataSource = Utilidades.llenarComboBox("select idmarca,marca from marca");
             cboxMarca.DisplayMember = "marca";
-           // cboxMarca.ValueMember = "idmarca";
+            cboxMarca.ValueMember = "idmarca";
 
             cboxModelo.DataSource = Utilidades.llenarComboBox("select idmodelo,modelo from modelo");
             cboxModelo.DisplayMember = "modelo";
-           // cboxModelo.ValueMember = "idmodelo";
+            cboxModelo.ValueMember = "idmodelo";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace TallSys
                        // desactivarControles();
                        // btnGuardar.Enabled = false;
                        // limpiarCampos();
-                       // tabla.DataSource = Utilidades.datasetLista("Vehiculo").Tables[0];
+                        dataGridVehiculos.DataSource = Utilidades.datasetLista("Vehiculo").Tables[0];
                     }
                     catch (Exception er)
                     {
