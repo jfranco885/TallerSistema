@@ -20,7 +20,7 @@ namespace TallSys
             edtId.Enabled = false;
             edtEspecialidad.Enabled = false;
 
-            tabla.DataSource = Utilidades.datasetLista("Especialidades").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarEspecialidades").Tables[0];
         }
 
         private void MtoEspecialidades_Load(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace TallSys
                         edtEspecialidad.Enabled = false;
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Especialidades").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarEspecialidades").Tables[0];
                     }
                     catch (Exception e)
                     {
@@ -78,7 +78,7 @@ namespace TallSys
                 edtEspecialidad.Enabled = false;
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
-                tabla.DataSource = Utilidades.datasetLista("Especialidades").Tables[0];
+                tabla.DataSource = Utilidades.datasetLista("listarEspecialidades").Tables[0];
 
                 }
                 catch (Exception errr)
@@ -155,7 +155,7 @@ namespace TallSys
                         edtEspecialidad.Enabled = false;
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
-                        tabla.DataSource = Utilidades.datasetLista("Especialidades").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarEspecialidades").Tables[0];
                     }
                     catch (Exception error)
                     {

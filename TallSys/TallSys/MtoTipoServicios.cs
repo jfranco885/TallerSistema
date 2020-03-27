@@ -18,7 +18,7 @@ namespace TallSys
         public MtoTipoServicios()
         {
             InitializeComponent();
-            tabla.DataSource = Utilidades.datasetLista("TipoServicio").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarTipoServicio").Tables[0];
             edtFecha.Enabled = false;
             edtId.Enabled = false;
             desactivarControles();
@@ -88,7 +88,7 @@ namespace TallSys
                         desactivarControles();
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("TipoServicio").Tables[0];//actualizando tabla
+                        tabla.DataSource = Utilidades.datasetLista("listarTipoServicio").Tables[0];//actualizando tabla
                     }
                     catch (Exception errorGuardarC)
                     {
@@ -162,7 +162,7 @@ namespace TallSys
                     desactivarControles();
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("TipoServicio").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarTipoServicio").Tables[0];
                 }
                 catch (Exception errr)
                 {
@@ -189,7 +189,7 @@ namespace TallSys
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
                     limpiarCampos();
-                    tabla.DataSource = Utilidades.datasetLista("TipoServicio").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarTipoServicio").Tables[0];
                 }
                 catch (Exception error)
                 {

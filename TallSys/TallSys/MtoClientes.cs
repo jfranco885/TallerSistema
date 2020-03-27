@@ -24,7 +24,7 @@ namespace TallSys
         public MtoClientes()
         {
             InitializeComponent();
-            tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarClientes").Tables[0];
             edtFecha.Enabled = false;
             edtId.Enabled = false;
             desactivarControlesC();
@@ -63,7 +63,7 @@ namespace TallSys
                         desactivarControlesC();
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];//actualizando tabla
+                        tabla.DataSource = Utilidades.datasetLista("listarClientes").Tables[0];//actualizando tabla
                     }
                     catch (Exception errorGuardarC)
                     {
@@ -137,7 +137,7 @@ namespace TallSys
                 desactivarControlesC();
                 btnEditar.Enabled = false;
                 btnEliminar.Enabled = false;
-                tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
+                tabla.DataSource = Utilidades.datasetLista("listarClientes").Tables[0];
                 }
                 catch (Exception errr)
                 {
@@ -177,7 +177,7 @@ namespace TallSys
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarClientes").Tables[0];
                     }
                     catch (Exception error)
                     {

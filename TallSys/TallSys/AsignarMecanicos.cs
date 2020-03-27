@@ -16,7 +16,7 @@ namespace TallSys
         public AsignarMecanicos()
         {
             InitializeComponent();
-            dataGridEmpleados.DataSource = Utilidades.datasetLista("Empleados").Tables[0];
+            dataGridEmpleados.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];
         }
 
         private void AsignarMecanicos_Load(object sender, EventArgs e)

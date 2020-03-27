@@ -24,7 +24,7 @@ namespace TallSys
         public AgregarClientes()
         {
             InitializeComponent();
-            dataGridClientes.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
+            dataGridClientes.DataSource = Utilidades.datasetLista("listarClientes").Tables[0];
         }
 
         private void AgregarClientes_Load(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace TallSys
                         //  desactivarControlesC();
                         //  btnGuardar.Enabled = false;
                         //   limpiarCampos();
-                        dataGridClientes.DataSource = Utilidades.datasetLista("Clientes").Tables[0];
+                        dataGridClientes.DataSource = Utilidades.datasetLista("listarClientes").Tables[0];
                     }
                     catch (Exception errorGuardarC)
                     {

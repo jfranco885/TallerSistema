@@ -20,7 +20,7 @@ namespace TallSys
             edtFecha.Enabled = false;
             desactivarControles();
 
-            tabla.DataSource = Utilidades.datasetLista("Vehiculo").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarVehiculo").Tables[0];
         }
 
         private void MtoVehiculos_Load(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace TallSys
                         desactivarControles();
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Vehiculo").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarVehiculo").Tables[0];
                     }
                     catch (Exception e)
                     {
@@ -90,7 +90,7 @@ namespace TallSys
                     desactivarControles();
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Vehiculo").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarVehiculo").Tables[0];
 
                 }
                 catch (Exception errr)
@@ -172,7 +172,7 @@ namespace TallSys
                         desactivarControles();
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
-                        tabla.DataSource = Utilidades.datasetLista("Vehiculo").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarVehiculo").Tables[0];
                     }
                     catch (Exception error)
                     {

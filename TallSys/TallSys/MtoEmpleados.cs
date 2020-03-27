@@ -34,7 +34,7 @@ namespace TallSys
             edtFecha.Enabled = false;
             edtIdEmpleado.Enabled = false;
             desactivarControlesE();
-            tabla.DataSource = Utilidades.datasetLista("Empleados").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];
         }
 
         private void MtoEmpleados_Load(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace TallSys
                         desactivarControlesE();
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Empleados").Tables[0];//actualizando tabla
+                        tabla.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];//actualizando tabla
                     }
                     catch (Exception errorGuardarC)
                     {
@@ -225,7 +225,7 @@ namespace TallSys
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Empleados").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];
                     }
                     catch (Exception error)
                     {
@@ -247,7 +247,7 @@ namespace TallSys
                     desactivarControlesE();
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Empleados").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];
                 }catch(Exception errr)
                 {
                     MessageBox.Show("Ha ocurrido un error" + errr.Message);

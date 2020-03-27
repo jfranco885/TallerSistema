@@ -19,7 +19,7 @@ namespace TallSys
             edtIdMarca.Enabled = false;
             edtMarca.Enabled = false;
 
-            tabla.DataSource = Utilidades.datasetLista("Marca").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarMarca").Tables[0];
         }
         public override void guardar()
         {
@@ -44,7 +44,7 @@ namespace TallSys
                         edtMarca.Enabled = false;
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Marca").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarMarca").Tables[0];
                     }
                     catch (Exception e)
                     {
@@ -72,7 +72,7 @@ namespace TallSys
                     edtMarca.Enabled = false;
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Marca").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarMarca").Tables[0];
 
                 }
                 catch (Exception errr)
@@ -146,7 +146,7 @@ namespace TallSys
                         edtMarca.Enabled = false;
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
-                        tabla.DataSource = Utilidades.datasetLista("Marca").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarMarca").Tables[0];
                     }
                     catch (Exception error)
                     {

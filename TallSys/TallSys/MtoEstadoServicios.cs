@@ -19,7 +19,7 @@ namespace TallSys
             edtId.Enabled = false;
             edtEstado.Enabled = false;
 
-            tabla.DataSource = Utilidades.datasetLista("Estado").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarEstado").Tables[0];
         }
 
         private void MtoEstadoServicios_Load(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace TallSys
                         edtEstado.Enabled = false;
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Estado").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarEstado").Tables[0];
                     }
                     catch (Exception e)
                     {
@@ -77,7 +77,7 @@ namespace TallSys
                     edtEstado.Enabled = false;
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Estado").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarEstado").Tables[0];
 
                 }
                 catch (Exception errr)
@@ -151,7 +151,7 @@ namespace TallSys
                         edtEstado.Enabled = false;
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
-                        tabla.DataSource = Utilidades.datasetLista("Estado").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarEstado").Tables[0];
                     }
                     catch (Exception error)
                     {

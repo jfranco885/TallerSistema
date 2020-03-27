@@ -18,7 +18,7 @@ namespace TallSys
             edtId.Enabled = false;
             edtDescripcion.Enabled = false;
 
-            tabla.DataSource = Utilidades.datasetLista("Nave").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarNave").Tables[0];
         }
 
         private void MtoNaves_Load(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace TallSys
                         edtDescripcion.Enabled = false;
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Nave").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarNave").Tables[0];
                     }
                     catch (Exception e)
                     {
@@ -68,7 +68,7 @@ namespace TallSys
                     edtDescripcion.Enabled = false;
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Nave").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarNave").Tables[0];
 
                 }
                 catch (Exception errr)
@@ -142,7 +142,7 @@ namespace TallSys
                         edtDescripcion.Enabled = false;
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
-                        tabla.DataSource = Utilidades.datasetLista("Nave").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarNave").Tables[0];
                     }
                     catch (Exception error)
                     {

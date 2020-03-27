@@ -53,12 +53,12 @@ namespace MiLibreria
         }//Fin Existe
 
         //Método para llenar dataset y ocuparlo en la tabla
-        public static DataSet datasetLista(String tablaDbNombreProcedure)
+        public static DataSet datasetLista(String NombreProcedure)
         {
             DataSet dt=null;
             try
             {
-                String consulta = String.Format("exec listar" + tablaDbNombreProcedure);
+                String consulta = String.Format("exec " + NombreProcedure);
                 dt = Ejecutar(consulta);
             }
             catch (Exception err)
@@ -69,12 +69,12 @@ namespace MiLibreria
             return dt;
         }
 
-        public static DataSet datasetConsultarProcedure(String tablaDbNombreProcedure,String buscar)        
+        public static DataSet datasetConsultarProcedure(String procedimientoConsultar,String buscar)        
         {
             DataSet dt = null;
             try
             {
-                 String consulta = String.Format("exec consultar" + tablaDbNombreProcedure + " '{0}'", buscar);
+                 String consulta = String.Format("exec " + procedimientoConsultar + " '{0}'", buscar);
                 
                 dt = Ejecutar(consulta);
             }catch(Exception err)
@@ -116,10 +116,10 @@ namespace MiLibreria
             return dt;
         }
 
-     
+      
 
 
-        /*   public static void llenarComboBox(String consult,ComboBox cbox,String nombreCampo,String id )
+           public static void llenarCombox(String consult,ComboBox cbox,String nombreCampo,String id )
            {
                try
                {
@@ -143,6 +143,6 @@ namespace MiLibreria
 
            }
          
-     */
+     
     }//fin clase
 }//Min mi libreria

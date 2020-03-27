@@ -20,7 +20,7 @@ namespace TallSys
             edtModelo.Enabled = false;
             cboxMarca.Enabled = false;
 
-            tabla.DataSource = Utilidades.datasetLista("Modelo").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarModelo").Tables[0];
         }
 
         private void MtoModelos_Load(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace TallSys
                         cboxMarca.Enabled = false;
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Modelo").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarModelo").Tables[0];
                     }
                     catch (Exception e)
                     {
@@ -86,7 +86,7 @@ namespace TallSys
                     cboxMarca.Enabled = false;
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Modelo").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarModelo").Tables[0];
 
                 }
                 catch (Exception errr)
@@ -169,7 +169,7 @@ namespace TallSys
                         cboxMarca.Enabled = false;
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
-                        tabla.DataSource = Utilidades.datasetLista("Modelo").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarModelo").Tables[0];
                     }
                     catch (Exception error)
                     {

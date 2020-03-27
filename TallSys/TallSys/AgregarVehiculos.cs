@@ -15,17 +15,15 @@ namespace TallSys
         public AgregarVehiculos()
         {
             InitializeComponent();
-            dataGridVehiculos.DataSource = Utilidades.datasetLista("Vehiculo").Tables[0];
+            dataGridVehiculos.DataSource = Utilidades.datasetLista("listarVehiculo").Tables[0];
         }
 
         private void AgregarVehiculos_Load(object sender, EventArgs e)
         {
-            
-
-            cboxMarca.DataSource = Utilidades.llenarComboBox("select idmarca,marca from marca");
-            cboxMarca.DisplayMember = "marca";
-            cboxMarca.ValueMember = "idmarca";
-
+               cboxMarca.DataSource = Utilidades.llenarComboBox("select idmarca,marca from marca");
+               cboxMarca.DisplayMember = "marca";
+               cboxMarca.ValueMember = "idmarca";
+   
             cboxModelo.DataSource = Utilidades.llenarComboBox("select idmodelo,modelo from modelo");
             cboxModelo.DisplayMember = "modelo";
             cboxModelo.ValueMember = "idmodelo";
@@ -59,7 +57,7 @@ namespace TallSys
                        // desactivarControles();
                        // btnGuardar.Enabled = false;
                        // limpiarCampos();
-                        dataGridVehiculos.DataSource = Utilidades.datasetLista("Vehiculo").Tables[0];
+                        dataGridVehiculos.DataSource = Utilidades.datasetLista("listarVehiculo").Tables[0];
                     }
                     catch (Exception er)
                     {

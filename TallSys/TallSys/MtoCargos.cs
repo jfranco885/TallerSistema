@@ -21,7 +21,7 @@ namespace TallSys
             edtIdCargo.Enabled = false;
             edtCargo.Enabled = false;
             
-            tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+            tabla.DataSource = Utilidades.datasetLista("listarCargos").Tables[0];
 
         }
 
@@ -52,7 +52,7 @@ namespace TallSys
                         edtCargo.Enabled = false;
                         btnGuardar.Enabled = false;
                         limpiarCampos();
-                        tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarCargos").Tables[0];
                     }
                 catch (Exception e)
                 {
@@ -82,7 +82,7 @@ namespace TallSys
                     edtCargo.Enabled = false;
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
-                    tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+                    tabla.DataSource = Utilidades.datasetLista("listarCargos").Tables[0];
 
                 }catch (Exception errr)
             {
@@ -165,7 +165,7 @@ namespace TallSys
                         edtCargo.Enabled = false;
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
-                        tabla.DataSource = Utilidades.datasetLista("Cargos").Tables[0];
+                        tabla.DataSource = Utilidades.datasetLista("listarCargos").Tables[0];
                     }
                     catch (Exception error)
                     {
