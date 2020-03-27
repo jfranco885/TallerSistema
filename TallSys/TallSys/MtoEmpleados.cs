@@ -335,5 +335,7 @@ namespace TallSys
         {
             errorProvider1.Clear();
         }
+
+       
     }//fin clase
 }//fin proyecto

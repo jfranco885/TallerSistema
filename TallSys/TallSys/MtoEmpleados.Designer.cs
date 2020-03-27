@@ -49,6 +49,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cboxServicioVehiculo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -253,11 +255,31 @@
             this.cboxEstado.TabIndex = 49;
             this.cboxEstado.SelectedIndexChanged += new System.EventHandler(this.cboxEstado_SelectedIndexChanged);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(379, 286);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(139, 13);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "Brindará servicio a vehículo";
+            // 
+            // cboxServicioVehiculo
+            // 
+            this.cboxServicioVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxServicioVehiculo.FormattingEnabled = true;
+            this.cboxServicioVehiculo.Location = new System.Drawing.Point(526, 283);
+            this.cboxServicioVehiculo.Name = "cboxServicioVehiculo";
+            this.cboxServicioVehiculo.Size = new System.Drawing.Size(226, 21);
+            this.cboxServicioVehiculo.TabIndex = 51;
+            // 
             // MtoEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 484);
+            this.Controls.Add(this.cboxServicioVehiculo);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.cboxEstado);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label7);
@@ -311,6 +333,8 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.cboxEstado, 0);
+            this.Controls.SetChildIndex(this.label13, 0);
+            this.Controls.SetChildIndex(this.cboxServicioVehiculo, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -341,5 +365,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cboxEstado;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cboxServicioVehiculo;
     }
 }

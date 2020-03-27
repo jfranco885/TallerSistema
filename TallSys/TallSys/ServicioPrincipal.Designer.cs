@@ -206,6 +206,7 @@
             this.edtCodigoServicio.Name = "edtCodigoServicio";
             this.edtCodigoServicio.Size = new System.Drawing.Size(158, 20);
             this.edtCodigoServicio.TabIndex = 22;
+            this.edtCodigoServicio.TextChanged += new System.EventHandler(this.edtCodigoServicio_TextChanged);
             // 
             // label6
             // 
@@ -344,11 +345,11 @@
         public System.Windows.Forms.Button btnBuscarVehiculo;
         private System.Windows.Forms.Button btnCrearVehiculo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox edtCodigoServicio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox edtIdCliente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox edtIdVehiculo;
+        public System.Windows.Forms.TextBox edtCodigoServicio;
     }
 }

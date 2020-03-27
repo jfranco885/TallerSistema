@@ -16,7 +16,7 @@ namespace TallSys
         public AsignarMecanicos()
         {
             InitializeComponent();
-            dataGridEmpleados.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];
+            dataGridMecSinAsignar.DataSource = Utilidades.datasetLista("listarEmpleadosQuePuedeDisponerse").Tables[0];
         }
 
         private void AsignarMecanicos_Load(object sender, EventArgs e)
@@ -28,5 +28,16 @@ namespace TallSys
         {
             idEmpleado = edtEmpleado.Text.Trim();
         }
-    }
-}
+
+        public void cargarTabla()
+        {
+            dataGridMecanicoAsignado.DataSource = Utilidades.datasetConsultarProcedure("listarMecanicosAsignados", Convert.ToInt16(txtIdServicio.Text)).Tables[0];
+
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            cargarTabla();
+        }
+    }//fin clase
+}//fin proyecto

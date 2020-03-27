@@ -14,6 +14,7 @@ namespace TallSys
 {
     public partial class ServicioPrincipal : ContenedorVentanas
     {
+     
         int idcliente;
         int idvehiculo;
         public ServicioPrincipal()
@@ -59,18 +60,18 @@ namespace TallSys
                     if (dt.Tables[0].Rows.Count > 0)
                     {
                         String nombre = edtCliente.Text = (dt.Tables[0].Rows[0]["nombres_cliente"].ToString().Trim());
-                        String apellido= edtCliente.Text = (dt.Tables[0].Rows[0]["apellidos_cliente"].ToString().Trim());
+                        String apellido = edtCliente.Text = (dt.Tables[0].Rows[0]["apellidos_cliente"].ToString().Trim());
                         edtIdCliente.Text = (dt.Tables[0].Rows[0]["idcliente"].ToString().Trim());
 
-                        edtCliente.Text = nombre + " " + apellido;   
-                        
+                        edtCliente.Text = nombre + " " + apellido;
 
-                   
+
+
                     }
                     else
                     {
                         MessageBox.Show("Este cliente no existe");
-                       
+
                     }
                 }
                 catch (Exception errr)
@@ -100,21 +101,21 @@ namespace TallSys
                 if (dt.Tables[0].Rows.Count > 0)
                 {
                     String marca = (dt.Tables[0].Rows[0]["Marca"].ToString().Trim());
-                   // String modelo= (dt.Tables[0].Rows[0]["Modelo"].ToString().Trim());
+                    // String modelo= (dt.Tables[0].Rows[0]["Modelo"].ToString().Trim());
                     String placa = (dt.Tables[0].Rows[0]["placa"].ToString().Trim()); ;
 
                     edtIdVehiculo.Text = (dt.Tables[0].Rows[0]["idvehiculo"].ToString().Trim());
-                    edtVehiculo.Text ="Marca: "+ marca + " Placa: " + placa;
+                    edtVehiculo.Text = "Marca: " + marca + " Placa: " + placa;
 
-                  
-                   
+
+
 
 
                 }
                 else
                 {
                     MessageBox.Show("Este Vehículo no existe");
-                  
+
                 }
 
 
@@ -133,7 +134,7 @@ namespace TallSys
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (validarCampo(edtIdCliente)| validarCampo(edtIdVehiculo))
+            if (validarCampo(edtIdCliente) | validarCampo(edtIdVehiculo))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -141,7 +142,7 @@ namespace TallSys
             {
                 int clienteId = Convert.ToInt32(edtIdCliente.Text.Trim());
                 int vehiculoId = Convert.ToInt32(edtIdVehiculo.Text.Trim());
-                
+
                 try
                 {
                     //define connection and command, in using blocks to ensure disposal
@@ -150,13 +151,13 @@ namespace TallSys
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                     //Paráetros de entrada
+                        //Paráetros de entrada
                         cmd.Parameters.AddWithValue("@idvehiculo", vehiculoId);
                         cmd.Parameters.AddWithValue("@idcliente", clienteId);
                         //Parámetro de salida
                         cmd.Parameters.Add("@idServicioEncabezado", SqlDbType.Int).Direction = ParameterDirection.Output;
 
-                      
+
                         // open connection and execute stored procedure
                         conn.Open();
                         cmd.ExecuteNonQuery();
@@ -165,14 +166,14 @@ namespace TallSys
                         conn.Close();
                         int idSerGenerado = Convert.ToInt32(cmd.Parameters["@idServicioEncabezado"].Value);
                         edtCodigoSer.Text = idSerGenerado.ToString();
-                        edtCodigoServicio.Text= idSerGenerado.ToString();
+                        edtCodigoServicio.Text = idSerGenerado.ToString();
                     }
 
-                   
-                    
+
+
 
                     limpiarCampos();
-                   
+
                 }
                 catch (Exception er)
                 {
@@ -181,7 +182,7 @@ namespace TallSys
 
 
             }
-            
+
         }
         private void limpiarCampos()
         {
@@ -195,8 +196,29 @@ namespace TallSys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarServicios agregarServicios = new AgregarServicios();
-            agregarServicios.Show();
+
+
+            if (validarCampo(edtCodigoServicio))
+            {
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
+                AgregarServicios agregarServicios = new AgregarServicios();
+
+               
+                agregarServicios.edtIdServicioEncabezado.Text = edtCodigoServicio.Text.Trim();
+                agregarServicios.Show();
+
+            }
         }
+
+        private void edtCodigoServicio_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        
+
     }//fin clase
 }//fin proyect

@@ -69,7 +69,7 @@ namespace MiLibreria
             return dt;
         }
 
-        public static DataSet datasetConsultarProcedure(String procedimientoConsultar,String buscar)        
+        public static DataSet datasetConsultarProcedure(String procedimientoConsultar,int buscar)        
         {
             DataSet dt = null;
             try
