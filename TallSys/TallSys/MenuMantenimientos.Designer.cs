@@ -178,6 +178,7 @@
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 20;
             this.label10.Text = "Ventas";
+            this.label10.Visible = false;
             // 
             // btnVehiculos
             // 
@@ -197,6 +198,7 @@
             this.btnFacturas.Size = new System.Drawing.Size(75, 72);
             this.btnFacturas.TabIndex = 18;
             this.btnFacturas.UseVisualStyleBackColor = true;
+            this.btnFacturas.Visible = false;
             this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
             // 
             // label9

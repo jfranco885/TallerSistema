@@ -15,7 +15,7 @@ namespace MiLibreria
        public static SqlConnection con;
         public static DataSet Ejecutar(String consulta)
         {
-            con = new SqlConnection("Data Source=.;Initial Catalog=tallerdb;Integrated Security=True");//DESKTOP-G2V0SUK\\SQLEXPRESS
+            con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");//DESKTOP-G2V0SUK\\SQLEXPRESS
 
             con.Open();
           
