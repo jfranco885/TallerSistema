@@ -204,11 +204,23 @@ namespace TallSys
             }
             else
             {
-                AgregarServicios agregarServicios = new AgregarServicios();
+                Boolean existe;
+                String idencabezado = edtCodigoServicio.Text.Trim();
+                String consul = String.Format("select *from encabezado_servicio where idencabezado_servicio='{0}'", idencabezado);
+                existe = Utilidades.Existe(consul);
 
-               
-                agregarServicios.edtIdServicioEncabezado.Text = edtCodigoServicio.Text.Trim();
-                agregarServicios.Show();
+                if (existe == true)
+                {
+                    AgregarServicios agregarServicios = new AgregarServicios();
+
+
+                    agregarServicios.edtIdServicioEncabezado.Text = edtCodigoServicio.Text.Trim();
+                    agregarServicios.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha creado este encabezado de Servicio");
+                }
 
             }
         }

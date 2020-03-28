@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtIdServicio = new System.Windows.Forms.Label();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMecSinAsignar)).BeginInit();
@@ -119,7 +120,7 @@
             // 
             this.txtIdServicio.AutoSize = true;
             this.txtIdServicio.BackColor = System.Drawing.SystemColors.Info;
-            this.txtIdServicio.Location = new System.Drawing.Point(12, 49);
+            this.txtIdServicio.Location = new System.Drawing.Point(76, 53);
             this.txtIdServicio.Name = "txtIdServicio";
             this.txtIdServicio.Size = new System.Drawing.Size(53, 13);
             this.txtIdServicio.TabIndex = 101;
@@ -135,11 +136,21 @@
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 103;
+            this.label3.Text = "Id Servicio";
+            // 
             // AsignarMecanicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 407);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.txtIdServicio);
             this.Controls.Add(this.button1);
@@ -162,6 +173,7 @@
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.txtIdServicio, 0);
             this.Controls.SetChildIndex(this.btnMostrar, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMecSinAsignar)).EndInit();
@@ -182,5 +194,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnMostrar;
         public System.Windows.Forms.Label txtIdServicio;
+        private System.Windows.Forms.Label label3;
     }
 }

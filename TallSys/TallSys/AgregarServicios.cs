@@ -58,11 +58,25 @@ namespace TallSys
             }
             else
             {
-                AsignarMecanicos asignarMecanicos = new AsignarMecanicos();
-                asignarMecanicos.txtIdServicio.Text = edtidServicioDetalle.Text.Trim();
+                 
+                    Boolean existe;
+                    String iddetalleSer = edtidServicioDetalle.Text.Trim();
+                    String consul = String.Format("select *from detalle_servicios where iddetalle_servicio='{0}'", iddetalleSer);
+                    existe = Utilidades.Existe(consul);
 
-                asignarMecanicos.Show();
-            }
+                    if (existe == true)
+                    {
+
+                        AsignarMecanicos asignarMecanicos = new AsignarMecanicos();
+                        asignarMecanicos.txtIdServicio.Text = edtidServicioDetalle.Text.Trim();
+
+                        asignarMecanicos.Show();
+                    }
+                    else//si existe
+                    {
+                        MessageBox.Show("Este servicio no se ha creado");
+                    }
+                }
            
         }
 
