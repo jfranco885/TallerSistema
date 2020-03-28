@@ -74,7 +74,7 @@
             // 
             // edtDui
             // 
-            this.edtDui.Location = new System.Drawing.Point(526, 129);
+            this.edtDui.Location = new System.Drawing.Point(519, 109);
             this.edtDui.Name = "edtDui";
             this.edtDui.Size = new System.Drawing.Size(226, 20);
             this.edtDui.TabIndex = 45;
@@ -83,7 +83,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(481, 132);
+            this.label11.Location = new System.Drawing.Point(474, 112);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 13);
             this.label11.TabIndex = 44;
@@ -91,7 +91,7 @@
             // 
             // edtNombre
             // 
-            this.edtNombre.Location = new System.Drawing.Point(236, 163);
+            this.edtNombre.Location = new System.Drawing.Point(229, 143);
             this.edtNombre.Name = "edtNombre";
             this.edtNombre.Size = new System.Drawing.Size(226, 20);
             this.edtNombre.TabIndex = 43;
@@ -99,7 +99,7 @@
             // 
             // edtApellido
             // 
-            this.edtApellido.Location = new System.Drawing.Point(236, 198);
+            this.edtApellido.Location = new System.Drawing.Point(229, 178);
             this.edtApellido.Name = "edtApellido";
             this.edtApellido.Size = new System.Drawing.Size(226, 20);
             this.edtApellido.TabIndex = 42;
@@ -107,7 +107,7 @@
             // 
             // edtFecha
             // 
-            this.edtFecha.Location = new System.Drawing.Point(526, 259);
+            this.edtFecha.Location = new System.Drawing.Point(519, 239);
             this.edtFecha.Name = "edtFecha";
             this.edtFecha.Size = new System.Drawing.Size(226, 20);
             this.edtFecha.TabIndex = 41;
@@ -115,7 +115,7 @@
             // 
             // edtCelular
             // 
-            this.edtCelular.Location = new System.Drawing.Point(526, 160);
+            this.edtCelular.Location = new System.Drawing.Point(519, 140);
             this.edtCelular.Name = "edtCelular";
             this.edtCelular.Size = new System.Drawing.Size(226, 20);
             this.edtCelular.TabIndex = 40;
@@ -123,7 +123,7 @@
             // 
             // edtCorreo
             // 
-            this.edtCorreo.Location = new System.Drawing.Point(526, 231);
+            this.edtCorreo.Location = new System.Drawing.Point(519, 211);
             this.edtCorreo.Name = "edtCorreo";
             this.edtCorreo.Size = new System.Drawing.Size(226, 20);
             this.edtCorreo.TabIndex = 38;
@@ -131,7 +131,7 @@
             // 
             // edtIdEmpleado
             // 
-            this.edtIdEmpleado.Location = new System.Drawing.Point(236, 129);
+            this.edtIdEmpleado.Location = new System.Drawing.Point(229, 109);
             this.edtIdEmpleado.Name = "edtIdEmpleado";
             this.edtIdEmpleado.Size = new System.Drawing.Size(226, 20);
             this.edtIdEmpleado.TabIndex = 37;
@@ -140,7 +140,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(155, 163);
+            this.label10.Location = new System.Drawing.Point(148, 143);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 36;
@@ -149,7 +149,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(481, 163);
+            this.label9.Location = new System.Drawing.Point(474, 143);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(39, 13);
             this.label9.TabIndex = 35;
@@ -159,7 +159,7 @@
             // 
             this.cboxEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEspecialidad.FormattingEnabled = true;
-            this.cboxEspecialidad.Location = new System.Drawing.Point(236, 262);
+            this.cboxEspecialidad.Location = new System.Drawing.Point(229, 242);
             this.cboxEspecialidad.Name = "cboxEspecialidad";
             this.cboxEspecialidad.Size = new System.Drawing.Size(226, 21);
             this.cboxEspecialidad.TabIndex = 34;
@@ -168,7 +168,7 @@
             // 
             this.cboxCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCargo.FormattingEnabled = true;
-            this.cboxCargo.Location = new System.Drawing.Point(236, 230);
+            this.cboxCargo.Location = new System.Drawing.Point(229, 210);
             this.cboxCargo.Name = "cboxCargo";
             this.cboxCargo.Size = new System.Drawing.Size(226, 21);
             this.cboxCargo.TabIndex = 33;
@@ -176,7 +176,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(481, 195);
+            this.label8.Location = new System.Drawing.Point(474, 175);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 32;
@@ -185,7 +185,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(481, 233);
+            this.label6.Location = new System.Drawing.Point(474, 213);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 31;
@@ -194,7 +194,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(155, 195);
+            this.label5.Location = new System.Drawing.Point(148, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 30;
@@ -203,7 +203,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(155, 262);
+            this.label4.Location = new System.Drawing.Point(148, 242);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 29;
@@ -212,7 +212,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(481, 262);
+            this.label3.Location = new System.Drawing.Point(474, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 28;
@@ -221,7 +221,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(155, 233);
+            this.label7.Location = new System.Drawing.Point(148, 213);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 47;
@@ -230,7 +230,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 129);
+            this.label2.Location = new System.Drawing.Point(148, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(15, 13);
             this.label2.TabIndex = 46;
@@ -249,7 +249,7 @@
             // 
             this.cboxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEstado.FormattingEnabled = true;
-            this.cboxEstado.Location = new System.Drawing.Point(526, 195);
+            this.cboxEstado.Location = new System.Drawing.Point(519, 175);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(226, 21);
             this.cboxEstado.TabIndex = 49;
@@ -258,7 +258,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(379, 286);
+            this.label13.Location = new System.Drawing.Point(372, 271);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(139, 13);
             this.label13.TabIndex = 50;
@@ -268,7 +268,7 @@
             // 
             this.cboxServicioVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxServicioVehiculo.FormattingEnabled = true;
-            this.cboxServicioVehiculo.Location = new System.Drawing.Point(526, 283);
+            this.cboxServicioVehiculo.Location = new System.Drawing.Point(519, 263);
             this.cboxServicioVehiculo.Name = "cboxServicioVehiculo";
             this.cboxServicioVehiculo.Size = new System.Drawing.Size(226, 21);
             this.cboxServicioVehiculo.TabIndex = 51;

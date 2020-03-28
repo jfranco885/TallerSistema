@@ -22,6 +22,7 @@ namespace TallSys
         String edtcorreo;
         int cboxcargoInt;
         int cboxespecialidadInt;
+        int servicioVehiculo;
         String cboxcargo;
         String cboxespecialidad;
         String cboxestado;
@@ -43,7 +44,10 @@ namespace TallSys
             cboxEstado.Items.Add("Activo");
             cboxEstado.Items.Add("Inactivo");
 
-             // Utilidades.llenarComboBox("select idespecialidad, nombre_especialidad from especialidades", cboxEspecialidad, "nombre_especialidad","idespecialidad");
+            cboxServicioVehiculo.Items.Add("Si");
+            cboxServicioVehiculo.Items.Add("No");
+
+            // Utilidades.llenarComboBox("select idespecialidad, nombre_especialidad from especialidades", cboxEspecialidad, "nombre_especialidad","idespecialidad");
             //   Utilidades.llenarComboBox("select idcargo, cargo from cargo", cboxCargo, "cargo","idcargo");
 
             cboxEspecialidad.DataSource = Utilidades.llenarComboBox("select idespecialidad,nombre_especialidad from especialidades");
@@ -84,6 +88,15 @@ namespace TallSys
                 {
                     cboxestadoInt = 0;
                 }
+                //Serviciovehiculo
+                if (cboxServicioVehiculo.SelectedItem.ToString() == "Si")
+                {
+                    servicioVehiculo = 1;
+                }
+                else
+                {
+                    servicioVehiculo = 0;
+                }
 
                 edtcorreo = edtCorreo.Text.Trim();
 
@@ -95,8 +108,8 @@ namespace TallSys
                     try
                     {
                         String consulta = String.Format("EXEC insertarEmpleados '{0}','{1}','{2}','{3}'" +
-                            ",'{4}','{5}','{6}','{7}'", edtnombres, edtapellidos, edtdui, cboxcargoInt, cboxespecialidadInt,
-                            edtcorreo,edtcelular,cboxestadoInt);
+                            ",'{4}','{5}','{6}','{7}','{8}'", edtnombres, edtapellidos, edtdui, cboxcargoInt, cboxespecialidadInt,
+                            edtcorreo,edtcelular,cboxestadoInt,servicioVehiculo);
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se han guardado los datos");
 
@@ -125,6 +138,7 @@ namespace TallSys
             activarControlesE();
             edtNombre.Focus();
             cboxEstado.SelectedItem = "Activo";
+            cboxServicioVehiculo.SelectedItem = "Si";
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
@@ -138,13 +152,14 @@ namespace TallSys
 
                 String edtbuscar = edtBuscar.Text.Trim();
                 DataSet dt;
-                String consul = String.Format("Select idempleado as Código,nombres_empleado as Nombres,apellidos_empleado as Apellidos,dui as DUI,car.cargo as Cargo,esp.nombre_especialidad as Especialidad,correo as Correo,celular as Celular,estado as Estado,fecha_creacion as FechaCreación from empleados as emp inner join cargo as car on emp.idcargo=car.idcargo inner join especialidades as esp on emp.idespecialidad=esp.idespecialidad where dui='{0}'", edtbuscar);
+                String consul = String.Format("Select idempleado as Código,nombres_empleado as Nombres,apellidos_empleado as Apellidos,dui as DUI,car.cargo as Cargo,esp.nombre_especialidad as Especialidad,correo as Correo,celular as Celular,estado as Estado,fecha_creacion as FechaCreación,servicio_vehiculo from empleados as emp inner join cargo as car on emp.idcargo=car.idcargo inner join especialidades as esp on emp.idespecialidad=esp.idespecialidad where dui='{0}'", edtbuscar);
                 dt = Utilidades.Ejecutar(consul);
 
 
                 if (dt.Tables[0].Rows.Count > 0)
                 {
                     String estad = dt.Tables[0].Rows[0]["Estado"].ToString().Trim();
+                    String servVehiculo;
                     if (estad == "1")
                     {
                         estad = "Activo";
@@ -152,6 +167,15 @@ namespace TallSys
                     else
                     {
                         estad = "InActivo";
+                    }
+                    //para sel serviciovehiculo si o no
+                    if (dt.Tables[0].Rows[0]["servicio_vehiculo"].ToString().Trim() == "1")
+                    {
+                        servVehiculo = "Si";
+                    }
+                    else
+                    {
+                        servVehiculo = "No";
                     }
 
                     edtIdEmpleado.Text = (dt.Tables[0].Rows[0]["Código"].ToString().Trim());
@@ -163,6 +187,7 @@ namespace TallSys
                     cboxEspecialidad.Text = (dt.Tables[0].Rows[0]["Especialidad"].ToString().Trim());
                     cboxCargo.Text = (dt.Tables[0].Rows[0]["Cargo"].ToString().Trim());
                     cboxEstado.Text = (estad);
+                    cboxServicioVehiculo.Text = (servVehiculo);
                     edtFecha.Text = (dt.Tables[0].Rows[0]["FechaCreación"].ToString().Trim());
 
                     activarControlesE();
@@ -211,13 +236,22 @@ namespace TallSys
                     {
                         cboxestadoInt = 0;
                     }
+                    //Serviciovehiculo
+                    if (cboxServicioVehiculo.SelectedItem.ToString() == "Si")
+                    {
+                        servicioVehiculo = 1;
+                    }
+                    else
+                    {
+                        servicioVehiculo = 0;
+                    }
 
                     edtcorreo = edtCorreo.Text.Trim();
                     try
                     {
 
                         String consulta = String.Format("EXEC actualizarEmpleados '{0}','{1}','{2}','{3}'" +
-                                ",'{4}','{5}','{6}','{7}','{8}'", edtidempleado, edtnombres, edtapellidos, edtdui, cboxcargoInt, cboxespecialidadInt, edtcorreo, edtcelular, cboxestadoInt);
+                                ",'{4}','{5}','{6}','{7}','{8}','{9}'", edtidempleado, edtnombres, edtapellidos, edtdui, cboxcargoInt, cboxespecialidadInt, edtcorreo, edtcelular, cboxestadoInt,servicioVehiculo);
                         Utilidades.Ejecutar(consulta);
 
                         MessageBox.Show("Se actualizaron los datos");
@@ -261,6 +295,7 @@ namespace TallSys
             edtApellido.Enabled = false;
             cboxCargo.Enabled = false;
             cboxEspecialidad.Enabled = false;
+            cboxServicioVehiculo.Enabled = false;
             edtDui.Enabled = false;
             edtCelular.Enabled = false;
             cboxEstado.Enabled = false;
@@ -273,6 +308,7 @@ namespace TallSys
             edtApellido.Enabled = true;
             cboxCargo.Enabled = true;
             cboxEspecialidad.Enabled = true;
+            cboxServicioVehiculo.Enabled = true;
             edtDui.Enabled = true;
             edtCelular.Enabled = true;
             cboxEstado.Enabled = true;
