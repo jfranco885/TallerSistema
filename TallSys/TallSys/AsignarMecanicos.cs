@@ -41,7 +41,7 @@ namespace TallSys
                 {
                     //verificando si no esta empleado en otro servicio
                     Boolean disponible;
-                    String consular = String.Format("select idempleado from detalle_emp_serv where estado='{0}'", 1);
+                    String consular = String.Format("select estado from detalle_emp_serv where estado = 1 and idempleado='{0}'", idEmpleado);
                     disponible = Utilidades.Existe(consular);
 
                     if (disponible == false)
