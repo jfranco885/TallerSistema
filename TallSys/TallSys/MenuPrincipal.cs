@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiLibreria;
 
 namespace TallSys
 {
@@ -37,6 +38,33 @@ namespace TallSys
                 Application.Exit();
 
             }
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            string cmd = "select * from usuarios where idusuario="+Form1.codigo;
+            DataSet ds = Utilidades.Ejecutar(cmd);
+
+            txtUsuario.Text = ds.Tables[0].Rows[0]["usuario"].ToString().Trim();
+
+            if (Form1.rol == 1) {
+
+                btnAgregarServ.Visible = true;
+                btnMantenimientos.Visible = true;
+                btnReportes.Visible = true;
+                btnSalir.Visible = true;
+
+            }
+            else{
+                btnAgregarServ.Visible = true;
+                btnMantenimientos.Visible = true;
+                btnReportes.Visible = false;
+                btnSalir.Visible = true;
+
+            }
+
+
+
         }
     }
 }

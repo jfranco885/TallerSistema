@@ -32,8 +32,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtclave = new System.Windows.Forms.TextBox();
+            this.txtusuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,19 +69,19 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // txtclave
             // 
-            this.textBox2.Location = new System.Drawing.Point(257, 245);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtclave.Location = new System.Drawing.Point(257, 245);
+            this.txtclave.Name = "txtclave";
+            this.txtclave.Size = new System.Drawing.Size(125, 20);
+            this.txtclave.TabIndex = 9;
             // 
-            // textBox1
+            // txtusuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(257, 203);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtusuario.Location = new System.Drawing.Point(257, 203);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(125, 20);
+            this.txtusuario.TabIndex = 8;
             // 
             // label1
             // 
@@ -111,8 +111,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtclave);
+            this.Controls.Add(this.txtusuario);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -129,8 +129,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtclave;
+        private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIngresar;
     }

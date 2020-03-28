@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.btnMantenimientos = new System.Windows.Forms.Button();
             this.btnAgregarServ = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -106,16 +106,16 @@
             this.button4.Text = "PERFIL";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnReportes
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(452, 304);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(279, 159);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "REPORTES";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
+            this.btnReportes.Location = new System.Drawing.Point(452, 304);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(279, 159);
+            this.btnReportes.TabIndex = 18;
+            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.UseVisualStyleBackColor = true;
             // 
             // btnMantenimientos
             // 
@@ -150,7 +150,7 @@
             this.ClientSize = new System.Drawing.Size(1015, 544);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnMantenimientos);
             this.Controls.Add(this.btnAgregarServ);
             this.Controls.Add(this.groupBox1);
@@ -158,6 +158,7 @@
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -172,7 +173,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnMantenimientos;
         private System.Windows.Forms.Button btnAgregarServ;
     }
