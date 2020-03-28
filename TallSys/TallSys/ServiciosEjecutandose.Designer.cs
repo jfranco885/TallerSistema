@@ -31,26 +31,19 @@
             this.btnGestionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.edtIdServicio = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IdServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Testablecido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoDiag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridServEjecutandose = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridServEjecutandose)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGestionar
             // 
             this.btnGestionar.Location = new System.Drawing.Point(481, 93);
             this.btnGestionar.Name = "btnGestionar";
-            this.btnGestionar.Size = new System.Drawing.Size(75, 23);
+            this.btnGestionar.Size = new System.Drawing.Size(142, 23);
             this.btnGestionar.TabIndex = 2;
-            this.btnGestionar.Text = "Gestionar";
+            this.btnGestionar.Text = "Gestionar Servicio";
             this.btnGestionar.UseVisualStyleBackColor = true;
             this.btnGestionar.Click += new System.EventHandler(this.btnGestionar_Click);
             // 
@@ -69,71 +62,26 @@
             this.edtIdServicio.Name = "edtIdServicio";
             this.edtIdServicio.Size = new System.Drawing.Size(160, 20);
             this.edtIdServicio.TabIndex = 4;
+            this.edtIdServicio.TextChanged += new System.EventHandler(this.edtIdServicio_TextChanged);
             // 
-            // dataGridView1
+            // dataGridServEjecutandose
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdServicio,
-            this.Estado,
-            this.Cliente,
-            this.TipoServicio,
-            this.Testablecido,
-            this.Nave,
-            this.HoraInicio,
-            this.TiempoDiag});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 155);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(935, 265);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // IdServicio
-            // 
-            this.IdServicio.HeaderText = "IdServicio";
-            this.IdServicio.Name = "IdServicio";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            // 
-            // TipoServicio
-            // 
-            this.TipoServicio.HeaderText = "Tipo Servicio";
-            this.TipoServicio.Name = "TipoServicio";
-            // 
-            // Testablecido
-            // 
-            this.Testablecido.HeaderText = "Tiempo Establecido";
-            this.Testablecido.Name = "Testablecido";
-            // 
-            // Nave
-            // 
-            this.Nave.HeaderText = "Nave";
-            this.Nave.Name = "Nave";
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.Name = "HoraInicio";
-            // 
-            // TiempoDiag
-            // 
-            this.TiempoDiag.HeaderText = "TiempoDiagnosticado";
-            this.TiempoDiag.Name = "TiempoDiag";
+            this.dataGridServEjecutandose.AllowUserToAddRows = false;
+            this.dataGridServEjecutandose.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridServEjecutandose.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridServEjecutandose.Location = new System.Drawing.Point(0, 155);
+            this.dataGridServEjecutandose.Name = "dataGridServEjecutandose";
+            this.dataGridServEjecutandose.RowHeadersVisible = false;
+            this.dataGridServEjecutandose.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridServEjecutandose.Size = new System.Drawing.Size(935, 265);
+            this.dataGridServEjecutandose.TabIndex = 5;
             // 
             // ServiciosEjecutandose
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 456);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridServEjecutandose);
             this.Controls.Add(this.edtIdServicio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGestionar);
@@ -144,9 +92,10 @@
             this.Controls.SetChildIndex(this.btnGestionar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.edtIdServicio, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.dataGridServEjecutandose, 0);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridServEjecutandose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,14 +106,6 @@
         private System.Windows.Forms.Button btnGestionar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox edtIdServicio;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdServicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoServicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Testablecido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoDiag;
+        private System.Windows.Forms.DataGridView dataGridServEjecutandose;
     }
 }
