@@ -117,6 +117,7 @@
             // 
             // btnModelos
             // 
+            this.btnModelos.Image = global::TallSys.Properties.Resources.marca1;
             this.btnModelos.Location = new System.Drawing.Point(618, 254);
             this.btnModelos.Name = "btnModelos";
             this.btnModelos.Size = new System.Drawing.Size(75, 75);

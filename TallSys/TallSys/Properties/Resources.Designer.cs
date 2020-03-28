@@ -143,6 +143,16 @@ namespace TallSys.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap marca1 {
+            get {
+                object obj = ResourceManager.GetObject("marca1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nave {
             get {
                 object obj = ResourceManager.GetObject("nave", resourceCulture);

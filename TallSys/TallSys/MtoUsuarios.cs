@@ -19,6 +19,7 @@ namespace TallSys
         String edtusuario;
         String edtclave;
         String cboxrol;
+        String edtid;
         
         int cboxrolInt;
         int cboxempleadoInt;
@@ -30,7 +31,7 @@ namespace TallSys
         public MtoUsuarios()
         {
             InitializeComponent();
-
+            desactivarControlesE();
             tabla.DataSource = Utilidades.datasetLista("listarUsuarios").Tables[0];
         }
 
@@ -78,6 +79,8 @@ namespace TallSys
                         String consulta = String.Format("EXEC insertarUsuarios '{0}','{1}'" + ",'{2}','{3}'", edtusuario, llamar.PassHash(edtclave), cboxrolInt, cboxempleadoInt);
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se han guardado los datos");
+
+                        desactivarControlesE();
 
                         //tabla.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];//actualizando tabla
                     }
@@ -205,7 +208,7 @@ namespace TallSys
                 DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
                 if (resul == DialogResult.Yes)
                 {
-                    //edtId = edtId.Text.Trim();
+                    edtid = edtId.Text.Trim();
                     edtusuario = edtUsuario.Text.Trim();
                     edtclave = edtClave.Text.Trim();
                     // cboxcargo = cboxCargo.SelectedItem.ToString();
@@ -214,22 +217,23 @@ namespace TallSys
                     // cboxespecialidad =cboxEspecialidad.SelectedItem.ToString();
                     edtusuario = edtUsuario.Text.Trim();
                     edtclave = edtClave.Text.Trim();
-                    cboxrol = cboxRol.SelectedItem.ToString();
-                   /* if (cboxrol == "Admin" | cboxrol == "admin")
-                    {
-                        cboxrolInt = 1;
-                    }
-                    else
-                    {
-                        cboxrolInt = 0;
-                    }
-                   */
+                    //  cboxrol = cboxRol.SelectedItem.ToString();
+                    cboxrolInt = Convert.ToInt32(cboxRol.SelectedValue);
+                    /* if (cboxrol == "Admin" | cboxrol == "admin")
+                     {
+                         cboxrolInt = 1;
+                     }
+                     else
+                     {
+                         cboxrolInt = 0;
+                     }
+                    */
 
                     //edtcorreo = edtCorreo.Text.Trim();
                     try
                     {
 
-                        String consulta = String.Format("EXEC actualizarUsuarios '{0}','{1}'"+",'{2}','{3}'", edtusuario, edtclave,cboxrolInt, cboxempleadoInt);
+                        String consulta = String.Format("EXEC actualizarUsuarios '{0}','{1}'"+ ",'{2}','{3}','{4}'",edtId, edtusuario, edtclave,cboxrolInt, cboxempleadoInt);
                         Utilidades.Ejecutar(consulta);
 
                         MessageBox.Show("Se actualizaron los datos");
@@ -253,6 +257,7 @@ namespace TallSys
         private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             activarControlesE();
+            limpiarCampos();
         }
     }
     }

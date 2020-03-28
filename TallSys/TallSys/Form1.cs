@@ -26,6 +26,11 @@ namespace TallSys
         
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            if (validarCampo(txtusuario) | validarCampo(txtclave))
+            {
+                //mostrar ellor vacio
+            }
+            else { 
             try
             {
                 string cmd = string.Format("select * from usuarios where usuario='{0}' and clave='{1}'",txtusuario.Text.Trim(),llamar.PassHash(txtclave.Text.Trim()));
@@ -63,11 +68,23 @@ namespace TallSys
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hubo un error con la db"+ex.Message);
+                MessageBox.Show("Credenciales incorrectas");
             }
-            
-           
-            
+
+            }
+
         }
-    }
-}
+        //VALIDAR CAMPO VACÍO
+
+        public Boolean validarCampo(TextBox campo)
+        {
+            Boolean vacio = false;
+            if (campo.Text == "")
+            {
+                vacio = true;
+                errorProvider2.SetError(campo, "Debe ingresar datos");
+            }
+            return vacio;
+        }//fin validar campo vacío
+    }//fin clase
+}//fin proyecto
