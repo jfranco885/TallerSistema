@@ -9,7 +9,7 @@ namespace MiLibreria
 {
     public class Utilidades
     {
-
+        //clase principal
        
         
        public static SqlConnection con;

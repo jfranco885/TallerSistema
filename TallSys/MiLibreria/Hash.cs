@@ -8,7 +8,7 @@ using System.Text;
 namespace MiLibreria
 {
     public class Hash
-    {
+    {  //metodo par encriptar
         public string PassHash(string dato)
         {
             SHA1 sha = SHA1.Create();
