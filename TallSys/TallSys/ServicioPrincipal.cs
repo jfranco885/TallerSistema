@@ -145,9 +145,11 @@ namespace TallSys
 
                 try
                 {
-                    //define connection and command, in using blocks to ensure disposal
-                    using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True"))
-                    using (SqlCommand cmd = new SqlCommand("dbo.insertarEncab_DetVehiculo", conn))
+                    SqlConnection con = Utilidades.con;
+                    
+                    // using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True"))
+                    
+                    using (SqlCommand cmd = new SqlCommand("dbo.insertarEncab_DetVehiculo", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -159,11 +161,11 @@ namespace TallSys
 
 
                         // open connection and execute stored procedure
-                        conn.Open();
+                        con.Open();
                         cmd.ExecuteNonQuery();
 
                         // read output value from @NewId                      
-                        conn.Close();
+                        con.Close();
                         int idSerGenerado = Convert.ToInt32(cmd.Parameters["@idServicioEncabezado"].Value);
                         edtCodigoSer.Text = idSerGenerado.ToString();
                         edtCodigoServicio.Text = idSerGenerado.ToString();

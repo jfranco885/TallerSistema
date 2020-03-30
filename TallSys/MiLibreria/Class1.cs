@@ -12,19 +12,26 @@ namespace MiLibreria
         //clase principal
        
         
-       public static SqlConnection con;
+       public static SqlConnection con= new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");
         public static DataSet Ejecutar(String consulta)
         {
-            con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");//DESKTOP-G2V0SUK\\SQLEXPRESS
-
-            con.Open();
-          
-            //  MessageBox.Show("Conexión con éxito");
+            //  con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");//DESKTOP-G2V0SUK\\SQLEXPRESS
             DataSet dataSet = new DataSet();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(consulta, con);
-            
-            sqlDataAdapter.Fill(dataSet);//llenando el dataset
-            con.Close();//cerrando conexión
+            try
+            {
+                con.Open();
+
+                //  MessageBox.Show("Conexión con éxito");
+               
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(consulta, con);
+
+                sqlDataAdapter.Fill(dataSet);//llenando el dataset
+                con.Close();//cerrando conexión
+            }catch(Exception err)
+            {
+                MessageBox.Show("Error" + err.Message);
+            }
+           
             
             return dataSet;
         }//Min Ejecutar
@@ -92,9 +99,16 @@ namespace MiLibreria
         //Eliminar registro
         public static void eliminarRegistro(String tablaDbNombreProcedure, String id)
         {
-            String consulta = String.Format("exec eliminar"+ tablaDbNombreProcedure + " '{0}'",id);
-            Ejecutar(consulta);
-            MessageBox.Show("Se ha eliminado el registro");
+            try
+            {
+                String consulta = String.Format("exec eliminar" + tablaDbNombreProcedure + " '{0}'", id);
+                Ejecutar(consulta);
+                MessageBox.Show("Se ha eliminado el registro");
+            }catch(Exception err)
+            {
+                MessageBox.Show("Hubo error"+err.Message);
+            }
+           
         }
 
         //llenar combobox
