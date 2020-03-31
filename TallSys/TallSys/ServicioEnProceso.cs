@@ -37,8 +37,10 @@ namespace TallSys
 
         private void btnGestionar_Click(object sender, EventArgs e)
         {
-            MtoCambioPiezas mtoCambioPiezas = new MtoCambioPiezas();
-            mtoCambioPiezas.Show();
+            GestionarCambioPiezas gestionarCambioPiezas = new GestionarCambioPiezas();
+            gestionarCambioPiezas.edtServicio.Text = txtServicio.Text.Trim();
+            gestionarCambioPiezas.dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarCambioPiezaPorIdServicio", Convert.ToInt16(txtServicio.Text.Trim())).Tables[0];
+            gestionarCambioPiezas.Show();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

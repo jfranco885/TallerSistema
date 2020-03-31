@@ -15,6 +15,7 @@ namespace TallSys
         public GestionarCambioPiezas()
         {
             InitializeComponent();
+            edtServicio.Enabled = false;
         }
     }
 }

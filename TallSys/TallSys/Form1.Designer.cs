@@ -78,6 +78,7 @@
             this.txtclave.Name = "txtclave";
             this.txtclave.Size = new System.Drawing.Size(125, 20);
             this.txtclave.TabIndex = 9;
+            this.txtclave.Text = "123";
             // 
             // txtusuario
             // 
@@ -85,6 +86,7 @@
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(125, 20);
             this.txtusuario.TabIndex = 8;
+            this.txtusuario.Text = "jfranco";
             // 
             // label1
             // 
