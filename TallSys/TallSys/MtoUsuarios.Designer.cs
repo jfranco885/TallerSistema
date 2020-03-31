@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboxEmpleado = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -137,11 +138,21 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Empleado";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(618, 166);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(239, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Crear boton buscar y validar si existe el empleado";
+            // 
             // MtoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 478);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.cboxEmpleado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cboxRol);
@@ -173,6 +184,7 @@
             this.Controls.SetChildIndex(this.cboxRol, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.cboxEmpleado, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -192,5 +204,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboxEmpleado;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

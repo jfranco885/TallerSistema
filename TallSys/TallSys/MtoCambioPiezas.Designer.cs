@@ -33,10 +33,15 @@
             this.edtRepuesto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.edtDetalleServicio = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.edtServicio = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(247, 79);
             // 
             // btnBuscar
             // 
@@ -68,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 240);
+            this.label3.Location = new System.Drawing.Point(12, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 18;
@@ -83,20 +88,29 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Nombre Repuesto";
             // 
-            // edtDetalleServicio
+            // label5
             // 
-            this.edtDetalleServicio.FormattingEnabled = true;
-            this.edtDetalleServicio.Location = new System.Drawing.Point(375, 237);
-            this.edtDetalleServicio.Name = "edtDetalleServicio";
-            this.edtDetalleServicio.Size = new System.Drawing.Size(270, 21);
-            this.edtDetalleServicio.TabIndex = 21;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(293, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Id Servicio";
+            // 
+            // edtServicio
+            // 
+            this.edtServicio.Location = new System.Drawing.Point(36, 116);
+            this.edtServicio.Name = "edtServicio";
+            this.edtServicio.Size = new System.Drawing.Size(161, 20);
+            this.edtServicio.TabIndex = 23;
             // 
             // MtoCambioPiezas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 474);
-            this.Controls.Add(this.edtDetalleServicio);
+            this.Controls.Add(this.edtServicio);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.edtRepuesto);
             this.Controls.Add(this.label3);
@@ -118,7 +132,8 @@
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.edtRepuesto, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.edtDetalleServicio, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.edtServicio, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -133,6 +148,7 @@
         private System.Windows.Forms.TextBox edtRepuesto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox edtDetalleServicio;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox edtServicio;
     }
 }
