@@ -169,12 +169,12 @@
 
         public System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label txtUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnMantenimientos;
         private System.Windows.Forms.Button btnAgregarServ;
+        public System.Windows.Forms.Label txtUsuario;
     }
 }

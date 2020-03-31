@@ -58,21 +58,21 @@
             // cboxRol
             // 
             this.cboxRol.FormattingEnabled = true;
-            this.cboxRol.Location = new System.Drawing.Point(390, 234);
+            this.cboxRol.Location = new System.Drawing.Point(390, 271);
             this.cboxRol.Name = "cboxRol";
             this.cboxRol.Size = new System.Drawing.Size(222, 21);
             this.cboxRol.TabIndex = 28;
             // 
             // edtUsuario
             // 
-            this.edtUsuario.Location = new System.Drawing.Point(390, 160);
+            this.edtUsuario.Location = new System.Drawing.Point(390, 197);
             this.edtUsuario.Name = "edtUsuario";
             this.edtUsuario.Size = new System.Drawing.Size(222, 20);
             this.edtUsuario.TabIndex = 26;
             // 
             // edtClave
             // 
-            this.edtClave.Location = new System.Drawing.Point(390, 195);
+            this.edtClave.Location = new System.Drawing.Point(390, 232);
             this.edtClave.Name = "edtClave";
             this.edtClave.Size = new System.Drawing.Size(222, 20);
             this.edtClave.TabIndex = 25;
@@ -87,7 +87,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(285, 163);
+            this.label5.Location = new System.Drawing.Point(285, 200);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 22;
@@ -96,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(285, 234);
+            this.label4.Location = new System.Drawing.Point(285, 271);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 13);
             this.label4.TabIndex = 21;
@@ -105,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(285, 195);
+            this.label3.Location = new System.Drawing.Point(285, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 20;
@@ -123,7 +123,7 @@
             // cboxEmpleado
             // 
             this.cboxEmpleado.FormattingEnabled = true;
-            this.cboxEmpleado.Location = new System.Drawing.Point(390, 274);
+            this.cboxEmpleado.Location = new System.Drawing.Point(390, 158);
             this.cboxEmpleado.Name = "cboxEmpleado";
             this.cboxEmpleado.Size = new System.Drawing.Size(222, 21);
             this.cboxEmpleado.TabIndex = 30;
@@ -131,7 +131,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(285, 274);
+            this.label6.Location = new System.Drawing.Point(285, 158);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 29;

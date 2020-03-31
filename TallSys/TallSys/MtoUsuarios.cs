@@ -13,7 +13,7 @@ namespace TallSys
 {
     public partial class MtoUsuarios : ContenedorMantenimientos
     {
-        Hash llamar = new Hash();
+       // Hash llamar = new Hash();
 
         //private String edtidusuario;
         String edtusuario;
@@ -65,7 +65,7 @@ namespace TallSys
                 cboxempleadoInt = Convert.ToInt32(cboxEmpleado.SelectedValue);
                 // cboxespecialidad =cboxEspecialidad.SelectedItem.ToString();
 
-
+                
                 //Serviciovehiculo
 
                 String consul = String.Format("select *from usuarios where usuario='{0}'", edtusuario);
@@ -76,13 +76,13 @@ namespace TallSys
                     try
                     {
                        // string datoClave = llamar.PassHash(edtclave);
-                        String consulta = String.Format("EXEC insertarUsuarios '{0}','{1}'" + ",'{2}','{3}'", edtusuario, llamar.PassHash(edtclave), cboxrolInt, cboxempleadoInt);
+                        String consulta = String.Format("EXEC insertarUsuarios '{0}','{1}'" + ",'{2}','{3}'", edtusuario, edtclave, cboxrolInt, cboxempleadoInt);
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se han guardado los datos");
 
                         desactivarControlesE();
 
-                        //tabla.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];//actualizando tabla
+                        tabla.DataSource = Utilidades.datasetLista("listarUsuarios").Tables[0];//actualizando tabla
                     }
                     catch (Exception errorGuardarC)
                     {
@@ -109,8 +109,7 @@ namespace TallSys
 
                 String edtbuscar = edtBuscar.Text.Trim();
                 DataSet dt;
-                String consul = String.Format("Select idusuario as Código,usuario as Usuario,clave as Clave,ro.rol as Rol,emp.nombres_empleado as Empleado from usuarios as us inner join roles as ro on us.idrol=ro.idrol inner join empleados as emp on us.idempleado=emp.idempleado where usuario='{0}'",edtBuscar.Text);
-                dt = Utilidades.Ejecutar(consul);
+                dt = Utilidades.datasetConsultarProcedureConCadena("consultarUsuarios", edtbuscar);
 
                 if (dt.Tables[0].Rows.Count > 0)
                 {
@@ -166,35 +165,7 @@ namespace TallSys
 
         }
 
-        private void desactivarControlesE()
-        {
-            edtId.Enabled = false;
-            edtUsuario.Enabled = false;
-            cboxRol.Enabled = false;
-            cboxEmpleado.Enabled = false;
-            edtClave.Enabled = false;
-            
-        }
-        private void activarControlesE()
-        {
-            edtId.Enabled = true;
-            edtUsuario.Enabled = true;
-            cboxRol.Enabled = true;
-            cboxEmpleado.Enabled = true;
-            edtClave.Enabled = true;
-
-        }
-
-        private void limpiarCampos()
-        {
-            edtBuscar.Text = "";
-            edtId.Text = "";
-            edtUsuario.Text = "";
-            edtClave.Text = "";
-            cboxRol.Text = "";
-            cboxEmpleado.Text = "";
-            
-        }
+      
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
@@ -208,32 +179,19 @@ namespace TallSys
                 DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
                 if (resul == DialogResult.Yes)
                 {
+                    edtusuario = edtUsuario.Text.Trim();
+                    edtclave = edtClave.Text.Trim();                   
+                    cboxrolInt = Convert.ToInt32(cboxRol.SelectedValue);                     
+                    string empleado = cboxEmpleado.SelectedValue.ToString();
                     edtid = edtId.Text.Trim();
-                    edtusuario = edtUsuario.Text.Trim();
-                    edtclave = edtClave.Text.Trim();
-                    // cboxcargo = cboxCargo.SelectedItem.ToString();
-                    cboxrolInt = Convert.ToInt32(cboxRol.SelectedValue);
-                    cboxempleadoInt = Convert.ToInt32(cboxEmpleado.SelectedValue);
-                    // cboxespecialidad =cboxEspecialidad.SelectedItem.ToString();
-                    edtusuario = edtUsuario.Text.Trim();
-                    edtclave = edtClave.Text.Trim();
-                    //  cboxrol = cboxRol.SelectedItem.ToString();
-                    cboxrolInt = Convert.ToInt32(cboxRol.SelectedValue);
-                    /* if (cboxrol == "Admin" | cboxrol == "admin")
-                     {
-                         cboxrolInt = 1;
-                     }
-                     else
-                     {
-                         cboxrolInt = 0;
-                     }
-                    */
 
-                    //edtcorreo = edtCorreo.Text.Trim();
+                   // MessageBox.Show("empleado"+empleado);
+                
+             
                     try
                     {
 
-                        String consulta = String.Format("EXEC actualizarUsuarios '{0}','{1}'"+ ",'{2}','{3}','{4}'",edtId, edtusuario, edtclave,cboxrolInt, cboxempleadoInt);
+                        String consulta = String.Format("EXEC actualizarUsuarios '{0}','{1}','{2}','{3}','{4}'",edtid, edtusuario, edtclave,cboxrolInt, empleado);
                         Utilidades.Ejecutar(consulta);
 
                         MessageBox.Show("Se actualizaron los datos");
@@ -258,6 +216,35 @@ namespace TallSys
         {
             activarControlesE();
             limpiarCampos();
+        }
+        private void desactivarControlesE()
+        {
+            edtId.Enabled = false;
+            edtUsuario.Enabled = false;
+            cboxRol.Enabled = false;
+            cboxEmpleado.Enabled = false;
+            edtClave.Enabled = false;
+
+        }
+        private void activarControlesE()
+        {
+            // edtId.Enabled = true;
+            edtUsuario.Enabled = true;
+            cboxRol.Enabled = true;
+            cboxEmpleado.Enabled = true;
+            edtClave.Enabled = true;
+
+        }
+
+        private void limpiarCampos()
+        {
+            edtBuscar.Text = "";
+            edtId.Text = "";
+            edtUsuario.Text = "";
+            edtClave.Text = "";
+            cboxRol.Text = "";
+            cboxEmpleado.Text = "";
+
         }
     }
     }

@@ -95,7 +95,24 @@ namespace MiLibreria
 
             return dt;
         }
+        public static DataSet datasetConsultarProcedureConCadena(String procedimientoConsultar, String variable)
+        {
+            DataSet dt = null;
+            try
+            {
+                String consulta = String.Format("exec " + procedimientoConsultar + " '{0}'", variable);
 
+                dt = Ejecutar(consulta);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error al al hacer la consulta" + err.Message);
+            }
+
+
+
+            return dt;
+        }
         //Eliminar registro
         public static void eliminarRegistro(String tablaDbNombreProcedure, String id)
         {

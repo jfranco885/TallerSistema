@@ -14,15 +14,18 @@ namespace TallSys
 {
     public partial class Form1 : Form
     {
-        Hash llamar = new Hash();
+        public static string codigo = "";
+        public static string eltipo = "";
+        public static int rol = 0;
+        public static string nombreUsuario = "";
+
+       // Hash llamar = new Hash();
         public Form1()
         {
             InitializeComponent();
         }
 
-        public static string codigo = "";
-        public static string eltipo = "";
-        public static int rol=0;
+       
         
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -33,42 +36,74 @@ namespace TallSys
             else { 
             try
             {
-                string cmd = string.Format("select * from usuarios where usuario='{0}' and clave='{1}'",txtusuario.Text.Trim(),llamar.PassHash(txtclave.Text.Trim()));
-              DataSet  ds = Utilidades.Ejecutar(cmd);
+                    
+                      //  SqlConnection con = Utilidades.con;
 
-                codigo = ds.Tables[0].Rows[0]["idusuario"].ToString().Trim();
-                string usuario = ds.Tables[0].Rows[0]["usuario"].ToString().Trim();
-                string clave = ds.Tables[0].Rows[0]["clave"].ToString().Trim();
-                rol = Convert.ToInt32(eltipo=ds.Tables[0].Rows[0]["idrol"].ToString().Trim());
+                     using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True"))
 
-                if (usuario==txtusuario.Text.Trim() && clave == llamar.PassHash(txtclave.Text.Trim())) {
-
-                    if (rol==1) {
-                     MenuPrincipal menuPrincipal = new MenuPrincipal();
-                     this.Hide();
-                      menuPrincipal.Show();
-
-                    }
-                    else
+                    using (SqlCommand cmd = new SqlCommand("dbo.loginUsuario", conn))
                     {
-                        MenuPrincipal menuPrincipal = new MenuPrincipal();
-                        this.Hide();
-                        menuPrincipal.Show();
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                        // MessageBox.Show("Bienvenido Usuario"+usuario);
-                    }
+                        //Paráetros de entrada
+                        cmd.Parameters.AddWithValue("@usuario", txtusuario.Text.Trim());
+                        cmd.Parameters.AddWithValue("@clave", txtclave.Text.Trim());
+                        //Parámetro de salida
+                        cmd.Parameters.Add("@Result", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("@rol", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("@nombre", SqlDbType.VarChar,50).Direction = ParameterDirection.Output;
+
+
+                        // open connection and execute stored procedure
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+
+                        // read output value from @NewId                      
+                        conn.Close();
+                        int resultado = Convert.ToInt32(cmd.Parameters["@Result"].Value);                     
+
+               
+                        //validando la respuesta
+                        if (resultado == 1)
+                        {
+                            rol = Convert.ToInt32(cmd.Parameters["@rol"].Value);
+                            nombreUsuario = Convert.ToString(cmd.Parameters["@nombre"].Value);
+
+                            MenuPrincipal menuPrincipal = new MenuPrincipal();
+                            this.Hide();
+                            menuPrincipal.Show();
+                            //Validando el rol, Traer el rol en una variable de retorno
+                           
+                            if (rol == 1)
+                                {
+                                   
+                                    this.Hide();
+                                    menuPrincipal.Show();
+
+                                }
+                                else
+                                {
+                                   
+                                    this.Hide();
+                                    menuPrincipal.Show();
+
+                                    // MessageBox.Show("Bienvenido Usuario"+usuario);
+                                }
+
+                            menuPrincipal.txtUsuario.Text = nombreUsuario;
+                                
+                        }
+                        else
+                        {
+                            MessageBox.Show("EL usuario o contraseña son incorrectos....!!!!");
+                        }
+
+                    }                  
 
                 }
-                else{
-                    MessageBox.Show("EL usuario o contraseña son incorrectos....!!!!");
-                }
-
-
-                
-            }
-            catch (Exception ex)
+                catch (Exception ex)
             {
-                MessageBox.Show("Credenciales incorrectas");
+                MessageBox.Show("Ha habido un problema"+ex.Message);
             }
 
             }
