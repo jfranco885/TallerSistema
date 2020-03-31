@@ -71,6 +71,7 @@
             this.dataGridServEjecutandose.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridServEjecutandose.Location = new System.Drawing.Point(0, 155);
             this.dataGridServEjecutandose.Name = "dataGridServEjecutandose";
+            this.dataGridServEjecutandose.ReadOnly = true;
             this.dataGridServEjecutandose.RowHeadersVisible = false;
             this.dataGridServEjecutandose.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridServEjecutandose.Size = new System.Drawing.Size(935, 265);

@@ -111,6 +111,7 @@
             this.dataGridVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridVehiculos.Location = new System.Drawing.Point(87, 269);
             this.dataGridVehiculos.Name = "dataGridVehiculos";
+            this.dataGridVehiculos.ReadOnly = true;
             this.dataGridVehiculos.RowHeadersVisible = false;
             this.dataGridVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridVehiculos.Size = new System.Drawing.Size(766, 150);

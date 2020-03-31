@@ -56,6 +56,7 @@
             this.edtIdTipoServicio = new System.Windows.Forms.TextBox();
             this.edtDescripcion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).BeginInit();
@@ -189,6 +190,8 @@
             this.dataGridRepuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridRepuesto.Location = new System.Drawing.Point(667, 346);
             this.dataGridRepuesto.Name = "dataGridRepuesto";
+            this.dataGridRepuesto.ReadOnly = true;
+            this.dataGridRepuesto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridRepuesto.Size = new System.Drawing.Size(261, 80);
             this.dataGridRepuesto.TabIndex = 24;
             // 
@@ -302,11 +305,22 @@
             this.label12.TabIndex = 40;
             this.label12.Text = "Descripción";
             // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(689, 317);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(75, 23);
+            this.btnMostrar.TabIndex = 41;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
             // txtIdServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 458);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.edtDescripcion);
             this.Controls.Add(this.edtIdTipoServicio);
@@ -367,6 +381,7 @@
             this.Controls.SetChildIndex(this.edtIdTipoServicio, 0);
             this.Controls.SetChildIndex(this.edtDescripcion, 0);
             this.Controls.SetChildIndex(this.label12, 0);
+            this.Controls.SetChildIndex(this.btnMostrar, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).EndInit();
@@ -405,5 +420,6 @@
         public System.Windows.Forms.TextBox edtDescripcion;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label txtEncabezado;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }

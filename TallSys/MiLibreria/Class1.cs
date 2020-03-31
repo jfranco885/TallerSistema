@@ -13,7 +13,7 @@ namespace MiLibreria
        
         //Prueba de conexion este mensaje fue agregado 31/03/2020  a las 11:31
 
-       public static SqlConnection con= new SqlConnection("Data Source=.;Initial Catalog=tallerdb;Integrated Security=True");
+       public static SqlConnection con= new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");
         public static DataSet Ejecutar(String consulta)
         {
             //  con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");//DESKTOP-G2V0SUK\\SQLEXPRESS
@@ -31,6 +31,7 @@ namespace MiLibreria
             }catch(Exception err)
             {
                 MessageBox.Show("Error" + err.Message);
+              
             }
            
             
@@ -178,16 +179,7 @@ namespace MiLibreria
            }
 
 
-        /// TRES TRISTE TIGRES COMEN EN TRES TRISTES TRATES Y NO ME ACUERDO LO DEMAS JAJAJAJJA
-        /// //comentario franco
-
-       //comentario franco 2
-        // Habia una vez una niña con una capa roja que le gustaba cazar zorros.
-
-
-
-        // Blanca nieves es una enanita que tiene como amigos a 7 gignates
-
+        
 
 
 

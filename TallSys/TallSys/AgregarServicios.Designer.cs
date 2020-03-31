@@ -225,6 +225,7 @@
             this.dataGridServiciosAgregados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridServiciosAgregados.Location = new System.Drawing.Point(16, 229);
             this.dataGridServiciosAgregados.Name = "dataGridServiciosAgregados";
+            this.dataGridServiciosAgregados.ReadOnly = true;
             this.dataGridServiciosAgregados.RowHeadersVisible = false;
             this.dataGridServiciosAgregados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridServiciosAgregados.Size = new System.Drawing.Size(520, 150);

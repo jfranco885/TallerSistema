@@ -86,5 +86,11 @@ namespace TallSys
             }
             
         }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarCambioPiezaPorIdServicio", Convert.ToInt16(txtServicio.Text.Trim())).Tables[0];
+
+        }
     }//fin clase
 }//fin proyecto

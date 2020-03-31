@@ -38,6 +38,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
+            this.edtCantidad = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).BeginInit();
@@ -78,6 +80,7 @@
             this.edtRepuesto.Name = "edtRepuesto";
             this.edtRepuesto.Size = new System.Drawing.Size(270, 20);
             this.edtRepuesto.TabIndex = 28;
+            this.edtRepuesto.TextChanged += new System.EventHandler(this.edtRepuesto_TextChanged);
             // 
             // edtidCambio
             // 
@@ -102,8 +105,11 @@
             this.dataGridRepuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridRepuesto.Location = new System.Drawing.Point(117, 289);
             this.dataGridRepuesto.Name = "dataGridRepuesto";
+            this.dataGridRepuesto.ReadOnly = true;
+            this.dataGridRepuesto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridRepuesto.Size = new System.Drawing.Size(465, 129);
             this.dataGridRepuesto.TabIndex = 31;
+            this.dataGridRepuesto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EnviarDatos);
             // 
             // btnEditar
             // 
@@ -113,6 +119,7 @@
             this.btnEditar.TabIndex = 30;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -122,6 +129,7 @@
             this.btnGuardar.TabIndex = 32;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
@@ -131,12 +139,32 @@
             this.btnEliminar.TabIndex = 33;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(124, 263);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(49, 13);
+            this.label.TabIndex = 35;
+            this.label.Text = "Cantidad";
+            // 
+            // edtCantidad
+            // 
+            this.edtCantidad.Location = new System.Drawing.Point(230, 260);
+            this.edtCantidad.Name = "edtCantidad";
+            this.edtCantidad.Size = new System.Drawing.Size(270, 20);
+            this.edtCantidad.TabIndex = 34;
+            this.edtCantidad.TextChanged += new System.EventHandler(this.edtCantidad_TextChanged);
             // 
             // GestionarCambioPiezas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 450);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.edtCantidad);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dataGridRepuesto);
@@ -149,7 +177,6 @@
             this.Controls.Add(this.label3);
             this.Name = "GestionarCambioPiezas";
             this.Text = "GestionarCambioPiezas";
-            this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.edtServicio, 0);
             this.Controls.SetChildIndex(this.label2, 0);
@@ -160,6 +187,9 @@
             this.Controls.SetChildIndex(this.dataGridRepuesto, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.btnEliminar, 0);
+            this.Controls.SetChildIndex(this.edtCantidad, 0);
+            this.Controls.SetChildIndex(this.label, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).EndInit();
@@ -179,5 +209,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.TextBox edtServicio;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox edtCantidad;
     }
 }

@@ -83,6 +83,7 @@
             this.dataGridMecSinAsignar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridMecSinAsignar.Location = new System.Drawing.Point(516, 132);
             this.dataGridMecSinAsignar.Name = "dataGridMecSinAsignar";
+            this.dataGridMecSinAsignar.ReadOnly = true;
             this.dataGridMecSinAsignar.RowHeadersVisible = false;
             this.dataGridMecSinAsignar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridMecSinAsignar.Size = new System.Drawing.Size(437, 263);
@@ -102,6 +103,7 @@
             this.dataGridMecanicoAsignado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridMecanicoAsignado.Location = new System.Drawing.Point(25, 132);
             this.dataGridMecanicoAsignado.Name = "dataGridMecanicoAsignado";
+            this.dataGridMecanicoAsignado.ReadOnly = true;
             this.dataGridMecanicoAsignado.RowHeadersVisible = false;
             this.dataGridMecanicoAsignado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridMecanicoAsignado.Size = new System.Drawing.Size(437, 263);
