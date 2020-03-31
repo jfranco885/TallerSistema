@@ -28,27 +28,156 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.edtServicio = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.edtRepuesto = new System.Windows.Forms.TextBox();
+            this.edtidCambio = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridRepuesto = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(616, 12);
             // 
+            // edtServicio
+            // 
+            this.edtServicio.Location = new System.Drawing.Point(38, 95);
+            this.edtServicio.Name = "edtServicio";
+            this.edtServicio.Size = new System.Drawing.Size(161, 20);
+            this.edtServicio.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Id Servicio";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(124, 219);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Nombre Repuesto";
+            // 
+            // edtRepuesto
+            // 
+            this.edtRepuesto.Location = new System.Drawing.Point(230, 216);
+            this.edtRepuesto.Name = "edtRepuesto";
+            this.edtRepuesto.Size = new System.Drawing.Size(270, 20);
+            this.edtRepuesto.TabIndex = 28;
+            // 
+            // edtidCambio
+            // 
+            this.edtidCambio.Location = new System.Drawing.Point(230, 164);
+            this.edtidCambio.Name = "edtidCambio";
+            this.edtidCambio.Size = new System.Drawing.Size(270, 20);
+            this.edtidCambio.TabIndex = 27;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(124, 167);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Código Cambio";
+            // 
+            // dataGridRepuesto
+            // 
+            this.dataGridRepuesto.AllowUserToAddRows = false;
+            this.dataGridRepuesto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridRepuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridRepuesto.Location = new System.Drawing.Point(117, 289);
+            this.dataGridRepuesto.Name = "dataGridRepuesto";
+            this.dataGridRepuesto.Size = new System.Drawing.Size(465, 129);
+            this.dataGridRepuesto.TabIndex = 31;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(579, 162);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 30;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(579, 260);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 32;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(579, 214);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 33;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
             // GestionarCambioPiezas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 450);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.dataGridRepuesto);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.edtRepuesto);
+            this.Controls.Add(this.edtidCambio);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.edtServicio);
+            this.Controls.Add(this.label3);
             this.Name = "GestionarCambioPiezas";
             this.Text = "GestionarCambioPiezas";
+            this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.edtServicio, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.edtidCambio, 0);
+            this.Controls.SetChildIndex(this.edtRepuesto, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.btnEditar, 0);
+            this.Controls.SetChildIndex(this.dataGridRepuesto, 0);
+            this.Controls.SetChildIndex(this.btnGuardar, 0);
+            this.Controls.SetChildIndex(this.btnEliminar, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox edtRepuesto;
+        private System.Windows.Forms.TextBox edtidCambio;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.DataGridView dataGridRepuesto;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.TextBox edtServicio;
     }
 }

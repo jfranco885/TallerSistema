@@ -43,7 +43,8 @@ namespace TallSys
                     txtIdServicio servicioEnProceso = new txtIdServicio();
                     //enviando datos al otro formulario
                     servicioEnProceso.txtServicio.Text = edtIdServicio.Text.Trim();
-                    servicioEnProceso.dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarRepuestoPorIdservicio", Convert.ToInt16(edtIdServicio.Text.Trim())).Tables[0];
+                    servicioEnProceso.dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarCambioPiezaPorIdServicio", Convert.ToInt16(edtIdServicio.Text.Trim())).Tables[0];
+
 
                     DataSet dt;
                     dt = Utilidades.datasetConsultarProcedure("listarServiciosEnProceso", Convert.ToInt16(edtIdServicio.Text.Trim()));
