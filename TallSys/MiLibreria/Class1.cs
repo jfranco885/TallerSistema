@@ -12,7 +12,7 @@ namespace MiLibreria
         //clase principal
        
         
-       public static SqlConnection con= new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");
+       public static SqlConnection con= new SqlConnection("Data Source=.;Initial Catalog=tallerdb;Integrated Security=True");
         public static DataSet Ejecutar(String consulta)
         {
             //  con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");//DESKTOP-G2V0SUK\\SQLEXPRESS
