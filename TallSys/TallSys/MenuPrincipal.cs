@@ -13,11 +13,14 @@ namespace TallSys
 {
     public partial class MenuPrincipal : Form
     {
+       
         public MenuPrincipal()
         {
             InitializeComponent();
+           
+            
         }
-
+        
         private void btnMantenimientos_Click(object sender, EventArgs e)
         {
             MenuMantenimientos menuMantenimientos =new MenuMantenimientos();
@@ -42,10 +45,12 @@ namespace TallSys
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-           // string cmd = "select * from usuarios where idusuario="+Form1.codigo;
-          //  DataSet ds = Utilidades.Ejecutar(cmd);
+            // string cmd = "select * from usuarios where idusuario="+Form1.codigo;
+            //  DataSet ds = Utilidades.Ejecutar(cmd);
 
-          //  txtUsuario.Text = ds.Tables[0].Rows[0]["usuario"].ToString().Trim();
+            //  txtUsuario.Text = ds.Tables[0].Rows[0]["usuario"].ToString().Trim();
+
+           
 
             if (Form1.rol == 1) {
 

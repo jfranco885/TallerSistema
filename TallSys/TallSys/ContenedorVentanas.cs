@@ -12,9 +12,11 @@ namespace TallSys
 {
     public partial class ContenedorVentanas : Form
     {
+        MenuPrincipal menuPrincipal= new MenuPrincipal();
         public ContenedorVentanas()
         {
             InitializeComponent();
+           
         }
 
         private void ContenedorVentanas_Load(object sender, EventArgs e)

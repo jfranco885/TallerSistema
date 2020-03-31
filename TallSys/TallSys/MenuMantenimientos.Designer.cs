@@ -385,7 +385,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 471);
+            this.ClientSize = new System.Drawing.Size(972, 471);
             this.Controls.Add(this.groupBox2);
             this.Name = "MenuMantenimientos";
             this.Text = "MenuMantenimientos";

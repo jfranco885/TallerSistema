@@ -91,7 +91,9 @@ namespace TallSys
                                 }
 
                             menuPrincipal.txtUsuario.Text = nombreUsuario;
-                                
+
+                           
+                           
                         }
                         else
                         {
