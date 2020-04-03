@@ -48,12 +48,12 @@ namespace TallSys
 
             // double i = Convert.ToDouble(n, provider);
             // NumberFormatInfo cultures = new CultureInfo("en-US", false).NumberFormat; 
-          //  CultureInfo cultures = new CultureInfo("en-US");
-          //  String n = "22222.50";
-          //  decimal i = Decimal.Parse(n, cultures);
-          //  i = i * Convert.ToDecimal(2.3);
-          //  MessageBox.Show(i.ToString());
-            
+            //  CultureInfo cultures = new CultureInfo("en-US");
+            //  String n = "22222.50";
+            //  decimal i = Decimal.Parse(n, cultures);
+            //  i = i * Convert.ToDecimal(2.3);
+            //  MessageBox.Show(i.ToString());
+
 
 
             /* CultureInfo  provider = new CultureInfo("en-US");
@@ -63,6 +63,7 @@ namespace TallSys
                //    '$6,032.51' converted to 6032.51.
 
        */
+           
             if (validarCampo(edtServicio) | validarCampo(edtPrecio) | validarCampo(edtDescripcion) |
                 validarCampo(edtTiempo))
             {
@@ -174,6 +175,10 @@ namespace TallSys
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
+
+           // MessageBox.Show(edtPrecio.Text.Trim());
+
+
             DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
             {
@@ -181,7 +186,7 @@ namespace TallSys
                 {
                     
 
-                    String consulta = String.Format("EXEC actualizarTipoServicio '{0}','{1}','{2}','{3}','{4}'",edtId.Text.Trim(), edtServicio.Text.Trim(),Convert.ToDecimal(edtPrecio.Text.Trim()), edtDescripcion.Text.Trim(), Convert.ToDecimal(edtTiempo.Text.Trim()));
+                    String consulta = String.Format("EXEC actualizarTipoServicio '{0}','{1}','{2}','{3}','{4}'",edtId.Text.Trim(), edtServicio.Text.Trim(), edtPrecio.Text.Trim(), edtDescripcion.Text.Trim(), edtTiempo.Text.Trim());
                     Utilidades.Ejecutar(consulta);
 
                     MessageBox.Show("Se actualizaron los datos");

@@ -36,8 +36,9 @@
             this.dataGridMecanicoAsignado = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.txtIdServicio = new System.Windows.Forms.Label();
-            this.btnMostrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMecSinAsignar)).BeginInit();
@@ -61,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(142, 87);
+            this.label2.Location = new System.Drawing.Point(172, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 5;
@@ -128,16 +129,6 @@
             this.txtIdServicio.TabIndex = 101;
             this.txtIdServicio.Text = "idServicio";
             // 
-            // btnMostrar
-            // 
-            this.btnMostrar.Location = new System.Drawing.Point(54, 103);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(75, 23);
-            this.btnMostrar.TabIndex = 102;
-            this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -147,13 +138,36 @@
             this.label3.TabIndex = 103;
             this.label3.Text = "Id Servicio";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(628, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(214, 20);
+            this.label5.TabIndex = 105;
+            this.label5.Text = "Mecánicos Disponibles";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(92, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(325, 20);
+            this.label4.TabIndex = 106;
+            this.label4.Text = "Mecánicos que han sido asignados";
+            // 
             // AsignarMecanicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 407);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.txtIdServicio);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridMecanicoAsignado);
@@ -174,8 +188,9 @@
             this.Controls.SetChildIndex(this.dataGridMecanicoAsignado, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.txtIdServicio, 0);
-            this.Controls.SetChildIndex(this.btnMostrar, 0);
             this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMecSinAsignar)).EndInit();
@@ -192,10 +207,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridMecSinAsignar;
         private System.Windows.Forms.TextBox edtEmpleado;
-        private System.Windows.Forms.DataGridView dataGridMecanicoAsignado;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnMostrar;
         public System.Windows.Forms.Label txtIdServicio;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.DataGridView dataGridMecanicoAsignado;
     }
 }

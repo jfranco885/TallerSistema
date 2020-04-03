@@ -57,10 +57,20 @@
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Location = new System.Drawing.Point(799, 246);
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(799, 204);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(799, 165);
             // 
             // btnEditar
             // 
+            this.btnEditar.Location = new System.Drawing.Point(799, 126);
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // edtBuscar
@@ -69,7 +79,7 @@
             // 
             // edtServicio
             // 
-            this.edtServicio.Location = new System.Drawing.Point(359, 116);
+            this.edtServicio.Location = new System.Drawing.Point(171, 156);
             this.edtServicio.Name = "edtServicio";
             this.edtServicio.Size = new System.Drawing.Size(226, 20);
             this.edtServicio.TabIndex = 27;
@@ -77,7 +87,7 @@
             // 
             // edtPrecio
             // 
-            this.edtPrecio.Location = new System.Drawing.Point(359, 149);
+            this.edtPrecio.Location = new System.Drawing.Point(171, 189);
             this.edtPrecio.Name = "edtPrecio";
             this.edtPrecio.Size = new System.Drawing.Size(226, 20);
             this.edtPrecio.TabIndex = 26;
@@ -85,7 +95,7 @@
             // 
             // edtTiempo
             // 
-            this.edtTiempo.Location = new System.Drawing.Point(359, 183);
+            this.edtTiempo.Location = new System.Drawing.Point(171, 223);
             this.edtTiempo.Name = "edtTiempo";
             this.edtTiempo.Size = new System.Drawing.Size(226, 20);
             this.edtTiempo.TabIndex = 25;
@@ -93,7 +103,7 @@
             // 
             // edtDescripcion
             // 
-            this.edtDescripcion.Location = new System.Drawing.Point(359, 218);
+            this.edtDescripcion.Location = new System.Drawing.Point(444, 160);
             this.edtDescripcion.Multiline = true;
             this.edtDescripcion.Name = "edtDescripcion";
             this.edtDescripcion.Size = new System.Drawing.Size(317, 54);
@@ -102,7 +112,7 @@
             // 
             // edtId
             // 
-            this.edtId.Location = new System.Drawing.Point(359, 90);
+            this.edtId.Location = new System.Drawing.Point(171, 130);
             this.edtId.Name = "edtId";
             this.edtId.Size = new System.Drawing.Size(226, 20);
             this.edtId.TabIndex = 23;
@@ -110,7 +120,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(272, 123);
+            this.label6.Location = new System.Drawing.Point(84, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 22;
@@ -119,7 +129,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(272, 152);
+            this.label5.Location = new System.Drawing.Point(84, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 21;
@@ -128,7 +138,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(272, 221);
+            this.label4.Location = new System.Drawing.Point(573, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 20;
@@ -137,16 +147,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(270, 186);
+            this.label3.Location = new System.Drawing.Point(82, 226);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Tiempo por hora";
+            this.label3.Text = "Tiempo en horas";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(275, 93);
+            this.label2.Location = new System.Drawing.Point(87, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 13);
             this.label2.TabIndex = 18;
@@ -163,7 +173,7 @@
             // 
             // edtFecha
             // 
-            this.edtFecha.Location = new System.Drawing.Point(359, 286);
+            this.edtFecha.Location = new System.Drawing.Point(523, 226);
             this.edtFecha.Name = "edtFecha";
             this.edtFecha.Size = new System.Drawing.Size(226, 20);
             this.edtFecha.TabIndex = 30;
@@ -171,7 +181,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(270, 289);
+            this.label8.Location = new System.Drawing.Point(434, 229);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 29;

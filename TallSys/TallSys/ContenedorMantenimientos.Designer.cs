@@ -34,8 +34,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.tabla = new System.Windows.Forms.DataGridView();
             this.edtBuscar = new System.Windows.Forms.TextBox();
+            this.tabla = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).BeginInit();
@@ -105,20 +105,6 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // tabla
-            // 
-            this.tabla.AllowUserToAddRows = false;
-            this.tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla.Location = new System.Drawing.Point(36, 312);
-            this.tabla.Name = "tabla";
-            this.tabla.ReadOnly = true;
-            this.tabla.RowHeadersVisible = false;
-            this.tabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tabla.Size = new System.Drawing.Size(875, 150);
-            this.tabla.TabIndex = 15;
-            this.tabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_CellContentClick);
-            // 
             // edtBuscar
             // 
             this.edtBuscar.Location = new System.Drawing.Point(354, 76);
@@ -127,13 +113,26 @@
             this.edtBuscar.TabIndex = 16;
             this.edtBuscar.TextChanged += new System.EventHandler(this.edtBuscar_TextChanged);
             // 
+            // tabla
+            // 
+            this.tabla.AllowUserToAddRows = false;
+            this.tabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla.Location = new System.Drawing.Point(12, 292);
+            this.tabla.Name = "tabla";
+            this.tabla.ReadOnly = true;
+            this.tabla.RowHeadersVisible = false;
+            this.tabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla.Size = new System.Drawing.Size(892, 186);
+            this.tabla.TabIndex = 17;
+            // 
             // ContenedorMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 490);
-            this.Controls.Add(this.edtBuscar);
             this.Controls.Add(this.tabla);
+            this.Controls.Add(this.edtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnNuevo);
@@ -143,15 +142,15 @@
             this.Name = "ContenedorMantenimientos";
             this.Text = "ContenedorMantenimientos";
             this.Load += new System.EventHandler(this.ContenedorMantenimientos_Load);
-            this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.btnEliminar, 0);
             this.Controls.SetChildIndex(this.btnGuardar, 0);
             this.Controls.SetChildIndex(this.btnNuevo, 0);
             this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.tabla, 0);
             this.Controls.SetChildIndex(this.edtBuscar, 0);
+            this.Controls.SetChildIndex(this.tabla, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).EndInit();

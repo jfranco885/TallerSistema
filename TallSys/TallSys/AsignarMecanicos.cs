@@ -84,9 +84,6 @@ namespace TallSys
 
         }
 
-        private void btnMostrar_Click(object sender, EventArgs e)
-        {
-            cargarTablas();
-        }
+       
     }//fin clase
 }//fin proyecto

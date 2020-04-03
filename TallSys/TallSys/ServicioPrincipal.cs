@@ -196,7 +196,7 @@ namespace TallSys
             edtBuscarV.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAgregarServicio_Click(object sender, EventArgs e)
         {
 
 
@@ -215,6 +215,7 @@ namespace TallSys
                 {
                     AgregarServicios agregarServicios = new AgregarServicios();
 
+                    agregarServicios.dataGridServiciosAgregados.DataSource = Utilidades.datasetConsultarProcedure("listarServiciosPorencabezados",Convert.ToInt16(edtCodigoServicio.Text.Trim())).Tables[0];
 
                     agregarServicios.edtIdServicioEncabezado.Text = edtCodigoServicio.Text.Trim();
                     agregarServicios.Show();

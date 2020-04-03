@@ -57,6 +57,7 @@
             this.edtDescripcion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.btnDardeBaja = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).BeginInit();
@@ -99,7 +100,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 213);
+            this.label4.Location = new System.Drawing.Point(36, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 8;
@@ -108,7 +109,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 265);
+            this.label5.Location = new System.Drawing.Point(36, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 10;
@@ -117,7 +118,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 337);
+            this.label6.Location = new System.Drawing.Point(36, 307);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 12;
@@ -125,7 +126,7 @@
             // 
             // edtCliente
             // 
-            this.edtCliente.Location = new System.Drawing.Point(141, 372);
+            this.edtCliente.Location = new System.Drawing.Point(141, 346);
             this.edtCliente.Name = "edtCliente";
             this.edtCliente.Size = new System.Drawing.Size(256, 20);
             this.edtCliente.TabIndex = 15;
@@ -133,7 +134,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 375);
+            this.label7.Location = new System.Drawing.Point(36, 349);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 14;
@@ -219,21 +220,21 @@
             // 
             // edtTiempoReal
             // 
-            this.edtTiempoReal.Location = new System.Drawing.Point(141, 210);
+            this.edtTiempoReal.Location = new System.Drawing.Point(141, 187);
             this.edtTiempoReal.Name = "edtTiempoReal";
             this.edtTiempoReal.Size = new System.Drawing.Size(256, 20);
             this.edtTiempoReal.TabIndex = 27;
             // 
             // edtEstadoActual
             // 
-            this.edtEstadoActual.Location = new System.Drawing.Point(141, 258);
+            this.edtEstadoActual.Location = new System.Drawing.Point(141, 230);
             this.edtEstadoActual.Name = "edtEstadoActual";
             this.edtEstadoActual.Size = new System.Drawing.Size(256, 20);
             this.edtEstadoActual.TabIndex = 31;
             // 
             // edtNave
             // 
-            this.edtNave.Location = new System.Drawing.Point(141, 334);
+            this.edtNave.Location = new System.Drawing.Point(141, 304);
             this.edtNave.Name = "edtNave";
             this.edtNave.Size = new System.Drawing.Size(256, 20);
             this.edtNave.TabIndex = 32;
@@ -242,7 +243,7 @@
             // 
             this.cboxEstadoNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEstadoNuevo.FormattingEnabled = true;
-            this.cboxEstadoNuevo.Location = new System.Drawing.Point(141, 297);
+            this.cboxEstadoNuevo.Location = new System.Drawing.Point(141, 267);
             this.cboxEstadoNuevo.Name = "cboxEstadoNuevo";
             this.cboxEstadoNuevo.Size = new System.Drawing.Size(256, 21);
             this.cboxEstadoNuevo.TabIndex = 33;
@@ -257,7 +258,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(36, 300);
+            this.label10.Location = new System.Drawing.Point(36, 270);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 13);
             this.label10.TabIndex = 35;
@@ -315,11 +316,22 @@
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // btnDardeBaja
+            // 
+            this.btnDardeBaja.Location = new System.Drawing.Point(360, 51);
+            this.btnDardeBaja.Name = "btnDardeBaja";
+            this.btnDardeBaja.Size = new System.Drawing.Size(170, 23);
+            this.btnDardeBaja.TabIndex = 42;
+            this.btnDardeBaja.Text = "Dar de baja a mecánicos";
+            this.btnDardeBaja.UseVisualStyleBackColor = true;
+            this.btnDardeBaja.Click += new System.EventHandler(this.btnDardeBaja_Click);
+            // 
             // txtIdServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 458);
+            this.Controls.Add(this.btnDardeBaja);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.edtDescripcion);
@@ -382,6 +394,7 @@
             this.Controls.SetChildIndex(this.edtDescripcion, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.btnMostrar, 0);
+            this.Controls.SetChildIndex(this.btnDardeBaja, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).EndInit();
@@ -421,5 +434,6 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label txtEncabezado;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Button btnDardeBaja;
     }
 }

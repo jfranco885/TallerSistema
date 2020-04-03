@@ -49,7 +49,7 @@ namespace TallSys
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnAsignarMecanico_Click(object sender, EventArgs e)
         {
             if (validarCampo(edtidServicioDetalle))
             {
@@ -69,8 +69,9 @@ namespace TallSys
 
                         AsignarMecanicos asignarMecanicos = new AsignarMecanicos();
                         asignarMecanicos.txtIdServicio.Text = edtidServicioDetalle.Text.Trim();
+                    asignarMecanicos.dataGridMecanicoAsignado.DataSource = Utilidades.datasetConsultarProcedure("listarMecanicosAsignados", Convert.ToInt16(edtidServicioDetalle.Text.Trim())).Tables[0];
 
-                        asignarMecanicos.Show();
+                    asignarMecanicos.Show();
                     }
                     else//si existe
                     {
@@ -142,10 +143,7 @@ namespace TallSys
             errorProvider1.Clear();
         }
 
-        private void btnMostrar_Click(object sender, EventArgs e)
-        {
-            cargarTabla();
-        }
+       
 
         private void edtidServicioDetalle_TextChanged(object sender, EventArgs e)
         {

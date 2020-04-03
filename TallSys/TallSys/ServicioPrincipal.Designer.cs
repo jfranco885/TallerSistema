@@ -42,7 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCrearCliente = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarServicio = new System.Windows.Forms.Button();
             this.edtCodigoServicio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.edtBuscarC = new System.Windows.Forms.TextBox();
@@ -180,7 +180,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnAgregarServicio);
             this.groupBox2.Controls.Add(this.edtCodigoServicio);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(102, 315);
@@ -190,15 +190,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar Servicio";
             // 
-            // button1
+            // btnAgregarServicio
             // 
-            this.button1.Location = new System.Drawing.Point(281, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 29);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Agregar Servicios";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAgregarServicio.Location = new System.Drawing.Point(281, 54);
+            this.btnAgregarServicio.Name = "btnAgregarServicio";
+            this.btnAgregarServicio.Size = new System.Drawing.Size(124, 29);
+            this.btnAgregarServicio.TabIndex = 29;
+            this.btnAgregarServicio.Text = "Agregar Servicios";
+            this.btnAgregarServicio.UseVisualStyleBackColor = true;
+            this.btnAgregarServicio.Click += new System.EventHandler(this.btnAgregarServicio_Click);
             // 
             // edtCodigoServicio
             // 
@@ -344,7 +344,7 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button btnBuscarVehiculo;
         private System.Windows.Forms.Button btnCrearVehiculo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregarServicio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox edtIdCliente;

@@ -47,7 +47,7 @@
             this.dataGridServiciosAgregados = new System.Windows.Forms.DataGridView();
             this.edtidServicioDetalle = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnMostrar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -184,7 +184,7 @@
             this.btnBuscar.TabIndex = 29;
             this.btnBuscar.Text = "Asignar Empleados";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnAsignarMecanico_Click);
             // 
             // edtIdVehiculo
             // 
@@ -248,22 +248,21 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "idServicio";
             // 
-            // btnMostrar
+            // label7
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(300, 201);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(75, 23);
-            this.btnMostrar.TabIndex = 31;
-            this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(211, 213);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 13);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Servicios agregados";
             // 
             // AgregarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 457);
-            this.Controls.Add(this.btnMostrar);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.edtidServicioDetalle);
             this.Controls.Add(this.dataGridServiciosAgregados);
             this.Controls.Add(this.btnBuscar);
@@ -286,7 +285,7 @@
             this.Controls.SetChildIndex(this.dataGridServiciosAgregados, 0);
             this.Controls.SetChildIndex(this.edtidServicioDetalle, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
-            this.Controls.SetChildIndex(this.btnMostrar, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
@@ -317,6 +316,6 @@
         private System.Windows.Forms.TextBox edtidServicioDetalle;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.DataGridView dataGridServiciosAgregados;
-        private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Label label7;
     }
 }

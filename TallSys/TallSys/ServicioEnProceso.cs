@@ -92,5 +92,25 @@ namespace TallSys
             dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarCambioPiezaPorIdServicio", Convert.ToInt16(txtServicio.Text.Trim())).Tables[0];
 
         }
+
+        private void btnDardeBaja_Click(object sender, EventArgs e)
+        {
+            DialogResult resul = MessageBox.Show("Seguro que quiere dar de baja a los empleados asignados en este servicio?", "Dar de baja", MessageBoxButtons.YesNo);
+            if (resul == DialogResult.Yes)
+            {
+                try
+                {
+                    String consulta = String.Format("update detalle_emp_serv set estado=0 where iddetalle_servicio ="+txtServicio.Text.Trim());
+                    Utilidades.Ejecutar(consulta);
+
+                    MessageBox.Show("Los empleados que habían sido asignados a este servicio ya están disponibles para otro.");
+                }catch(Exception err)
+                {
+                    MessageBox.Show("Error "+err.Message);
+                }
+               
+
+            }
+        }
     }//fin clase
 }//fin proyecto
