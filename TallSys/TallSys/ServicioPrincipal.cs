@@ -34,13 +34,13 @@ namespace TallSys
         private void btnCrearCliente_Click(object sender, EventArgs e)
         {
             AgregarClientes agregarClientes = new AgregarClientes();
-            agregarClientes.Show();
+            agregarClientes.ShowDialog();
         }
 
         private void btnCrearVehiculo_Click(object sender, EventArgs e)
         {
             AgregarVehiculos agregarVehiculos = new AgregarVehiculos();
-            agregarVehiculos.Show();
+            agregarVehiculos.ShowDialog();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -218,7 +218,7 @@ namespace TallSys
                     agregarServicios.dataGridServiciosAgregados.DataSource = Utilidades.datasetConsultarProcedure("listarServiciosPorencabezados",Convert.ToInt16(edtCodigoServicio.Text.Trim())).Tables[0];
 
                     agregarServicios.edtIdServicioEncabezado.Text = edtCodigoServicio.Text.Trim();
-                    agregarServicios.Show();
+                    agregarServicios.ShowDialog();
                 }
                 else
                 {

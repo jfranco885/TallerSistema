@@ -24,13 +24,13 @@ namespace TallSys
         private void btnMantenimientos_Click(object sender, EventArgs e)
         {
             MenuMantenimientos menuMantenimientos =new MenuMantenimientos();
-            menuMantenimientos.Show();
+            menuMantenimientos.ShowDialog();
         }
 
         private void btnAgregarServ_Click(object sender, EventArgs e)
         {
             SeleccionServicios seleccionServicios = new SeleccionServicios();
-            seleccionServicios.Show();
+            seleccionServicios.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

@@ -48,10 +48,17 @@
             this.edtidServicioDetalle = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.edtIdCliente = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridServiciosAgregados)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -188,7 +195,7 @@
             // 
             // edtIdVehiculo
             // 
-            this.edtIdVehiculo.Location = new System.Drawing.Point(136, 172);
+            this.edtIdVehiculo.Location = new System.Drawing.Point(145, 69);
             this.edtIdVehiculo.Name = "edtIdVehiculo";
             this.edtIdVehiculo.Size = new System.Drawing.Size(140, 20);
             this.edtIdVehiculo.TabIndex = 7;
@@ -196,15 +203,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 179);
+            this.label3.Location = new System.Drawing.Point(37, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Vehiculo";
+            this.label3.Text = "Plava Vehiculo";
             // 
             // edtIdServicioEncabezado
             // 
-            this.edtIdServicioEncabezado.Location = new System.Drawing.Point(136, 139);
+            this.edtIdServicioEncabezado.Location = new System.Drawing.Point(145, 36);
             this.edtIdServicioEncabezado.Name = "edtIdServicioEncabezado";
             this.edtIdServicioEncabezado.Size = new System.Drawing.Size(140, 20);
             this.edtIdServicioEncabezado.TabIndex = 11;
@@ -212,7 +219,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 139);
+            this.label2.Location = new System.Drawing.Point(-123, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 13);
             this.label2.TabIndex = 10;
@@ -257,40 +264,99 @@
             this.label7.TabIndex = 43;
             this.label7.Text = "Servicios agregados";
             // 
+            // edtIdCliente
+            // 
+            this.edtIdCliente.Location = new System.Drawing.Point(145, 108);
+            this.edtIdCliente.Name = "edtIdCliente";
+            this.edtIdCliente.Size = new System.Drawing.Size(140, 20);
+            this.edtIdCliente.TabIndex = 45;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(37, 108);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 13);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Cliente";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(321, 53);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 31;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(321, 98);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 46;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.btnGuardar);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.edtIdCliente);
+            this.groupBox2.Controls.Add(this.btnModificar);
+            this.groupBox2.Controls.Add(this.edtIdVehiculo);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.edtIdServicioEncabezado);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(16, 49);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(421, 143);
+            this.groupBox2.TabIndex = 47;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Encabezado";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(37, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 13);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "Id Encabezado";
+            // 
             // AgregarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 457);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.edtidServicioDetalle);
             this.Controls.Add(this.dataGridServiciosAgregados);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.edtIdServicioEncabezado);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.edtIdVehiculo);
-            this.Controls.Add(this.label3);
             this.Name = "AgregarServicios";
             this.Text = "Empleado";
             this.Load += new System.EventHandler(this.AgregarServicios_Load);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.edtIdVehiculo, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.edtIdServicioEncabezado, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.btnBuscar, 0);
             this.Controls.SetChildIndex(this.dataGridServiciosAgregados, 0);
             this.Controls.SetChildIndex(this.edtidServicioDetalle, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.groupBox2, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridServiciosAgregados)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +383,11 @@
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.DataGridView dataGridServiciosAgregados;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox edtIdCliente;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label9;
     }
 }

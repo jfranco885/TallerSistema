@@ -20,9 +20,10 @@ namespace TallSys
         String edtclave;
         String cboxrol;
         String edtid;
-        
+        String idEmpleado;
+
         int cboxrolInt;
-        int cboxempleadoInt;
+        
 
       //  String cboxrol;
        // String cboxempleado;
@@ -31,7 +32,11 @@ namespace TallSys
         public MtoUsuarios()
         {
             InitializeComponent();
+            edtNombreEmpleado.Enabled = false;
+            edtIdEmpleado.Enabled = false;
+            edtId.Enabled = false;
             desactivarControlesE();
+            
             tabla.DataSource = Utilidades.datasetLista("listarUsuarios").Tables[0];
         }
 
@@ -41,9 +46,10 @@ namespace TallSys
             cboxRol.DisplayMember = "rol";
             cboxRol.ValueMember = "idrol";
 
-            cboxEmpleado.DataSource = Utilidades.llenarComboBox("select idempleado,nombres_empleado from empleados");
+         /*   cboxEmpleado.DataSource = Utilidades.llenarComboBox("select idempleado,nombres_empleado from empleados");
             cboxEmpleado.DisplayMember = "nombres_empleado";
             cboxEmpleado.ValueMember = "idempleado";
+            */
         }
 
 
@@ -62,7 +68,7 @@ namespace TallSys
                edtclave = edtClave.Text.Trim();
                 // cboxcargo = cboxCargo.SelectedItem.ToString();
                 cboxrolInt = Convert.ToInt32(cboxRol.SelectedValue);
-                cboxempleadoInt = Convert.ToInt32(cboxEmpleado.SelectedValue);
+                idEmpleado = edtIdEmpleado.Text.Trim();
                 // cboxespecialidad =cboxEspecialidad.SelectedItem.ToString();
 
                 
@@ -76,7 +82,7 @@ namespace TallSys
                     try
                     {
                        // string datoClave = llamar.PassHash(edtclave);
-                        String consulta = String.Format("EXEC insertarUsuarios '{0}','{1}'" + ",'{2}','{3}'", edtusuario, edtclave, cboxrolInt, cboxempleadoInt);
+                        String consulta = String.Format("EXEC insertarUsuarios '{0}','{1}'" + ",'{2}','{3}'", edtusuario, edtclave, cboxrolInt, idEmpleado);
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se han guardado los datos");
 
@@ -118,7 +124,8 @@ namespace TallSys
                     edtUsuario.Text = (dt.Tables[0].Rows[0]["Usuario"].ToString().Trim());
                     edtClave.Text = (dt.Tables[0].Rows[0]["Clave"].ToString().Trim());
                     cboxRol.Text = (dt.Tables[0].Rows[0]["Rol"].ToString().Trim());
-                    cboxEmpleado.Text = (dt.Tables[0].Rows[0]["Empleado"].ToString().Trim());
+                    edtNombreEmpleado.Text = (dt.Tables[0].Rows[0]["Empleado"].ToString().Trim());
+                    edtIdEmpleado.Text = (dt.Tables[0].Rows[0]["idEmpleado"].ToString().Trim());
 
                     activarControlesE();
                     btnEditar.Enabled = true;
@@ -182,7 +189,7 @@ namespace TallSys
                     edtusuario = edtUsuario.Text.Trim();
                     edtclave = edtClave.Text.Trim();                   
                     cboxrolInt = Convert.ToInt32(cboxRol.SelectedValue);                     
-                    string empleado = cboxEmpleado.SelectedValue.ToString();
+                    idEmpleado = edtIdEmpleado.Text.Trim();
                     edtid = edtId.Text.Trim();
 
                    // MessageBox.Show("empleado"+empleado);
@@ -191,7 +198,7 @@ namespace TallSys
                     try
                     {
 
-                        String consulta = String.Format("EXEC actualizarUsuarios '{0}','{1}','{2}','{3}','{4}'",edtid, edtusuario, edtclave,cboxrolInt, empleado);
+                        String consulta = String.Format("EXEC actualizarUsuarios '{0}','{1}','{2}','{3}','{4}'",edtid, edtusuario, edtclave,cboxrolInt, idEmpleado);
                         Utilidades.Ejecutar(consulta);
 
                         MessageBox.Show("Se actualizaron los datos");
@@ -222,16 +229,16 @@ namespace TallSys
             edtId.Enabled = false;
             edtUsuario.Enabled = false;
             cboxRol.Enabled = false;
-            cboxEmpleado.Enabled = false;
+           
             edtClave.Enabled = false;
 
         }
-        private void activarControlesE()
+        public  void activarControlesE()
         {
             // edtId.Enabled = true;
             edtUsuario.Enabled = true;
             cboxRol.Enabled = true;
-            cboxEmpleado.Enabled = true;
+           
             edtClave.Enabled = true;
 
         }
@@ -243,8 +250,19 @@ namespace TallSys
             edtUsuario.Text = "";
             edtClave.Text = "";
             cboxRol.Text = "";
-            cboxEmpleado.Text = "";
+            edtIdEmpleado.Text = "";
+            edtNombreEmpleado.Text = "";
+           
+        }
 
+        private void btnBuscarEmpleado_Click(object sender, EventArgs e)
+        {
+            BuscarEmpleado buscarEmpleado = new BuscarEmpleado();
+
+            buscarEmpleado.dataGridBuscar.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];
+            
+            this.Close();
+            buscarEmpleado.ShowDialog();
         }
     }
     }

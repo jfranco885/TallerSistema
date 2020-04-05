@@ -104,11 +104,11 @@
     <Compile Include="AsignarMecanicos.Designer.cs">
       <DependentUpon>AsignarMecanicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="AsignarTipoServicio.cs">
+    <Compile Include="BuscarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AsignarTipoServicio.Designer.cs">
-      <DependentUpon>AsignarTipoServicio.cs</DependentUpon>
+    <Compile Include="BuscarEmpleado.Designer.cs">
+      <DependentUpon>BuscarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="ContenedorMantenimientos.cs">
       <SubType>Form</SubType>
@@ -274,8 +274,8 @@
     <EmbeddedResource Include="AsignarMecanicos.resx">
       <DependentUpon>AsignarMecanicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AsignarTipoServicio.resx">
-      <DependentUpon>AsignarTipoServicio.cs</DependentUpon>
+    <EmbeddedResource Include="BuscarEmpleado.resx">
+      <DependentUpon>BuscarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContenedorMantenimientos.resx">
       <DependentUpon>ContenedorMantenimientos.cs</DependentUpon>

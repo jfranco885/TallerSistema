@@ -25,15 +25,15 @@ namespace TallSys
         private void btnNuevoServicio_Click(object sender, EventArgs e)
         {
             ServicioPrincipal servicioPrincipal = new ServicioPrincipal();
-            this.Hide();
-            servicioPrincipal.Show();
+            this.Close();
+            servicioPrincipal.ShowDialog();
         }
 
         private void btnServEjecutandose_Click(object sender, EventArgs e)
         {
             ServiciosEjecutandose serviciosEjecutandose = new ServiciosEjecutandose();
-            this.Hide();
-            serviciosEjecutandose.Show();
+            this.Close();
+            serviciosEjecutandose.ShowDialog();
         }
     }
 }

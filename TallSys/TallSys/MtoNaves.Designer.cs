@@ -33,6 +33,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +67,7 @@
             // 
             // edtId
             // 
-            this.edtId.Location = new System.Drawing.Point(263, 132);
+            this.edtId.Location = new System.Drawing.Point(263, 129);
             this.edtId.Name = "edtId";
             this.edtId.Size = new System.Drawing.Size(139, 20);
             this.edtId.TabIndex = 24;
@@ -73,7 +75,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(180, 135);
+            this.label5.Location = new System.Drawing.Point(180, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 23;
@@ -97,11 +99,31 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "por id";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(445, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Estado";
+            // 
+            // cboxEstado
+            // 
+            this.cboxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxEstado.FormattingEnabled = true;
+            this.cboxEstado.Location = new System.Drawing.Point(511, 128);
+            this.cboxEstado.Name = "cboxEstado";
+            this.cboxEstado.Size = new System.Drawing.Size(144, 21);
+            this.cboxEstado.TabIndex = 28;
+            // 
             // MtoNaves
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 484);
+            this.Controls.Add(this.cboxEstado);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.edtDescripcion);
             this.Controls.Add(this.edtId);
@@ -123,6 +145,8 @@
             this.Controls.SetChildIndex(this.edtId, 0);
             this.Controls.SetChildIndex(this.edtDescripcion, 0);
             this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.cboxEstado, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -136,5 +160,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboxEstado;
     }
 }

@@ -17,12 +17,17 @@ namespace TallSys
             InitializeComponent();
             edtId.Enabled = false;
             edtDescripcion.Enabled = false;
+            
+            cboxEstado.Enabled=false;
 
             tabla.DataSource = Utilidades.datasetLista("listarNave").Tables[0];
         }
 
         private void MtoNaves_Load(object sender, EventArgs e)
         {
+
+            cboxEstado.Items.Add("Disponible");
+            cboxEstado.Items.Add("Ocupada");
 
         }
 
@@ -35,13 +40,15 @@ namespace TallSys
             else
             {
                 String descripcion = edtDescripcion.Text.Trim();
+                String estado = cboxEstado.Text.Trim();
               
                     try
                     {
-                        String consulta = String.Format("EXEC insertarNave '{0}'",descripcion );
+                        String consulta = String.Format("EXEC insertarNave '{0}','{1}'", descripcion,estado );
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se han guardado los datos");
                         edtDescripcion.Enabled = false;
+                    cboxEstado.Enabled = false;
                         btnGuardar.Enabled = false;
                         limpiarCampos();
                         tabla.DataSource = Utilidades.datasetLista("listarNave").Tables[0];
@@ -68,6 +75,7 @@ namespace TallSys
                     edtDescripcion.Enabled = false;
                     btnEditar.Enabled = false;
                     btnEliminar.Enabled = false;
+                    cboxEstado.Enabled = false;
                     tabla.DataSource = Utilidades.datasetLista("listarNave").Tables[0];
 
                 }
@@ -82,6 +90,8 @@ namespace TallSys
         {
             limpiarCampos();
             edtDescripcion.Enabled = true;
+            cboxEstado.Enabled = true;
+            cboxEstado.Text = "Disponible";
             edtDescripcion.Focus();
         }
         private void btnBuscar_Click_1(object sender, EventArgs e)
@@ -102,10 +112,12 @@ namespace TallSys
                     {
                         edtId.Text = (dt.Tables[0].Rows[0]["idnave"].ToString().Trim());
                         edtDescripcion.Text = (dt.Tables[0].Rows[0]["descripcion"].ToString().Trim());
+                        cboxEstado.Text = (dt.Tables[0].Rows[0]["Estado"].ToString().Trim());
 
                         edtDescripcion.Enabled = true;
                         btnEditar.Enabled = true;
                         btnEliminar.Enabled = true;
+                        cboxEstado.Enabled = true;
                         btnGuardar.Enabled = false;
                     }
                     else
@@ -136,12 +148,13 @@ namespace TallSys
                     try
                     {
 
-                        String consulta = String.Format("EXEC actualizarNave '{0}','{1}'", edtId.Text, edtDescripcion.Text);
+                        String consulta = String.Format("EXEC actualizarNave '{0}','{1}','{2}'", edtId.Text, edtDescripcion.Text,cboxEstado.Text.Trim());
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se actualizaron los datos");
                         edtDescripcion.Enabled = false;
                         btnEditar.Enabled = false;
                         btnEliminar.Enabled = false;
+                        cboxEstado.Enabled = false;
                         tabla.DataSource = Utilidades.datasetLista("listarNave").Tables[0];
                     }
                     catch (Exception error)
@@ -161,6 +174,7 @@ namespace TallSys
             edtBuscar.Text = "";
             edtDescripcion.Text = "";
             edtId.Text = "";
+            cboxEstado.Text = "";
         }
 
        

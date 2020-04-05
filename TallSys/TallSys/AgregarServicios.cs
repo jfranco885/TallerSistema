@@ -18,6 +18,8 @@ namespace TallSys
             InitializeComponent();
             edtIdServicioEncabezado.Enabled = false;
             edtIdVehiculo.Enabled = false;
+            btnGuardar.Enabled = false;
+            edtIdCliente.Enabled = false;
 
             
             dataGridServiciosAgregados.DataSource = Utilidades.datasetConsultarProcedure("listarServiciosPorencabezados", 0).Tables[0];
@@ -33,7 +35,7 @@ namespace TallSys
              cboxTipoServicio.DisplayMember = "nombre_servicio";
              cboxTipoServicio.ValueMember = "idtipo_servicio";
 
-            cboxNave.DataSource = Utilidades.llenarComboBox("select idnave from nave");
+            cboxNave.DataSource = Utilidades.llenarComboBox("select idnave from nave where estado ='Disponible'");
             cboxNave.DisplayMember = "idnave";
             cboxNave.ValueMember = "idnave";
 
@@ -71,8 +73,8 @@ namespace TallSys
                         asignarMecanicos.txtIdServicio.Text = edtidServicioDetalle.Text.Trim();
                     asignarMecanicos.dataGridMecanicoAsignado.DataSource = Utilidades.datasetConsultarProcedure("listarMecanicosAsignados", Convert.ToInt16(edtidServicioDetalle.Text.Trim())).Tables[0];
 
-                    asignarMecanicos.Show();
-                    }
+                    asignarMecanicos.ShowDialog();
+                }
                     else//si existe
                     {
                         MessageBox.Show("Este servicio no se ha creado");
@@ -148,6 +150,22 @@ namespace TallSys
         private void edtidServicioDetalle_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.Clear();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            btnGuardar.Enabled = true;
+            edtIdServicioEncabezado.Enabled = true;
+            edtIdVehiculo.Enabled = true;
+            edtIdCliente.Enabled = true;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            btnGuardar.Enabled = false;
+            edtIdServicioEncabezado.Enabled = false;
+            edtIdVehiculo.Enabled = false;
+            edtIdCliente.Enabled = false;
         }
     }//fin clase
 }//fin proyec

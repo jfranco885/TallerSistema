@@ -25,86 +25,87 @@ namespace TallSys
         private void btnAgregarServ_Click(object sender, EventArgs e)
         {
             MtoServicios mtoServicios = new MtoServicios();
-            mtoServicios.Show();
+            mtoServicios.ShowDialog();
 
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             MtoUsuarios mtoUsuarios = new MtoUsuarios();
-            mtoUsuarios.Show();
+           // mtoUsuarios.Show();
+            mtoUsuarios.ShowDialog();
         }
 
         private void btnTipoServicio_Click(object sender, EventArgs e)
         {
             MtoTipoServicios mtoTipoServicios = new MtoTipoServicios();
-            mtoTipoServicios.Show();
+            mtoTipoServicios.ShowDialog();
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
             MtoEmpleados mtoEmpleados = new MtoEmpleados();
-            mtoEmpleados.Show();
+            mtoEmpleados.ShowDialog();
         }
 
         private void btnNaves_Click(object sender, EventArgs e)
         {
             MtoNaves mtoNaves = new MtoNaves();
-            mtoNaves.Show();
+            mtoNaves.ShowDialog();
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
             MtoClientes mtoClientes = new MtoClientes();
-            mtoClientes.Show();
+            mtoClientes.ShowDialog();
         }
 
         private void btnEspecialidad_Click(object sender, EventArgs e)
         {
             MtoEspecialidades mtoEspecialidades = new MtoEspecialidades();
-            mtoEspecialidades.Show();
+            mtoEspecialidades.ShowDialog();
         }
 
         private void btnCargos_Click(object sender, EventArgs e)
         {
             MtoCargos mtoCargos = new MtoCargos();
-            mtoCargos.Show();
+            mtoCargos.ShowDialog();
         }
 
         private void btnEstadoServicio_Click(object sender, EventArgs e)
         {
             MtoEstadoServicios mtoEstadoServicios = new MtoEstadoServicios();
-            mtoEstadoServicios.Show();
+            mtoEstadoServicios.ShowDialog();
         }
 
         private void btnFacturas_Click(object sender, EventArgs e)
         {
             MtoFacturacion mtoFacturacion = new MtoFacturacion();
-            mtoFacturacion.Show();
+            mtoFacturacion.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MtoCambioPiezas mtoCambioPiezas = new MtoCambioPiezas();
-            mtoCambioPiezas.Show();
+            mtoCambioPiezas.ShowDialog();
         }
 
         private void btnMarcas_Click(object sender, EventArgs e)
         {
             MtoMarcas mtoMarcas = new MtoMarcas();
-            mtoMarcas.Show();
+            mtoMarcas.ShowDialog();
         }
 
         private void btnModelos_Click(object sender, EventArgs e)
         {
             MtoModelos mtoModelos = new MtoModelos();
-            mtoModelos.Show();
+            mtoModelos.ShowDialog();
         }
 
         private void btnVehiculos_Click(object sender, EventArgs e)
         {
             MtoVehiculos mtoVehiculos = new MtoVehiculos();
-            mtoVehiculos.Show();
+            mtoVehiculos.ShowDialog();
         }
     }
 }

@@ -53,7 +53,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtEncabezado = new System.Windows.Forms.Label();
-            this.edtIdTipoServicio = new System.Windows.Forms.TextBox();
+            this.edtIdTipoServNave = new System.Windows.Forms.TextBox();
             this.edtDescripcion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnMostrar = new System.Windows.Forms.Button();
@@ -282,12 +282,12 @@
             this.txtEncabezado.TabIndex = 37;
             this.txtEncabezado.Text = "Encabezado";
             // 
-            // edtIdTipoServicio
+            // edtIdTipoServNave
             // 
-            this.edtIdTipoServicio.Location = new System.Drawing.Point(163, 129);
-            this.edtIdTipoServicio.Name = "edtIdTipoServicio";
-            this.edtIdTipoServicio.Size = new System.Drawing.Size(134, 20);
-            this.edtIdTipoServicio.TabIndex = 38;
+            this.edtIdTipoServNave.Location = new System.Drawing.Point(163, 129);
+            this.edtIdTipoServNave.Name = "edtIdTipoServNave";
+            this.edtIdTipoServNave.Size = new System.Drawing.Size(134, 20);
+            this.edtIdTipoServNave.TabIndex = 38;
             // 
             // edtDescripcion
             // 
@@ -335,7 +335,7 @@
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.edtDescripcion);
-            this.Controls.Add(this.edtIdTipoServicio);
+            this.Controls.Add(this.edtIdTipoServNave);
             this.Controls.Add(this.txtEncabezado);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -390,7 +390,7 @@
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.label11, 0);
             this.Controls.SetChildIndex(this.txtEncabezado, 0);
-            this.Controls.SetChildIndex(this.edtIdTipoServicio, 0);
+            this.Controls.SetChildIndex(this.edtIdTipoServNave, 0);
             this.Controls.SetChildIndex(this.edtDescripcion, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.btnMostrar, 0);
@@ -429,7 +429,7 @@
         public System.Windows.Forms.TextBox edtTipoServicio;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox edtIdTipoServicio;
+        public System.Windows.Forms.TextBox edtIdTipoServNave;
         public System.Windows.Forms.TextBox edtDescripcion;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label txtEncabezado;
