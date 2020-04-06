@@ -74,7 +74,7 @@ namespace TallSys
                         AsignarMecanicos asignarMecanicos = new AsignarMecanicos();
                         asignarMecanicos.txtIdServicio.Text = edtidServicioDetalle.Text.Trim();
                     asignarMecanicos.dataGridMecanicoAsignado.DataSource = Utilidades.datasetConsultarProcedure("listarMecanicosAsignados", Convert.ToInt16(edtidServicioDetalle.Text.Trim())).Tables[0];
-
+                  
                     asignarMecanicos.ShowDialog();
                 }
                     else//si existe

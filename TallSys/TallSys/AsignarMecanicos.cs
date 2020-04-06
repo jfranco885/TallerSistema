@@ -17,6 +17,8 @@ namespace TallSys
         {
             InitializeComponent();
             dataGridMecSinAsignar.DataSource = Utilidades.datasetLista("listarEmpleadosQuePuedeDisponerse").Tables[0];
+            dataGridMecSinAsignar.Columns.RemoveAt(6);
+            dataGridMecSinAsignar.Columns.RemoveAt(5);
         }
 
         private void AsignarMecanicos_Load(object sender, EventArgs e)

@@ -107,5 +107,11 @@ namespace TallSys
             MtoVehiculos mtoVehiculos = new MtoVehiculos();
             mtoVehiculos.ShowDialog();
         }
+
+        private void btnMecAsig_Click(object sender, EventArgs e)
+        {
+            MtoAsignarMecanicos mtoAsignarMecanicos = new MtoAsignarMecanicos();
+            mtoAsignarMecanicos.ShowDialog();
+        }
     }
 }

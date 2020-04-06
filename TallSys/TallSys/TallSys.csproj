@@ -146,6 +146,12 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="MtoAsignarMecanicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtoAsignarMecanicos.Designer.cs">
+      <DependentUpon>MtoAsignarMecanicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MtoCambioPiezas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MtoAsignarMecanicos.resx">
+      <DependentUpon>MtoAsignarMecanicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MtoCambioPiezas.resx">
       <DependentUpon>MtoCambioPiezas.cs</DependentUpon>
     </EmbeddedResource>
@@ -421,6 +430,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mecanicos.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

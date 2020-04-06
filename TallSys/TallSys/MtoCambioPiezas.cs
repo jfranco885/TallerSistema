@@ -55,7 +55,7 @@ namespace TallSys
                 }
                 else
                 {
-                    MessageBox.Show("No existe este id de Servicio");
+                    MessageBox.Show("No existe este id de Cambio de Piezas");
                 }
             }
         }

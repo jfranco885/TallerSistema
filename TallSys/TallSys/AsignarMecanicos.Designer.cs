@@ -82,12 +82,12 @@
             this.dataGridMecSinAsignar.AllowUserToAddRows = false;
             this.dataGridMecSinAsignar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridMecSinAsignar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMecSinAsignar.Location = new System.Drawing.Point(516, 132);
+            this.dataGridMecSinAsignar.Location = new System.Drawing.Point(468, 132);
             this.dataGridMecSinAsignar.Name = "dataGridMecSinAsignar";
             this.dataGridMecSinAsignar.ReadOnly = true;
             this.dataGridMecSinAsignar.RowHeadersVisible = false;
             this.dataGridMecSinAsignar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridMecSinAsignar.Size = new System.Drawing.Size(437, 263);
+            this.dataGridMecSinAsignar.Size = new System.Drawing.Size(485, 263);
             this.dataGridMecSinAsignar.TabIndex = 96;
             // 
             // edtEmpleado
