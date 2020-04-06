@@ -17,9 +17,11 @@ namespace TallSys
         {
             InitializeComponent();
             edtIdServicioEncabezado.Enabled = false;
-            edtIdVehiculo.Enabled = false;
+            edtPlacaVehiculo.Enabled = false;
             btnGuardar.Enabled = false;
-            edtIdCliente.Enabled = false;
+            edtNombreCliente.Enabled = false;
+            edtDui.Enabled = false;
+            edtAsignacion.Enabled = false;
 
             
             dataGridServiciosAgregados.DataSource = Utilidades.datasetConsultarProcedure("listarServiciosPorencabezados", 0).Tables[0];
@@ -155,17 +157,116 @@ namespace TallSys
         private void btnModificar_Click(object sender, EventArgs e)
         {
             btnGuardar.Enabled = true;
-            edtIdServicioEncabezado.Enabled = true;
-            edtIdVehiculo.Enabled = true;
-            edtIdCliente.Enabled = true;
+           
+            
+            edtPlacaVehiculo.Enabled = true;
+            edtDui.Enabled = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            btnGuardar.Enabled = false;
-            edtIdServicioEncabezado.Enabled = false;
-            edtIdVehiculo.Enabled = false;
-            edtIdCliente.Enabled = false;
+           
+
+            if (validarCampo(edtIdServicioEncabezado) | validarCampo(edtDui) | validarCampo(edtPlacaVehiculo))
+            {
+
+            }//fin validando ampos
+            else
+            {
+
+                Boolean existeEncabezado;
+                String idencabezado = edtIdServicioEncabezado.Text.Trim();
+                String consul = String.Format("select *from encabezado_servicio where idencabezado_servicio='{0}'", idencabezado);
+                existeEncabezado = Utilidades.Existe(consul);
+
+                if (existeEncabezado == true)
+                {
+                    //Validando si existe el vehiculo
+                    Boolean existeVehiculo;
+                    String placa = edtPlacaVehiculo.Text.Trim();
+                    String consula = String.Format("select *from vehiculo where placa='{0}'", placa);
+                    existeVehiculo = Utilidades.Existe(consula);
+                    if (existeVehiculo == true)
+                    {
+                        //validando si existe el cliente
+                        Boolean existeCliente;
+                        String dui = edtDui.Text.Trim();
+                        String consultar = String.Format("select *from clientes where dui='{0}'", dui);
+                        existeCliente = Utilidades.Existe(consultar);
+                        if (existeCliente == true)
+                        {
+                            //hacer la inserción
+                            try
+                            {
+                                String iddetalleVehiculo = edtAsignacion.Text.Trim();
+                                
+                                String cons = String.Format("exec CambiarClienteVehiculo '{0}','{1}','{2}'", iddetalleVehiculo, dui, placa);
+                                Utilidades.Ejecutar(cons);
+                                MessageBox.Show("Se Modificaron los datos");
+
+                            }
+                            catch(Exception err)
+                            {
+                                MessageBox.Show("Hay un error"+err.Message);
+                            }
+
+                            btnGuardar.Enabled = false;
+                            edtIdServicioEncabezado.Enabled = false;
+                            edtPlacaVehiculo.Enabled = false;
+                            edtNombreCliente.Enabled = false;
+                            edtDui.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se modificó. Este Cliente no existe");
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se modificó. Este vehículo no existe");
+                    }
+
+
+                    }else
+                {
+                    MessageBox.Show("No se modificó. Este encabezado de servicio no existe");
+                }
+
+                //Rellenando nuevamente los campos
+
+                try
+                {
+                    String consulta = String.Format("exec listarEncabezadoServicio '{0}'", edtIdServicioEncabezado.Text.Trim());
+                    DataSet dt = Utilidades.Ejecutar(consulta);
+
+                    edtPlacaVehiculo.Text = (dt.Tables[0].Rows[0]["placa"].ToString().Trim());
+                    edtNombreCliente.Text = (dt.Tables[0].Rows[0]["nombre"].ToString().Trim());
+                    edtDui.Text = (dt.Tables[0].Rows[0]["dui"].ToString().Trim());
+                    edtAsignacion.Text = (dt.Tables[0].Rows[0]["idasignacion"].ToString().Trim());
+
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Error" + err.Message);
+                }
+                
+              
+
+
+            }//fin validadndo campos
+
+        }//fin guardar
+
+        private void edtPlacaVehiculo_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtDui_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }//fin clase
 }//fin proyec

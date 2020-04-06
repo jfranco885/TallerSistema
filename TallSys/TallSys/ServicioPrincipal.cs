@@ -24,6 +24,7 @@ namespace TallSys
             edtCliente.Enabled = false;
             edtIdCliente.Enabled = false;
             edtIdVehiculo.Enabled = false;
+           
         }
 
         private void ServicioPrincipal_Load(object sender, EventArgs e)
@@ -218,6 +219,25 @@ namespace TallSys
                     agregarServicios.dataGridServiciosAgregados.DataSource = Utilidades.datasetConsultarProcedure("listarServiciosPorencabezados",Convert.ToInt16(edtCodigoServicio.Text.Trim())).Tables[0];
 
                     agregarServicios.edtIdServicioEncabezado.Text = edtCodigoServicio.Text.Trim();
+
+                    //Traendo datos para mandar a los texbox
+                    try
+                    {
+                        String consulta = String.Format("exec listarEncabezadoServicio '{0}'", edtCodigoServicio.Text.Trim());
+                        DataSet dt = Utilidades.Ejecutar(consulta);
+
+                        agregarServicios.edtPlacaVehiculo.Text= (dt.Tables[0].Rows[0]["placa"].ToString().Trim());
+                        agregarServicios.edtNombreCliente.Text = (dt.Tables[0].Rows[0]["nombre"].ToString().Trim());
+                        agregarServicios.edtDui.Text = (dt.Tables[0].Rows[0]["dui"].ToString().Trim());
+                        agregarServicios.edtAsignacion.Text = (dt.Tables[0].Rows[0]["idasignacion"].ToString().Trim());
+
+
+                    }
+                    catch(Exception err){
+                        MessageBox.Show("Error" + err.Message);
+                    }
+                    ///
+                    edtCodigoServicio.Text = "";
                     agregarServicios.ShowDialog();
                 }
                 else
