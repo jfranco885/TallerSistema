@@ -393,5 +393,29 @@ namespace TallSys
         {
             errorProvider1.Clear();
         }
+
+        private void eventocboxTipo(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxTipoServicio) == false)
+            {
+                MessageBox.Show("No hay opciones de Tipo Servicio");
+            }
+        }
+
+        private void eventocboxNave(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxNav) == false)
+            {
+                MessageBox.Show("No hay opciones de nave");
+            }
+        }
+
+        private void eventocboxEstado(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxEstado) == false)
+            {
+                MessageBox.Show("No hay opciones de Estado");
+            }
+        }
     }//fin clase
 }//prin proyecto

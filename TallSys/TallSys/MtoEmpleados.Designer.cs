@@ -163,6 +163,7 @@
             this.cboxEspecialidad.Name = "cboxEspecialidad";
             this.cboxEspecialidad.Size = new System.Drawing.Size(226, 21);
             this.cboxEspecialidad.TabIndex = 34;
+            this.cboxEspecialidad.Click += new System.EventHandler(this.eventoEspecialidad);
             // 
             // cboxCargo
             // 
@@ -172,6 +173,7 @@
             this.cboxCargo.Name = "cboxCargo";
             this.cboxCargo.Size = new System.Drawing.Size(226, 21);
             this.cboxCargo.TabIndex = 33;
+            this.cboxCargo.Click += new System.EventHandler(this.eventoCargo);
             // 
             // label8
             // 
@@ -254,6 +256,7 @@
             this.cboxEstado.Size = new System.Drawing.Size(226, 21);
             this.cboxEstado.TabIndex = 49;
             this.cboxEstado.SelectedIndexChanged += new System.EventHandler(this.cboxEstado_SelectedIndexChanged);
+            this.cboxEstado.Click += new System.EventHandler(this.eventoEstado);
             // 
             // label13
             // 
@@ -272,6 +275,7 @@
             this.cboxServicioVehiculo.Name = "cboxServicioVehiculo";
             this.cboxServicioVehiculo.Size = new System.Drawing.Size(226, 21);
             this.cboxServicioVehiculo.TabIndex = 51;
+            this.cboxServicioVehiculo.Click += new System.EventHandler(this.eventoSeraVehi);
             // 
             // MtoEmpleados
             // 

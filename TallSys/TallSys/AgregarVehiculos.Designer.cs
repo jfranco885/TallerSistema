@@ -66,6 +66,7 @@
             this.cboxModelo.Name = "cboxModelo";
             this.cboxModelo.Size = new System.Drawing.Size(222, 21);
             this.cboxModelo.TabIndex = 33;
+            this.cboxModelo.Click += new System.EventHandler(this.eventoModelo);
             // 
             // label5
             // 
@@ -84,6 +85,7 @@
             this.cboxMarca.Name = "cboxMarca";
             this.cboxMarca.Size = new System.Drawing.Size(222, 21);
             this.cboxMarca.TabIndex = 31;
+            this.cboxMarca.Click += new System.EventHandler(this.EventoMarca);
             // 
             // label4
             // 

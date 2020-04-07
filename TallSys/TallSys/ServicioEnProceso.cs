@@ -139,5 +139,13 @@ namespace TallSys
 
             }
         }
+
+        private void eventocboxEstado(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxEstadoNuevo) == false)
+            {
+                MessageBox.Show("No hay opciones de Estado");
+            }
+        }
     }//fin clase
 }//fin proyecto

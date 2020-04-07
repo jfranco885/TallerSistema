@@ -87,12 +87,15 @@ namespace TallSys
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+
+           
             if (validarCampo(edtDescripcion))
             {
                 //solo mandara el error provider si está vacío
             }
             else
             {
+               
                
                     try
                     {
@@ -267,6 +270,32 @@ namespace TallSys
         private void edtDui_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.Clear();
+        }
+
+        
+        private void evento(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxNave)==false)
+            {
+                MessageBox.Show("No hay nave disponible");
+            }
+           
+        }
+
+        private void eventoTipo(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxTipoServicio) == false)
+            {
+                MessageBox.Show("No hay opciones de tipo de servicio");
+            }
+        }
+
+        private void eventoEstado(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxEstado) == false)
+            {
+                MessageBox.Show("No hay opciones de estado");
+            }
         }
     }//fin clase
 }//fin proyec

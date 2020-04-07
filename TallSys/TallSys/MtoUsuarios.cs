@@ -264,5 +264,13 @@ namespace TallSys
             this.Close();
             buscarEmpleado.ShowDialog();
         }
+
+        private void eventocboxRol(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxRol) == false)
+            {
+                MessageBox.Show("No hay opciones de Rol");
+            }
+        }
     }
     }

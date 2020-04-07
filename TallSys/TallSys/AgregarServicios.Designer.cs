@@ -95,6 +95,7 @@
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(235, 21);
             this.cboxEstado.TabIndex = 30;
+            this.cboxEstado.Click += new System.EventHandler(this.eventoEstado);
             // 
             // edtDescripcion
             // 
@@ -144,6 +145,7 @@
             this.cboxNave.Name = "cboxNave";
             this.cboxNave.Size = new System.Drawing.Size(235, 21);
             this.cboxNave.TabIndex = 14;
+            this.cboxNave.Click += new System.EventHandler(this.evento);
             // 
             // cboxTipoServicio
             // 
@@ -156,6 +158,7 @@
             this.cboxTipoServicio.Name = "cboxTipoServicio";
             this.cboxTipoServicio.Size = new System.Drawing.Size(235, 21);
             this.cboxTipoServicio.TabIndex = 13;
+            this.cboxTipoServicio.Click += new System.EventHandler(this.eventoTipo);
             // 
             // label5
             // 

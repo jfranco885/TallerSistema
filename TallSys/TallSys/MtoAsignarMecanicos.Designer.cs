@@ -123,6 +123,7 @@
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(266, 21);
             this.cboxEstado.TabIndex = 34;
+            this.cboxEstado.Click += new System.EventHandler(this.eventoEstado);
             // 
             // label5
             // 

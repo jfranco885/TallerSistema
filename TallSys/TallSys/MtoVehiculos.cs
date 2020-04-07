@@ -207,6 +207,20 @@ namespace TallSys
             edtPlaca.Enabled = true;
         }
 
-        
+        private void eventocboxMarca(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxMarca) == false)
+            {
+                MessageBox.Show("No hay opciones de Marca");
+            }
+        }
+
+        private void eventocboxModelo(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxModelo) == false)
+            {
+                MessageBox.Show("No hay opciones de modelo");
+            }
+        }
     }//fin clase
 }//fin proyect

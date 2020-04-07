@@ -83,6 +83,7 @@
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(223, 21);
             this.cboxEstado.TabIndex = 47;
+            this.cboxEstado.Click += new System.EventHandler(this.eventocboxEstado);
             // 
             // cboxTipoServicio
             // 
@@ -92,6 +93,7 @@
             this.cboxTipoServicio.Name = "cboxTipoServicio";
             this.cboxTipoServicio.Size = new System.Drawing.Size(223, 21);
             this.cboxTipoServicio.TabIndex = 46;
+            this.cboxTipoServicio.Click += new System.EventHandler(this.eventocboxTipo);
             // 
             // label11
             // 
@@ -252,6 +254,7 @@
             this.cboxNav.Name = "cboxNav";
             this.cboxNav.Size = new System.Drawing.Size(223, 21);
             this.cboxNav.TabIndex = 64;
+            this.cboxNav.Click += new System.EventHandler(this.eventocboxNave);
             // 
             // MtoServicios
             // 

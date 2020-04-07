@@ -315,6 +315,12 @@ namespace TallSys
             cboxEstado.Enabled = false;
         }
 
-        
+        private void eventoEstado(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxEstado) == false)
+            {
+                MessageBox.Show("No hay opciones de estado");
+            }
+        }
     }//fin clase
 }//fin proyec

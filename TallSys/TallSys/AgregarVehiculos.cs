@@ -77,6 +77,22 @@ namespace TallSys
         {
             errorProvider1.Clear();
         }
+
+        private void EventoMarca(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxMarca) == false)
+            {
+                MessageBox.Show("No hay opciones de marca");
+            }
+        }
+
+        private void eventoModelo(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxModelo) == false)
+            {
+                MessageBox.Show("No hay opciones de Modelo");
+            }
+        }
     }
     }
 

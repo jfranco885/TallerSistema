@@ -35,6 +35,7 @@ namespace TallSys
             edtFecha.Enabled = false;
             edtIdEmpleado.Enabled = false;
             desactivarControlesE();
+            
             tabla.DataSource = Utilidades.datasetLista("listarEmpleados").Tables[0];
         }
 
@@ -57,6 +58,8 @@ namespace TallSys
             cboxCargo.DataSource = Utilidades.llenarComboBox("select idcargo,cargo from cargo");
             cboxCargo.DisplayMember = "cargo";
             cboxCargo.ValueMember = "idcargo";
+
+            
 
         }
         public override void guardar()
@@ -324,6 +327,8 @@ namespace TallSys
             edtApellido.Text = "";
             cboxCargo.Text = "";
             cboxEspecialidad.Text = "";
+            cboxEstado.Text = "";
+            cboxServicioVehiculo.Text = "";
             edtDui.Text = "";
             edtCelular.Text = "";
             cboxEstado.Text = "";
@@ -372,6 +377,36 @@ namespace TallSys
             errorProvider1.Clear();
         }
 
-       
+        private void eventoCargo(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxCargo) == false)
+            {
+                MessageBox.Show("No hay opciones de Cargo, debe ingresarlas en el mantenimiento cargo");
+            }
+        }
+
+        private void eventoEspecialidad(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxEspecialidad) == false)
+            {
+                MessageBox.Show("No hay opciones de especialidades");
+            }
+        }
+
+        private void eventoEstado(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxEstado) == false)
+            {
+                MessageBox.Show("No hay opciones de estado");
+            }
+        }
+
+        private void eventoSeraVehi(object sender, EventArgs e)
+        {
+            if (tieneItems(cboxServicioVehiculo) == false)
+            {
+                MessageBox.Show("No hay opciones de servicio a vehículo");
+            }
+        }
     }//fin clase
 }//fin proyecto

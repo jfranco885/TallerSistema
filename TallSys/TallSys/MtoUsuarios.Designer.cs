@@ -66,11 +66,13 @@
             // 
             // cboxRol
             // 
+            this.cboxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxRol.FormattingEnabled = true;
             this.cboxRol.Location = new System.Drawing.Point(517, 196);
             this.cboxRol.Name = "cboxRol";
             this.cboxRol.Size = new System.Drawing.Size(222, 21);
             this.cboxRol.TabIndex = 28;
+            this.cboxRol.Click += new System.EventHandler(this.eventocboxRol);
             // 
             // edtUsuario
             // 

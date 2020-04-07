@@ -80,7 +80,17 @@ namespace TallSys
                 return false;//Significa que se ha ingresado letras
             }
         }
-
+        public Boolean tieneItems(ComboBox cbox)
+        {
+            if (cbox.Items.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public void btnSalir_Click(object sender, EventArgs e)
         {
            if(MessageBox.Show("¿Está seguro que desea salir?","Arvertencia",MessageBoxButtons.YesNo,MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -90,5 +100,7 @@ namespace TallSys
 
             }
         }
+
+        
     }//fin class
 }//fin tallsys

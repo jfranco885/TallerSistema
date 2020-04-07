@@ -64,6 +64,7 @@
             this.cboxMarca.Name = "cboxMarca";
             this.cboxMarca.Size = new System.Drawing.Size(227, 21);
             this.cboxMarca.TabIndex = 18;
+            this.cboxMarca.Click += new System.EventHandler(this.eventoMarca);
             // 
             // edtId
             // 

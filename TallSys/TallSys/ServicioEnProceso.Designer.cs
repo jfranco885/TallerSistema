@@ -247,6 +247,7 @@
             this.cboxEstadoNuevo.Name = "cboxEstadoNuevo";
             this.cboxEstadoNuevo.Size = new System.Drawing.Size(256, 21);
             this.cboxEstadoNuevo.TabIndex = 33;
+            this.cboxEstadoNuevo.Click += new System.EventHandler(this.eventocboxEstado);
             // 
             // edtTipoServicio
             // 
