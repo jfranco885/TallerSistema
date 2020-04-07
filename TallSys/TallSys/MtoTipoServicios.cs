@@ -64,8 +64,8 @@ namespace TallSys
 
        */
            
-            if (validarCampo(edtServicio) | validarCampo(edtPrecio) | validarCampo(edtDescripcion) |
-                validarCampo(edtTiempo))
+            if (validarCampo(edtServicio) | !validarSoloNumeros(edtPrecio) | validarCampo(edtDescripcion) |
+                !validarSoloNumeros(edtTiempo))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -176,34 +176,40 @@ namespace TallSys
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
 
-           // MessageBox.Show(edtPrecio.Text.Trim());
-
-
-            DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
-            if (resul == DialogResult.Yes)
+            if (validarCampo(edtServicio) | !validarSoloNumeros(edtPrecio) | validarCampo(edtDescripcion) |
+                !validarSoloNumeros(edtTiempo))
             {
-                try
+                //solo mandara el error provider si está vacío
+            }
+            else
+            {
+
+
+                DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
                 {
-                    
+                    try
+                    {
 
-                    String consulta = String.Format("EXEC actualizarTipoServicio '{0}','{1}','{2}','{3}','{4}'",edtId.Text.Trim(), edtServicio.Text.Trim(), edtPrecio.Text.Trim(), edtDescripcion.Text.Trim(), edtTiempo.Text.Trim());
-                    Utilidades.Ejecutar(consulta);
 
-                    MessageBox.Show("Se actualizaron los datos");
-                    desactivarControles();
-                    btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
-                    limpiarCampos();
-                    tabla.DataSource = Utilidades.datasetLista("listarTipoServicio").Tables[0];
+                        String consulta = String.Format("EXEC actualizarTipoServicio '{0}','{1}','{2}','{3}','{4}'", edtId.Text.Trim(), edtServicio.Text.Trim(), edtPrecio.Text.Trim(), edtDescripcion.Text.Trim(), edtTiempo.Text.Trim());
+                        Utilidades.Ejecutar(consulta);
+
+                        MessageBox.Show("Se actualizaron los datos");
+                        desactivarControles();
+                        btnEditar.Enabled = false;
+                        btnEliminar.Enabled = false;
+                        limpiarCampos();
+                        tabla.DataSource = Utilidades.datasetLista("listarTipoServicio").Tables[0];
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Ha ocurrido un error" + error.Message);
+                    }
+
                 }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Ha ocurrido un error" + error.Message);
-                }
-
             }
         }
-
 
 
 

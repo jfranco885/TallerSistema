@@ -62,6 +62,25 @@ namespace TallSys
             return vacio;
         }//fin validar campo vacío
 
+        //Validar solo números
+        public Boolean validarSoloNumeros(TextBox campo)
+        {
+          
+            try
+            {
+                
+                Double numero = Convert.ToDouble(campo.Text.Trim());
+                // Double resultado =  numero / 1;
+               
+                return true;//son solo números
+            }
+            catch
+            {
+                errorProvider1.SetError(campo, "Debe ingresar dato numérico");
+                return false;//Significa que se ha ingresado letras
+            }
+        }
+
         public void btnSalir_Click(object sender, EventArgs e)
         {
            if(MessageBox.Show("¿Está seguro que desea salir?","Arvertencia",MessageBoxButtons.YesNo,MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)

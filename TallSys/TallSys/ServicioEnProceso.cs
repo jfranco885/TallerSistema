@@ -45,62 +45,70 @@ namespace TallSys
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrEmpty(edtTiempoReal.Text) & !validarSoloNumeros(edtTiempoReal))//Si no es nullo y a la vez no son numeros
             {
 
-                String idDetalleServicio = txtServicio.Text;
-                String descripcion = edtDescripcion.Text.Trim();
-                String diagnostico=edtDiagnostico.Text.Trim();
-                int estado =int.Parse(cboxEstadoNuevo.SelectedValue.ToString());
-                String tiempoReal = edtTiempoReal.Text.Trim();
-
-                if (tiempoReal == "")
-                {
-                    tiempoReal = "0";
-                }
-                String actividad = edtActividad.Text.Trim();
-                int idnavetipo =int.Parse(edtIdTipoServNave.Text.Trim());
-                int idEncabezadoServicio =int.Parse(txtEncabezado.Text.Trim());
-            
-                String consulta = String.Format("EXEC insertarDatosElMecanico '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}'", idDetalleServicio,descripcion,diagnostico,estado,tiempoReal,actividad,idnavetipo,idEncabezadoServicio);
-
-                Utilidades.Ejecutar(consulta);
-
-
-
-                //actualizando los datos en la vista
-
-                
-                edtTiempoReal.Text = tiempoReal;
-                edtEstadoActual.Text = cboxEstadoNuevo.Text;
-                
-                MessageBox.Show("Se han guardado los datos");
-
-              
-               
-               
             }
-            catch (Exception errorGuardarC)
-            {
-                MessageBox.Show("Ha ocurrido un error" + errorGuardarC.Message);
-            }
-
-            //Si se seleccionó terminar en el estado entonces dar de baja a empleados y liberar la nave
-            if (cboxEstadoNuevo.Text.Trim() == "Terminado")
+            else
             {
                 try
                 {
-                    //dando de baja a empleados
-                    String consulta = String.Format("update detalle_emp_serv set estado=0 where iddetalle_servicio =" + txtServicio.Text.Trim());
+
+                    String idDetalleServicio = txtServicio.Text;
+                    String descripcion = edtDescripcion.Text.Trim();
+                    String diagnostico = edtDiagnostico.Text.Trim();
+                    int estado = int.Parse(cboxEstadoNuevo.SelectedValue.ToString());
+                    String tiempoReal = edtTiempoReal.Text.Trim();
+
+                    if (tiempoReal == "")
+                    {
+                        tiempoReal = "0";
+                    }
+                    String actividad = edtActividad.Text.Trim();
+                    int idnavetipo = int.Parse(edtIdTipoServNave.Text.Trim());
+                    int idEncabezadoServicio = int.Parse(txtEncabezado.Text.Trim());
+
+                    String consulta = String.Format("EXEC insertarDatosElMecanico '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}'", idDetalleServicio, descripcion, diagnostico, estado, tiempoReal, actividad, idnavetipo, idEncabezadoServicio);
+
                     Utilidades.Ejecutar(consulta);
-                    //liberando la nave
-                    String consultaNave = String.Format("update nave set estado='Disponible' where idnave =" + edtNave.Text.Trim());
-                    Utilidades.Ejecutar(consultaNave);
-                    MessageBox.Show("Se ha liberado la nave y los empleados");
+
+
+
+                    //actualizando los datos en la vista
+
+
+                    edtTiempoReal.Text = tiempoReal;
+                    edtEstadoActual.Text = cboxEstadoNuevo.Text;
+                    errorProvider1.Clear();
+
+                    MessageBox.Show("Se han guardado los datos");
+
+
+
+
                 }
-                catch (Exception err)
+                catch (Exception errorGuardarC)
                 {
-                    MessageBox.Show("Error " + err.Message);
+                    MessageBox.Show("Ha ocurrido un error" + errorGuardarC.Message);
+                }
+
+                //Si se seleccionó terminar en el estado entonces dar de baja a empleados y liberar la nave
+                if (cboxEstadoNuevo.Text.Trim() == "Terminado")
+                {
+                    try
+                    {
+                        //dando de baja a empleados
+                        String consulta = String.Format("update detalle_emp_serv set estado=0 where iddetalle_servicio =" + txtServicio.Text.Trim());
+                        Utilidades.Ejecutar(consulta);
+                        //liberando la nave
+                        String consultaNave = String.Format("update nave set estado='Disponible' where idnave =" + edtNave.Text.Trim());
+                        Utilidades.Ejecutar(consultaNave);
+                        MessageBox.Show("Se ha liberado la nave y los empleados");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Error " + err.Message);
+                    }
                 }
             }
             

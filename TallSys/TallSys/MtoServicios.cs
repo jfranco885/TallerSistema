@@ -50,64 +50,86 @@ namespace TallSys
             }
             else
             {
-                Boolean existe;
-                String idEncabezado = edtIdEncabezado.Text.Trim();
-
-                String consul = String.Format("select *from encabezado_servicio where idencabezado_servicio='{0}'", idEncabezado);
-                existe = Utilidades.Existe(consul);
-
-                if (existe == true)
+                if (!string.IsNullOrEmpty(edtTiempo.Text) & !validarSoloNumeros(edtTiempo))//Si no es nullo y a la vez no son numeros
                 {
 
-                    //////////////////////
-                   //Validando si está disponible la nave
-                    Boolean naveDisponible;
-                    int validarNave = Convert.ToInt32(cboxNav.SelectedValue);
+                }
+                else
+                {
 
-                    String consultar = String.Format("select * from nave where estado='Disponible' and idnave ={0}", validarNave);
-                    naveDisponible = Utilidades.Existe(consultar);
-                    if (naveDisponible)
+                    Boolean existe;
+                    String idEncabezado = edtIdEncabezado.Text.Trim();
+
+                    String consul = String.Format("select *from encabezado_servicio where idencabezado_servicio='{0}'", idEncabezado);
+                    existe = Utilidades.Existe(consul);
+
+                    if (existe == true)
                     {
-                        //////////
 
-                        String descripcion = edtDescripcion.Text.Trim();
-                        String diagnostico = edtDiag.Text.Trim();
-                        int estado = Convert.ToInt32(cboxEstado.SelectedValue);
-                        String tiempo = edtTiempo.Text.Trim();
-                        String actividad = edtActivida.Text.Trim();
-                        int nave = Convert.ToInt32(cboxNav.SelectedValue);
-                        String estadoNave = "Ocupada";
-                        int tipoServicio = Convert.ToInt32(cboxTipoServicio.SelectedValue);
+                        //////////////////////
+                        //Validando si está disponible la nave
+                        Boolean naveDisponible;
+                        int validarNave = Convert.ToInt32(cboxNav.SelectedValue);
 
-                        try
+                        String consultar = String.Format("select * from nave where estado='Disponible' and idnave ={0}", validarNave);
+                        naveDisponible = Utilidades.Existe(consultar);
+                        if (naveDisponible)
                         {
-                            String consulta = String.Format("EXEC insertarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
-                                ",'{4}','{5}','{6}','{7}','{8}'", idEncabezado, descripcion, diagnostico, estado, tiempo,
-                                actividad, nave, estadoNave, tipoServicio);
-                            Utilidades.Ejecutar(consulta);
-                            MessageBox.Show("Se han guardado los datos");
+                            //////////
 
-                            desactivarControles();
-                            btnGuardar.Enabled = false;
-                            limpiarCampos();
-                            cargarTablaMtoServicios();
-                        }
-                        catch (Exception errorGuardarC)
+                            String descripcion = edtDescripcion.Text.Trim();
+                            String diagnostico = edtDiag.Text.Trim();
+                            int estado = Convert.ToInt32(cboxEstado.SelectedValue);
+                            String tiempo = edtTiempo.Text.Trim();
+                            if (tiempo == "")
+                            {
+                                tiempo = "0";
+                            }
+                            String actividad = edtActivida.Text.Trim();
+                            int nave = Convert.ToInt32(cboxNav.SelectedValue);
+                            String estadoNave = "Ocupada";
+                            int tipoServicio = Convert.ToInt32(cboxTipoServicio.SelectedValue);
+                            //Validando que si tiempo lleva datos no sean letras
+                            if (!string.IsNullOrEmpty(edtTiempo.Text) & !validarSoloNumeros(edtTiempo))//Si no es nullo y a la vez no son numeros
+                            {
+
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    String consulta = String.Format("EXEC insertarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
+                                        ",'{4}','{5}','{6}','{7}','{8}'", idEncabezado, descripcion, diagnostico, estado, tiempo,
+                                        actividad, nave, estadoNave, tipoServicio);
+                                    Utilidades.Ejecutar(consulta);
+
+                                    errorProvider1.Clear();
+                                    MessageBox.Show("Se han guardado los datos");
+
+                                    desactivarControles();
+                                    btnGuardar.Enabled = false;
+                                    
+                                    limpiarCampos();
+                                    
+                                    cargarTablaMtoServicios();
+                                }
+                                catch (Exception errorGuardarC)
+                                {
+                                    MessageBox.Show("Ha ocurrido un error" + errorGuardarC.Message);
+                                }
+                            }//final validando si el tiempo no es nulo sean solo dígitos
+
+
+                        }//fin si está disponible la nave
+                        else
                         {
-                            MessageBox.Show("Ha ocurrido un error" + errorGuardarC.Message);
+                            MessageBox.Show("Esta nave no está disponible");
                         }
-
-
-
-                    }//fin si está disponible la nave
-                    else
+                    }//sin si existe
+                    else//si existe
                     {
-                        MessageBox.Show("Esta nave no está disponible");
+                        MessageBox.Show("No existe este Encabezado de servicio");
                     }
-                }//sin si existe
-                else//si existe
-                {
-                    MessageBox.Show("No existe este Encabezado de servicio");
                 }
             }//fin validadndo campos
 
@@ -187,21 +209,28 @@ namespace TallSys
             }
             else
             {
-
-                Boolean existe;
-                String idEncabezado = edtIdEncabezado.Text.Trim();
-
-                String consul = String.Format("select *from encabezado_servicio where idencabezado_servicio='{0}'", idEncabezado);
-                existe = Utilidades.Existe(consul);
-
-                if (existe == true)
+                //Validando que si tiempo lleva datos no sean letras
+                if (!string.IsNullOrEmpty(edtTiempo.Text) & !validarSoloNumeros(edtTiempo))//Si no es nullo y a la vez no son numeros
                 {
 
-                   
-                    Boolean naveDisponible;
-                    int validarNave = Convert.ToInt32(cboxNav.SelectedValue);
+                }
+                else
+                {
 
-                    
+                    Boolean existe;
+                    String idEncabezado = edtIdEncabezado.Text.Trim();
+
+                    String consul = String.Format("select *from encabezado_servicio where idencabezado_servicio='{0}'", idEncabezado);
+                    existe = Utilidades.Existe(consul);
+
+                    if (existe == true)
+                    {
+
+
+                        Boolean naveDisponible;
+                        int validarNave = Convert.ToInt32(cboxNav.SelectedValue);
+
+                        errorProvider1.Clear();//borrando el error si viene vacio el tiempo
 
                         DialogResult resul = MessageBox.Show("Seguro que quiere Modificar el Registro?", "Modificar Registro", MessageBoxButtons.YesNo);
                         if (resul == DialogResult.Yes)
@@ -211,6 +240,10 @@ namespace TallSys
                             String diagnostico = edtDiag.Text.Trim();
                             int estado = Convert.ToInt32(cboxEstado.SelectedValue);
                             String tiempo = edtTiempo.Text.Trim();
+                            if (tiempo == "")
+                            {
+                                tiempo ="0";
+                            }
                             String actividad = edtActivida.Text.Trim();
                             int nave = Convert.ToInt32(cboxNav.SelectedValue);
                             //para valor del estado nave
@@ -225,64 +258,69 @@ namespace TallSys
 
                             int tipoServicio = Convert.ToInt32(cboxTipoServicio.SelectedValue);
                             String idNaveTipoServicio = edtIdNaveServ.Text.Trim();
-                        if (naveActual == cboxNav.Text.Trim())
-                        {//Si la nave no ha cambiado solo insertar
-                            try
+                            if (naveActual == cboxNav.Text.Trim())
+                            {//Si la nave no ha cambiado solo insertar
+                                try
+                                {
+                                    String consulta = String.Format("EXEC actualizarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
+                                            ",'{4}','{5}','{6}','{7}','{8}','{9}','{10}'", idDetalleServicio, descripcion, diagnostico,
+                                            estado, tiempo, actividad, nave, estadoNave, tipoServicio, idEncabezado, idNaveTipoServicio);
+                                    Utilidades.Ejecutar(consulta);
+                                    MessageBox.Show("Se actualizaron los datos");
+                                    desactivarControles();
+                                    btnEditar.Enabled = false;
+                                    btnEliminar.Enabled = false;
+                                    limpiarCampos();
+                                    cargarTablaMtoServicios();//llenando la tabla
+                                }
+                                catch (Exception error)
+                                {
+                                    MessageBox.Show("Ha ocurrido un error" + error.Message);
+                                }
+                            }//Si la nave cambio verificar si está dicponible
+                            else
                             {
-                                String consulta = String.Format("EXEC actualizarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
-                                        ",'{4}','{5}','{6}','{7}','{8}','{9}','{10}'", idDetalleServicio, descripcion, diagnostico,
-                                        estado, tiempo, actividad, nave, estadoNave, tipoServicio, idEncabezado, idNaveTipoServicio);
-                                Utilidades.Ejecutar(consulta);
-                                MessageBox.Show("Se actualizaron los datos");
-                                desactivarControles();
-                                btnEditar.Enabled = false;
-                                btnEliminar.Enabled = false;
-                                limpiarCampos();
-                                cargarTablaMtoServicios();//llenando la tabla
-                            }
-                            catch (Exception error)
-                            {
-                                MessageBox.Show("Ha ocurrido un error" + error.Message);
-                            }
-                        }//Si la nave cambio verificar si está dicponible
-                        else
-                        {
 
-                      
-                        //validando si está disponible la nave
-                        String consultar = String.Format("select * from nave where estado='Disponible' and idnave ={0}", validarNave);
-                        naveDisponible = Utilidades.Existe(consultar);
-                        if (naveDisponible){
-                            try{
-                                String consulta = String.Format("EXEC actualizarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
-                                        ",'{4}','{5}','{6}','{7}','{8}','{9}','{10}'", idDetalleServicio, descripcion, diagnostico,
-                                        estado, tiempo, actividad, nave, estadoNave, tipoServicio, idEncabezado, idNaveTipoServicio);
-                                Utilidades.Ejecutar(consulta);
-                                MessageBox.Show("Se actualizaron los datos");
-                                desactivarControles();
-                                btnEditar.Enabled = false;
-                                btnEliminar.Enabled = false;
-                                limpiarCampos();
-                                cargarTablaMtoServicios();//llenando la tabla
+
+                                //validando si está disponible la nave
+                                String consultar = String.Format("select * from nave where estado='Disponible' and idnave ={0}", validarNave);
+                                naveDisponible = Utilidades.Existe(consultar);
+                                if (naveDisponible)
+                                {
+                                    try
+                                    {
+                                        String consulta = String.Format("EXEC actualizarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
+                                                ",'{4}','{5}','{6}','{7}','{8}','{9}','{10}'", idDetalleServicio, descripcion, diagnostico,
+                                                estado, tiempo, actividad, nave, estadoNave, tipoServicio, idEncabezado, idNaveTipoServicio);
+                                        Utilidades.Ejecutar(consulta);
+                                        MessageBox.Show("Se actualizaron los datos");
+                                        desactivarControles();
+                                        btnEditar.Enabled = false;
+                                        btnEliminar.Enabled = false;
+                                        limpiarCampos();
+                                        cargarTablaMtoServicios();//llenando la tabla
+                                    }
+                                    catch (Exception error)
+                                    {
+                                        MessageBox.Show("Ha ocurrido un error" + error.Message);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Esta nave no está disponible");
+                                }
+
+                                
                             }
-                            catch (Exception error)
-                            {
-                                MessageBox.Show("Ha ocurrido un error" + error.Message);
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Esta nave no está disponible");
-                        }
+
                         }
 
+
+                    }//fin si existe
+                    else//si existe
+                    {
+                        MessageBox.Show("No existe este Encabezado de servicio");
                     }
-                    
-                    
-                }//fin si existe
-                else//si existe
-                {
-                    MessageBox.Show("No existe este Encabezado de servicio");
                 }
             }//fin validando campos
         }//fin editar
@@ -351,6 +389,9 @@ namespace TallSys
             tabla.DataSource = Utilidades.datasetLista("listarMtoDetalleServicio").Tables[0];
         }
 
-       
+        private void edtTiempo_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
     }//fin clase
 }//prin proyecto

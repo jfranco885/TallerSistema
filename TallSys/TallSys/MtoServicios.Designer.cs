@@ -209,6 +209,7 @@
             this.edtTiempo.Name = "edtTiempo";
             this.edtTiempo.Size = new System.Drawing.Size(223, 20);
             this.edtTiempo.TabIndex = 59;
+            this.edtTiempo.TextChanged += new System.EventHandler(this.edtTiempo_TextChanged);
             // 
             // edtDescripcion
             // 
