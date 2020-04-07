@@ -57,7 +57,7 @@ namespace TallSys
         {
 
             //  MessageBox.Show(cboxcargo = cboxCargo.SelectedValue.ToString());
-            if (validarCampo(edtUsuario) | validarCampo(edtClave))
+            if (validarCampo(edtUsuario) | validarCampo(edtClave)|validarCombox(cboxRol))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -134,7 +134,7 @@ namespace TallSys
                 }
                 else
                 {
-                    MessageBox.Show("Este Empleado no existe");
+                    MessageBox.Show("Este Usuario no existe");
                     limpiarCampos();
                     desactivarControlesE();
                 }
@@ -177,7 +177,7 @@ namespace TallSys
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
 
-            if (validarCampo(edtUsuario) | validarCampo(edtClave))
+            if (validarCampo(edtUsuario) | validarCampo(edtClave) | validarCombox(cboxRol))
             {
                 //solo mandara el error provider si está vacío
             }

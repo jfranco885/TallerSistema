@@ -89,7 +89,7 @@ namespace TallSys
         {
 
            
-            if (validarCampo(edtDescripcion))
+            if (validarCampo(edtDescripcion)|validarCombox(cboxTipoServicio)|validarCombox(cboxNave)|validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }

@@ -62,6 +62,18 @@ namespace TallSys
             return vacio;
         }//fin validar campo vacío
 
+        //VALICANDO COMBOX VACIO
+        public Boolean validarCombox(ComboBox cbox)
+        {
+            Boolean vacio = false;
+            if (cbox.Text == "")
+            {
+                vacio = true;
+                errorProvider1.SetError(cbox, "Debe Seleccionar una opción");
+            }
+            return vacio;
+        }//fin validar campo vacío
+
         //Validar solo números
         public Boolean validarSoloNumeros(TextBox campo)
         {

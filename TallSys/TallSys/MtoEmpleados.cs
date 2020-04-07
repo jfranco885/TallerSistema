@@ -66,8 +66,10 @@ namespace TallSys
         {
 
           //  MessageBox.Show(cboxcargo = cboxCargo.SelectedValue.ToString());
-            if (validarCampo(edtNombre) | validarCampo(edtApellido) | validarCampo(edtDui) |
-                validarCampo(edtCelular) | validarCampo(edtCorreo))
+            if (validarCampo(edtNombre) | validarCampo(edtApellido)|validarCombox(cboxCargo) |
+                validarCombox(cboxEspecialidad) | validarCampo(edtDui) |
+                validarCampo(edtCelular) | validarCombox(cboxEstado) |
+                validarCampo(edtCorreo) | validarCombox(cboxServicioVehiculo))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -211,8 +213,10 @@ namespace TallSys
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            if (validarCampo(edtNombre) | validarCampo(edtApellido) | validarCampo(edtDui) |
-               validarCampo(edtCelular) | validarCampo(edtCorreo))
+            if (validarCampo(edtNombre) | validarCampo(edtApellido) | validarCombox(cboxCargo) |
+                validarCombox(cboxEspecialidad) | validarCampo(edtDui) |
+                validarCampo(edtCelular) | validarCombox(cboxEstado) |
+                validarCampo(edtCorreo) | validarCombox(cboxServicioVehiculo))
             {
                 //solo mandara el error provider si está vacío
             }

@@ -99,7 +99,7 @@ namespace TallSys
                 }
                 else//si existe
                 {
-                    MessageBox.Show("Este Tipo de Servicio ya existe ya existe");
+                    MessageBox.Show("Este Tipo de Servicio ya existe");
                 }
             }
 

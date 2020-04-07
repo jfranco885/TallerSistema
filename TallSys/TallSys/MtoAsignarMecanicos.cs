@@ -31,7 +31,7 @@ namespace TallSys
         public override void guardar()
         {
            // MessageBox.Show(cboxEstado.Text);
-            if (validarCampo(edtIdServicio) | validarCampo(edtIdEmpleado))
+            if (validarCampo(edtIdServicio) | validarCampo(edtIdEmpleado)|validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -182,7 +182,7 @@ namespace TallSys
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
 
-            if (validarCampo(edtIdServicio) | validarCampo(edtIdEmpleado))
+            if (validarCampo(edtIdServicio) | validarCampo(edtIdEmpleado) | validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }

@@ -73,7 +73,7 @@ namespace TallSys
                 }
                 else//si existe
                 {
-                    MessageBox.Show("Este cargo ya existe");
+                    MessageBox.Show("Este Cliente ya existe");
                 }
             }
 

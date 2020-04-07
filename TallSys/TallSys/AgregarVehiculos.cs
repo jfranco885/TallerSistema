@@ -31,7 +31,7 @@ namespace TallSys
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (validarCampo(edtPlaca))
+            if (validarCampo(edtPlaca)|validarCombox(cboxMarca)|validarCombox(cboxModelo))
             {
                 //solo mandara el error provider si está vacío
             }

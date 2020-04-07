@@ -33,7 +33,7 @@ namespace TallSys
 
         public override void guardar()
         {
-            if (validarCampo(edtDescripcion))
+            if (validarCampo(edtDescripcion) | validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -136,7 +136,7 @@ namespace TallSys
         }
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            if (validarCampo(edtDescripcion))
+            if (validarCampo(edtDescripcion) | validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }

@@ -16,7 +16,7 @@ namespace TallSys
         public txtIdServicio()
         {
             InitializeComponent();
-            
+
             edtCliente.Enabled = false;
             edtEstadoActual.Enabled = false;
             edtNave.Enabled = false;
@@ -25,7 +25,7 @@ namespace TallSys
             edtDescripcion.Enabled = false;
 
             cboxEstadoNuevo.Text = edtEstadoActual.Text;
-           
+
         }
 
         private void ServicioEnProceso_Load(object sender, EventArgs e)
@@ -45,6 +45,11 @@ namespace TallSys
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (validarCombox(cboxEstadoNuevo))
+            {
+
+            }
+            else { 
             if (!string.IsNullOrEmpty(edtTiempoReal.Text) & !validarSoloNumeros(edtTiempoReal))//Si no es nullo y a la vez no son numeros
             {
 
@@ -111,9 +116,9 @@ namespace TallSys
                     }
                 }
             }
-            
-        }
 
+        }
+    }
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarCambioPiezaPorIdServicio", Convert.ToInt16(txtServicio.Text.Trim())).Tables[0];

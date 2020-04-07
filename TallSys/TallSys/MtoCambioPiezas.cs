@@ -110,7 +110,7 @@ namespace TallSys
                     }
                     else
                     {
-                        MessageBox.Show("Este cargo no existe");
+                        MessageBox.Show("Este id de cambio de pieza no existe");
                         limpiarCampos();
                        
 

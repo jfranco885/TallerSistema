@@ -44,7 +44,7 @@ namespace TallSys
         {
 
             //  MessageBox.Show(cboxcargo = cboxCargo.SelectedValue.ToString());
-            if (validarCampo(edtIdEncabezado))
+            if (validarCampo(edtIdEncabezado)|validarCombox(cboxTipoServicio)|validarCombox(cboxNav)|validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -203,7 +203,7 @@ namespace TallSys
         }
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            if (validarCampo(edtIdEncabezado) | validarCampo(edtIdDetalleServ))
+            if (validarCampo(edtIdEncabezado) | validarCombox(cboxTipoServicio) | validarCombox(cboxNav) | validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }
