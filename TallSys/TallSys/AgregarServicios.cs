@@ -34,16 +34,11 @@ namespace TallSys
             cboxEstado.ValueMember = "idestado";
 
             cboxTipoServicio.DataSource = Utilidades.llenarComboBox("select idtipo_servicio,nombre_servicio from tipo_servicios");
-             cboxTipoServicio.DisplayMember = "nombre_servicio";
-             cboxTipoServicio.ValueMember = "idtipo_servicio";
-
-            cboxNave.DataSource = Utilidades.llenarComboBox("select idnave from nave where estado ='Disponible'");
-            cboxNave.DisplayMember = "idnave";
-            cboxNave.ValueMember = "idnave";
+            cboxTipoServicio.DisplayMember = "nombre_servicio";
+            cboxTipoServicio.ValueMember = "idtipo_servicio";
 
 
-
-
+            cargarComboxNave();
 
 
         }
@@ -89,7 +84,7 @@ namespace TallSys
         {
 
            
-            if (validarCampo(edtDescripcion)|validarCombox(cboxTipoServicio)|validarCombox(cboxNave)|validarCombox(cboxEstado))
+            if (validarCombox(cboxTipoServicio)|validarCombox(cboxNave)|validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -113,7 +108,8 @@ namespace TallSys
                    
 
                     cargarTabla();
-                    
+                    cargarComboxNave();
+
                     limpiarCampos();
 
                     int idencabezado = Convert.ToInt32((edtIdServicioEncabezado.Text.ToString()));
@@ -296,6 +292,15 @@ namespace TallSys
             {
                 MessageBox.Show("No hay opciones de estado");
             }
+        }
+        private void cargarComboxNave()
+        {
+           
+            cboxNave.DataSource = Utilidades.llenarComboBox("select idnave from nave where estado ='Disponible'");
+            cboxNave.DisplayMember = "idnave";
+            cboxNave.ValueMember = "idnave";
+
+
         }
     }//fin clase
 }//fin proyec

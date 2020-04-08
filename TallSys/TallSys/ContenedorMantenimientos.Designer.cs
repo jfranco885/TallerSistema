@@ -41,6 +41,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).BeginInit();
             this.SuspendLayout();
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -130,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 490);
+            this.ClientSize = new System.Drawing.Size(971, 492);
             this.Controls.Add(this.tabla);
             this.Controls.Add(this.edtBuscar);
             this.Controls.Add(this.label1);
@@ -152,6 +157,7 @@
             this.Controls.SetChildIndex(this.tabla, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).EndInit();
             this.ResumeLayout(false);

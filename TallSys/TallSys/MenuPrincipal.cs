@@ -24,12 +24,14 @@ namespace TallSys
         private void btnMantenimientos_Click(object sender, EventArgs e)
         {
             MenuMantenimientos menuMantenimientos =new MenuMantenimientos();
+
             menuMantenimientos.ShowDialog();
         }
 
         private void btnAgregarServ_Click(object sender, EventArgs e)
         {
             SeleccionServicios seleccionServicios = new SeleccionServicios();
+            
             seleccionServicios.ShowDialog();
         }
 
@@ -52,7 +54,7 @@ namespace TallSys
 
            
 
-            if (Form1.rol == 1) {
+            if (Form1.rol == 4) {
 
                 btnAgregarServ.Visible = true;
                 btnMantenimientos.Visible = true;

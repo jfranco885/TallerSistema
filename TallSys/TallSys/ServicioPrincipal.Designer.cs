@@ -52,10 +52,13 @@
             this.btnCrearVehiculo = new System.Windows.Forms.Button();
             this.btnBuscarVehiculo = new System.Windows.Forms.Button();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dataGridEncabezados = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEncabezados)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -73,7 +76,7 @@
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(463, 49);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(412, 247);
+            this.groupBox4.Size = new System.Drawing.Size(432, 247);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Solicitud Servicio";
@@ -183,16 +186,16 @@
             this.groupBox2.Controls.Add(this.btnAgregarServicio);
             this.groupBox2.Controls.Add(this.edtCodigoServicio);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(102, 315);
+            this.groupBox2.Location = new System.Drawing.Point(102, 330);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(721, 123);
+            this.groupBox2.Size = new System.Drawing.Size(721, 108);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar Servicio";
             // 
             // btnAgregarServicio
             // 
-            this.btnAgregarServicio.Location = new System.Drawing.Point(281, 54);
+            this.btnAgregarServicio.Location = new System.Drawing.Point(281, 43);
             this.btnAgregarServicio.Name = "btnAgregarServicio";
             this.btnAgregarServicio.Size = new System.Drawing.Size(124, 29);
             this.btnAgregarServicio.TabIndex = 29;
@@ -202,7 +205,7 @@
             // 
             // edtCodigoServicio
             // 
-            this.edtCodigoServicio.Location = new System.Drawing.Point(103, 59);
+            this.edtCodigoServicio.Location = new System.Drawing.Point(103, 48);
             this.edtCodigoServicio.Name = "edtCodigoServicio";
             this.edtCodigoServicio.Size = new System.Drawing.Size(158, 20);
             this.edtCodigoServicio.TabIndex = 22;
@@ -211,7 +214,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 62);
+            this.label6.Location = new System.Drawing.Point(4, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 13);
             this.label6.TabIndex = 21;
@@ -236,7 +239,7 @@
             // 
             // edtBuscarV
             // 
-            this.edtBuscarV.Location = new System.Drawing.Point(96, 155);
+            this.edtBuscarV.Location = new System.Drawing.Point(96, 134);
             this.edtBuscarV.Name = "edtBuscarV";
             this.edtBuscarV.Size = new System.Drawing.Size(189, 20);
             this.edtBuscarV.TabIndex = 28;
@@ -245,7 +248,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 158);
+            this.label5.Location = new System.Drawing.Point(12, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 27;
@@ -253,7 +256,7 @@
             // 
             // btnCrearVehiculo
             // 
-            this.btnCrearVehiculo.Location = new System.Drawing.Point(369, 150);
+            this.btnCrearVehiculo.Location = new System.Drawing.Point(369, 129);
             this.btnCrearVehiculo.Name = "btnCrearVehiculo";
             this.btnCrearVehiculo.Size = new System.Drawing.Size(75, 29);
             this.btnCrearVehiculo.TabIndex = 25;
@@ -266,7 +269,7 @@
             this.btnBuscarVehiculo.FlatAppearance.BorderSize = 0;
             this.btnBuscarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarVehiculo.Image = global::TallSys.Properties.Resources.search;
-            this.btnBuscarVehiculo.Location = new System.Drawing.Point(307, 146);
+            this.btnBuscarVehiculo.Location = new System.Drawing.Point(307, 125);
             this.btnBuscarVehiculo.Name = "btnBuscarVehiculo";
             this.btnBuscarVehiculo.Size = new System.Drawing.Size(56, 36);
             this.btnBuscarVehiculo.TabIndex = 26;
@@ -285,11 +288,35 @@
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(179, 171);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(131, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Encabezados de servicios";
+            // 
+            // dataGridEncabezados
+            // 
+            this.dataGridEncabezados.AllowUserToAddRows = false;
+            this.dataGridEncabezados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridEncabezados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEncabezados.Location = new System.Drawing.Point(15, 187);
+            this.dataGridEncabezados.Name = "dataGridEncabezados";
+            this.dataGridEncabezados.ReadOnly = true;
+            this.dataGridEncabezados.RowHeadersVisible = false;
+            this.dataGridEncabezados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridEncabezados.Size = new System.Drawing.Size(442, 137);
+            this.dataGridEncabezados.TabIndex = 30;
+            // 
             // ServicioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 450);
+            this.Controls.Add(this.dataGridEncabezados);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.edtBuscarV);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBuscarVehiculo);
@@ -314,12 +341,15 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.edtBuscarV, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.dataGridEncabezados, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEncabezados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,5 +381,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox edtIdVehiculo;
         public System.Windows.Forms.TextBox edtCodigoServicio;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.DataGridView dataGridEncabezados;
     }
 }

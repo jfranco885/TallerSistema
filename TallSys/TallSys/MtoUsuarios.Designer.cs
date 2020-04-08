@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnBuscarEmpleado = new System.Windows.Forms.Button();
             this.edtIdEmpleado = new System.Windows.Forms.TextBox();
@@ -63,6 +62,13 @@
             // btnEditar
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
             // 
             // cboxRol
             // 
@@ -140,15 +146,6 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Empleado";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(664, 79);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(239, 13);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Crear boton buscar y validar si existe el empleado";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -197,13 +194,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 478);
+            this.ClientSize = new System.Drawing.Size(962, 492);
             this.Controls.Add(this.edtNombreEmpleado);
             this.Controls.Add(this.edtIdEmpleado);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnBuscarEmpleado);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cboxRol);
             this.Controls.Add(this.edtUsuario);
@@ -233,13 +229,13 @@
             this.Controls.SetChildIndex(this.edtUsuario, 0);
             this.Controls.SetChildIndex(this.cboxRol, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.btnBuscarEmpleado, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.edtIdEmpleado, 0);
             this.Controls.SetChildIndex(this.edtNombreEmpleado, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -257,7 +253,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.Button btnBuscarEmpleado;
         private System.Windows.Forms.Label label9;

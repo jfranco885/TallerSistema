@@ -21,7 +21,7 @@ namespace TallSys
 
         private void ContenedorVentanas_Load(object sender, EventArgs e)
         {
-
+            txtUsuario.Text = Form1.nombreUsuario;
         }
 
         public virtual void editar()

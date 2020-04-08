@@ -322,5 +322,15 @@ namespace TallSys
                 MessageBox.Show("No hay opciones de estado");
             }
         }
+
+        private void edtIdEmpleado_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtIdServicio_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
     }//fin clase
 }//fin proyec

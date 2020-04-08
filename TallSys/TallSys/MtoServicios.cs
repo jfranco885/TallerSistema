@@ -417,5 +417,10 @@ namespace TallSys
                 MessageBox.Show("No hay opciones de Estado");
             }
         }
+
+        private void edtIdEncabezado_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
     }//fin clase
 }//prin proyecto

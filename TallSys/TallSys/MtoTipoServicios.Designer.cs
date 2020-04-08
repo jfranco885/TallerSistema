@@ -76,6 +76,13 @@
             // edtBuscar
             // 
             this.edtBuscar.Location = new System.Drawing.Point(352, 57);
+            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
             // 
             // edtServicio
             // 
@@ -191,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 480);
+            this.ClientSize = new System.Drawing.Size(962, 492);
             this.Controls.Add(this.edtFecha);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -230,6 +237,7 @@
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.edtFecha, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

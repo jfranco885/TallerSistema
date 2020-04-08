@@ -86,6 +86,9 @@ namespace TallSys
 
         }
 
-       
+        private void edtEmpleado_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
     }//fin clase
 }//fin proyecto

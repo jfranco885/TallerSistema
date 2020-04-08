@@ -18,6 +18,7 @@ namespace TallSys
         public static string eltipo = "";
         public static int rol = 0;
         public static string nombreUsuario = "";
+        public static int idempleado = 0;
 
        // Hash llamar = new Hash();
         public Form1()
@@ -52,6 +53,7 @@ namespace TallSys
                         cmd.Parameters.Add("@Result", SqlDbType.Int).Direction = ParameterDirection.Output;
                         cmd.Parameters.Add("@rol", SqlDbType.Int).Direction = ParameterDirection.Output;
                         cmd.Parameters.Add("@nombre", SqlDbType.VarChar,50).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("@idempleado", SqlDbType.Int).Direction = ParameterDirection.Output;
 
 
                         // open connection and execute stored procedure
@@ -68,13 +70,14 @@ namespace TallSys
                         {
                             rol = Convert.ToInt32(cmd.Parameters["@rol"].Value);
                             nombreUsuario = Convert.ToString(cmd.Parameters["@nombre"].Value);
+                            idempleado= Convert.ToInt32(cmd.Parameters["@idempleado"].Value);
 
                             MenuPrincipal menuPrincipal = new MenuPrincipal();
                             this.Hide();
                             menuPrincipal.Show();
                             //Validando el rol, Traer el rol en una variable de retorno
                            
-                            if (rol == 1)
+                            if (rol == 4)
                                 {
                                    
                                     this.Hide();

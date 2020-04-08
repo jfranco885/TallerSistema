@@ -40,6 +40,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.edtCantidad = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).BeginInit();
@@ -51,7 +52,7 @@
             // 
             // edtServicio
             // 
-            this.edtServicio.Location = new System.Drawing.Point(38, 95);
+            this.edtServicio.Location = new System.Drawing.Point(39, 73);
             this.edtServicio.Name = "edtServicio";
             this.edtServicio.Size = new System.Drawing.Size(161, 20);
             this.edtServicio.TabIndex = 25;
@@ -59,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 69);
+            this.label3.Location = new System.Drawing.Point(15, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 24;
@@ -68,7 +69,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(124, 219);
+            this.label4.Location = new System.Drawing.Point(123, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 29;
@@ -76,7 +77,7 @@
             // 
             // edtRepuesto
             // 
-            this.edtRepuesto.Location = new System.Drawing.Point(230, 216);
+            this.edtRepuesto.Location = new System.Drawing.Point(229, 170);
             this.edtRepuesto.Name = "edtRepuesto";
             this.edtRepuesto.Size = new System.Drawing.Size(270, 20);
             this.edtRepuesto.TabIndex = 28;
@@ -84,7 +85,7 @@
             // 
             // edtidCambio
             // 
-            this.edtidCambio.Location = new System.Drawing.Point(230, 164);
+            this.edtidCambio.Location = new System.Drawing.Point(229, 118);
             this.edtidCambio.Name = "edtidCambio";
             this.edtidCambio.Size = new System.Drawing.Size(270, 20);
             this.edtidCambio.TabIndex = 27;
@@ -92,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 167);
+            this.label2.Location = new System.Drawing.Point(123, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 26;
@@ -144,7 +145,7 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(124, 263);
+            this.label.Location = new System.Drawing.Point(123, 217);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(49, 13);
             this.label.TabIndex = 35;
@@ -152,17 +153,27 @@
             // 
             // edtCantidad
             // 
-            this.edtCantidad.Location = new System.Drawing.Point(230, 260);
+            this.edtCantidad.Location = new System.Drawing.Point(229, 214);
             this.edtCantidad.Name = "edtCantidad";
             this.edtCantidad.Size = new System.Drawing.Size(270, 20);
             this.edtCantidad.TabIndex = 34;
             this.edtCantidad.TextChanged += new System.EventHandler(this.edtCantidad_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(204, 270);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Seleccione para editar o eliminar";
             // 
             // GestionarCambioPiezas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label);
             this.Controls.Add(this.edtCantidad);
             this.Controls.Add(this.btnEliminar);
@@ -190,6 +201,7 @@
             this.Controls.SetChildIndex(this.edtCantidad, 0);
             this.Controls.SetChildIndex(this.label, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).EndInit();
@@ -211,5 +223,6 @@
         public System.Windows.Forms.TextBox edtServicio;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.TextBox edtCantidad;
+        private System.Windows.Forms.Label label1;
     }
 }

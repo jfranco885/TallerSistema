@@ -86,7 +86,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(747, 398);
+            this.btnSalir.Location = new System.Drawing.Point(712, 395);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(93, 65);
             this.btnSalir.TabIndex = 20;
@@ -98,7 +98,7 @@
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(747, 304);
+            this.button4.Location = new System.Drawing.Point(712, 301);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 87);
             this.button4.TabIndex = 19;
@@ -109,7 +109,7 @@
             // 
             this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
-            this.btnReportes.Location = new System.Drawing.Point(452, 304);
+            this.btnReportes.Location = new System.Drawing.Point(417, 301);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(279, 159);
             this.btnReportes.TabIndex = 18;
@@ -121,7 +121,7 @@
             this.btnMantenimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMantenimientos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnMantenimientos.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimientos.Image")));
-            this.btnMantenimientos.Location = new System.Drawing.Point(452, 156);
+            this.btnMantenimientos.Location = new System.Drawing.Point(417, 153);
             this.btnMantenimientos.Name = "btnMantenimientos";
             this.btnMantenimientos.Size = new System.Drawing.Size(388, 132);
             this.btnMantenimientos.TabIndex = 17;
@@ -134,7 +134,7 @@
             this.btnAgregarServ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarServ.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgregarServ.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarServ.Image")));
-            this.btnAgregarServ.Location = new System.Drawing.Point(145, 156);
+            this.btnAgregarServ.Location = new System.Drawing.Point(110, 153);
             this.btnAgregarServ.Name = "btnAgregarServ";
             this.btnAgregarServ.Size = new System.Drawing.Size(283, 307);
             this.btnAgregarServ.TabIndex = 16;
@@ -146,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 596);
+            this.ClientSize = new System.Drawing.Size(978, 498);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnReportes);

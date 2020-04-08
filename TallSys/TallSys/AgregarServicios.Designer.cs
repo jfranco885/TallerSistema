@@ -204,7 +204,7 @@
             // 
             this.edtPlacaVehiculo.Location = new System.Drawing.Point(145, 56);
             this.edtPlacaVehiculo.Name = "edtPlacaVehiculo";
-            this.edtPlacaVehiculo.Size = new System.Drawing.Size(140, 20);
+            this.edtPlacaVehiculo.Size = new System.Drawing.Size(153, 20);
             this.edtPlacaVehiculo.TabIndex = 7;
             this.edtPlacaVehiculo.TextChanged += new System.EventHandler(this.edtPlacaVehiculo_TextChanged);
             // 
@@ -276,7 +276,7 @@
             // 
             this.edtNombreCliente.Location = new System.Drawing.Point(145, 108);
             this.edtNombreCliente.Name = "edtNombreCliente";
-            this.edtNombreCliente.Size = new System.Drawing.Size(140, 20);
+            this.edtNombreCliente.Size = new System.Drawing.Size(170, 20);
             this.edtNombreCliente.TabIndex = 45;
             // 
             // label8
@@ -350,7 +350,7 @@
             // 
             this.edtDui.Location = new System.Drawing.Point(145, 82);
             this.edtDui.Name = "edtDui";
-            this.edtDui.Size = new System.Drawing.Size(140, 20);
+            this.edtDui.Size = new System.Drawing.Size(153, 20);
             this.edtDui.TabIndex = 49;
             this.edtDui.TextChanged += new System.EventHandler(this.edtDui_TextChanged);
             // 

@@ -24,7 +24,9 @@ namespace TallSys
             edtCliente.Enabled = false;
             edtIdCliente.Enabled = false;
             edtIdVehiculo.Enabled = false;
-           
+            cargarTabla();
+
+
         }
 
         private void ServicioPrincipal_Load(object sender, EventArgs e)
@@ -170,6 +172,7 @@ namespace TallSys
                         int idSerGenerado = Convert.ToInt32(cmd.Parameters["@idServicioEncabezado"].Value);
                         edtCodigoSer.Text = idSerGenerado.ToString();
                         edtCodigoServicio.Text = idSerGenerado.ToString();
+                        cargarTabla();
                     }
 
 
@@ -253,7 +256,10 @@ namespace TallSys
             errorProvider1.Clear();
         }
 
-        
+        private void cargarTabla()
+        {
+            dataGridEncabezados.DataSource = Utilidades.datasetLista("listarEncabezadoServicioTodos").Tables[0];
+        }
 
     }//fin clase
 }//fin proyect

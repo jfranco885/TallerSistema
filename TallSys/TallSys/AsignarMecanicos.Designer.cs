@@ -96,6 +96,7 @@
             this.edtEmpleado.Name = "edtEmpleado";
             this.edtEmpleado.Size = new System.Drawing.Size(246, 20);
             this.edtEmpleado.TabIndex = 97;
+            this.edtEmpleado.TextChanged += new System.EventHandler(this.edtEmpleado_TextChanged);
             // 
             // dataGridMecanicoAsignado
             // 

@@ -23,6 +23,7 @@ namespace TallSys
             edtTiempoEstablecido.Enabled = false;
             edtTipoServicio.Enabled = false;
             edtDescripcion.Enabled = false;
+            edtIdTipoServNave.Enabled = false;
 
             cboxEstadoNuevo.Text = edtEstadoActual.Text;
 
@@ -151,6 +152,15 @@ namespace TallSys
             {
                 MessageBox.Show("No hay opciones de Estado");
             }
+        }
+
+        private void btnMecanicos_Click(object sender, EventArgs e)
+        {
+            AsignarMecanicos asignarMecanicos = new AsignarMecanicos();
+            asignarMecanicos.txtIdServicio.Text = txtServicio.Text.Trim();
+            asignarMecanicos.dataGridMecanicoAsignado.DataSource = Utilidades.datasetConsultarProcedure("listarMecanicosAsignados", Convert.ToInt16(txtServicio.Text.Trim())).Tables[0];
+
+            asignarMecanicos.ShowDialog();
         }
     }//fin clase
 }//fin proyecto

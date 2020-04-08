@@ -58,6 +58,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnDardeBaja = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnMecanicos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).BeginInit();
@@ -319,7 +321,7 @@
             // 
             // btnDardeBaja
             // 
-            this.btnDardeBaja.Location = new System.Drawing.Point(360, 51);
+            this.btnDardeBaja.Location = new System.Drawing.Point(294, 46);
             this.btnDardeBaja.Name = "btnDardeBaja";
             this.btnDardeBaja.Size = new System.Drawing.Size(170, 23);
             this.btnDardeBaja.TabIndex = 42;
@@ -327,11 +329,32 @@
             this.btnDardeBaja.UseVisualStyleBackColor = true;
             this.btnDardeBaja.Click += new System.EventHandler(this.btnDardeBaja_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 132);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(131, 13);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "idAsignacion servico nave";
+            // 
+            // btnMecanicos
+            // 
+            this.btnMecanicos.Location = new System.Drawing.Point(470, 46);
+            this.btnMecanicos.Name = "btnMecanicos";
+            this.btnMecanicos.Size = new System.Drawing.Size(144, 23);
+            this.btnMecanicos.TabIndex = 44;
+            this.btnMecanicos.Text = "Ver Mecánicos asignados";
+            this.btnMecanicos.UseVisualStyleBackColor = true;
+            this.btnMecanicos.Click += new System.EventHandler(this.btnMecanicos_Click);
+            // 
             // txtIdServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 458);
+            this.Controls.Add(this.btnMecanicos);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btnDardeBaja);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.label12);
@@ -396,7 +419,10 @@
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.btnMostrar, 0);
             this.Controls.SetChildIndex(this.btnDardeBaja, 0);
+            this.Controls.SetChildIndex(this.label13, 0);
+            this.Controls.SetChildIndex(this.btnMecanicos, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).EndInit();
             this.ResumeLayout(false);
@@ -436,5 +462,7 @@
         public System.Windows.Forms.Label txtEncabezado;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnDardeBaja;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnMecanicos;
     }
 }

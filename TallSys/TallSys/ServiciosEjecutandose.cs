@@ -61,7 +61,7 @@ namespace TallSys
                         servicioEnProceso.edtNave.Text = (dt.Tables[0].Rows[0]["Nave"].ToString().Trim());
                         servicioEnProceso.edtTiempoEstablecido.Text = (dt.Tables[0].Rows[0]["TiempoEstablecidoPorHoras"].ToString().Trim());
                         servicioEnProceso.edtTiempoReal.Text = (dt.Tables[0].Rows[0]["TiempoDiagnosticado"].ToString().Trim());
-                        servicioEnProceso.txtServicio.Text = (dt.Tables[0].Rows[0]["IdEncabezadoServicio"].ToString().Trim());
+                        servicioEnProceso.txtServicio.Text = (dt.Tables[0].Rows[0]["IdServicio"].ToString().Trim());
                         servicioEnProceso.edtIdTipoServNave.Text = (dt.Tables[0].Rows[0]["idAsignacionNaveTipoServicio"].ToString().Trim());
                         servicioEnProceso.edtDescripcion.Text = (dt.Tables[0].Rows[0]["Descripcion"].ToString().Trim());
 
@@ -84,6 +84,25 @@ namespace TallSys
         private void edtIdServicio_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.Clear();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            dataGridServEjecutandose.DataSource = Utilidades.datasetLista("listarServiciosEjecutandose").Tables[0];
+
+        }
+
+        private void rdbMisServicios_CheckedChanged(object sender, EventArgs e)
+        {
+           // Form1 form = new Form1();
+            int idempleado =Form1.idempleado;
+            dataGridServEjecutandose.DataSource = Utilidades.datasetConsultarProcedure("listarServEjecutandoseIdEmpleado",idempleado).Tables[0];
+
+        }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            dataGridServEjecutandose.DataSource = Utilidades.datasetLista("listarServiciosEjecutandose").Tables[0];
         }
     }
 }

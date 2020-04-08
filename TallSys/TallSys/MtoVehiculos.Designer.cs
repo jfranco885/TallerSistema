@@ -45,11 +45,12 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(255, 83);
+            this.label1.Location = new System.Drawing.Point(254, 66);
             // 
             // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Location = new System.Drawing.Point(581, 50);
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // btnNuevo
@@ -60,10 +61,21 @@
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
+            // edtBuscar
+            // 
+            this.edtBuscar.Location = new System.Drawing.Point(353, 59);
+            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(260, 129);
+            this.label2.Location = new System.Drawing.Point(259, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 17;
@@ -72,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(301, 83);
+            this.label3.Location = new System.Drawing.Point(300, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 18;
@@ -82,7 +94,7 @@
             // 
             this.cboxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxMarca.FormattingEnabled = true;
-            this.cboxMarca.Location = new System.Drawing.Point(354, 156);
+            this.cboxMarca.Location = new System.Drawing.Point(353, 139);
             this.cboxMarca.Name = "cboxMarca";
             this.cboxMarca.Size = new System.Drawing.Size(222, 21);
             this.cboxMarca.TabIndex = 21;
@@ -91,7 +103,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(260, 165);
+            this.label4.Location = new System.Drawing.Point(259, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 20;
@@ -101,7 +113,7 @@
             // 
             this.cboxModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxModelo.FormattingEnabled = true;
-            this.cboxModelo.Location = new System.Drawing.Point(354, 192);
+            this.cboxModelo.Location = new System.Drawing.Point(353, 175);
             this.cboxModelo.Name = "cboxModelo";
             this.cboxModelo.Size = new System.Drawing.Size(222, 21);
             this.cboxModelo.TabIndex = 23;
@@ -110,7 +122,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(260, 201);
+            this.label5.Location = new System.Drawing.Point(259, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 22;
@@ -119,7 +131,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(260, 238);
+            this.label6.Location = new System.Drawing.Point(259, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 24;
@@ -127,7 +139,7 @@
             // 
             // edtPlaca
             // 
-            this.edtPlaca.Location = new System.Drawing.Point(354, 231);
+            this.edtPlaca.Location = new System.Drawing.Point(353, 214);
             this.edtPlaca.Name = "edtPlaca";
             this.edtPlaca.Size = new System.Drawing.Size(222, 20);
             this.edtPlaca.TabIndex = 25;
@@ -135,7 +147,7 @@
             // 
             // edtFecha
             // 
-            this.edtFecha.Location = new System.Drawing.Point(354, 269);
+            this.edtFecha.Location = new System.Drawing.Point(353, 252);
             this.edtFecha.Name = "edtFecha";
             this.edtFecha.Size = new System.Drawing.Size(222, 20);
             this.edtFecha.TabIndex = 27;
@@ -143,7 +155,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(260, 276);
+            this.label7.Location = new System.Drawing.Point(259, 259);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 13);
             this.label7.TabIndex = 26;
@@ -151,7 +163,7 @@
             // 
             // edtId
             // 
-            this.edtId.Location = new System.Drawing.Point(354, 122);
+            this.edtId.Location = new System.Drawing.Point(353, 105);
             this.edtId.Name = "edtId";
             this.edtId.Size = new System.Drawing.Size(222, 20);
             this.edtId.TabIndex = 28;
@@ -160,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 469);
+            this.ClientSize = new System.Drawing.Size(962, 492);
             this.Controls.Add(this.edtId);
             this.Controls.Add(this.edtFecha);
             this.Controls.Add(this.label7);
@@ -195,6 +207,7 @@
             this.Controls.SetChildIndex(this.edtFecha, 0);
             this.Controls.SetChildIndex(this.edtId, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

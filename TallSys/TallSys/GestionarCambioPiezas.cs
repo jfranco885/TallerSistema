@@ -19,6 +19,8 @@ namespace TallSys
             InitializeComponent();
             edtServicio.Enabled = false;
             edtidCambio.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -72,6 +74,8 @@ namespace TallSys
                     edtRepuesto.Text = "";
                     edtCantidad.Text = "";
                     edtidCambio.Text = "";
+                    btnEditar.Enabled = false;
+                    btnEliminar.Enabled = false;
                     dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarCambioPiezaPorIdServicio", Convert.ToInt16(edtServicio.Text.Trim())).Tables[0];
 
                 }
@@ -105,7 +109,9 @@ namespace TallSys
                     edtRepuesto.Text = "";
                     edtCantidad.Text = "";
                     edtidCambio.Text = "";
-                    dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarCambioPiezaPorIdServicio", Convert.ToInt16(edtServicio.Text.Trim())).Tables[0];
+                        btnEditar.Enabled = false;
+                        btnEliminar.Enabled = false;
+                        dataGridRepuesto.DataSource = Utilidades.datasetConsultarProcedure("listarCambioPiezaPorIdServicio", Convert.ToInt16(edtServicio.Text.Trim())).Tables[0];
 
                 }
                 catch (Exception er)
@@ -134,6 +140,8 @@ namespace TallSys
             edtidCambio.Text = dataGridRepuesto.Rows[e.RowIndex].Cells["Código"].Value.ToString();
             edtRepuesto.Text = dataGridRepuesto.Rows[e.RowIndex].Cells["Pieza"].Value.ToString();
             edtCantidad.Text = dataGridRepuesto.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
     }//fin clase
     

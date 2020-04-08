@@ -57,6 +57,13 @@
             // btnEditar
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
             // 
             // label6
             // 
@@ -73,6 +80,7 @@
             this.edtIdServicio.Name = "edtIdServicio";
             this.edtIdServicio.Size = new System.Drawing.Size(161, 20);
             this.edtIdServicio.TabIndex = 31;
+            this.edtIdServicio.TextChanged += new System.EventHandler(this.edtIdServicio_TextChanged);
             // 
             // label4
             // 
@@ -89,6 +97,7 @@
             this.edtIdEmpleado.Name = "edtIdEmpleado";
             this.edtIdEmpleado.Size = new System.Drawing.Size(270, 20);
             this.edtIdEmpleado.TabIndex = 29;
+            this.edtIdEmpleado.TextChanged += new System.EventHandler(this.edtIdEmpleado_TextChanged);
             // 
             // label3
             // 
@@ -138,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 489);
+            this.ClientSize = new System.Drawing.Size(962, 492);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboxEstado);
             this.Controls.Add(this.label6);
@@ -169,6 +178,7 @@
             this.Controls.SetChildIndex(this.cboxEstado, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

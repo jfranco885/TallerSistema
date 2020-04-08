@@ -65,6 +65,13 @@
             // btnEditar
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
             // 
             // edtNombres
             // 
@@ -214,7 +221,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 474);
+            this.ClientSize = new System.Drawing.Size(962, 492);
             this.Controls.Add(this.edtId);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -261,6 +268,7 @@
             this.Controls.SetChildIndex(this.edtBuscar, 0);
             this.Controls.SetChildIndex(this.edtId, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -66,6 +66,13 @@
             // btnEditar
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
             // 
             // edtDiag
             // 
@@ -98,7 +105,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(84, 242);
+            this.label11.Location = new System.Drawing.Point(57, 241);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(40, 13);
             this.label11.TabIndex = 45;
@@ -107,7 +114,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(96, 176);
+            this.label9.Location = new System.Drawing.Point(57, 176);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(33, 13);
             this.label9.TabIndex = 43;
@@ -116,7 +123,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(78, 146);
+            this.label6.Location = new System.Drawing.Point(57, 147);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 38;
@@ -157,7 +164,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 115);
+            this.label2.Location = new System.Drawing.Point(57, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 32;
@@ -166,7 +173,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(77, 270);
+            this.label7.Location = new System.Drawing.Point(57, 269);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 13);
             this.label7.TabIndex = 52;
@@ -195,6 +202,7 @@
             this.edtIdEncabezado.Name = "edtIdEncabezado";
             this.edtIdEncabezado.Size = new System.Drawing.Size(115, 20);
             this.edtIdEncabezado.TabIndex = 58;
+            this.edtIdEncabezado.TextChanged += new System.EventHandler(this.edtIdEncabezado_TextChanged);
             // 
             // label12
             // 
@@ -260,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 484);
+            this.ClientSize = new System.Drawing.Size(962, 492);
             this.Controls.Add(this.cboxNav);
             this.Controls.Add(this.edtIdNaveServ);
             this.Controls.Add(this.label13);
@@ -317,6 +325,7 @@
             this.Controls.SetChildIndex(this.edtIdNaveServ, 0);
             this.Controls.SetChildIndex(this.cboxNav, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
