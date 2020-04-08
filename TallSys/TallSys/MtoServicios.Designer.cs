@@ -69,11 +69,6 @@
             this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
-            this.txtUsuario.Text = "";
-            // 
             // edtDiag
             // 
             this.edtDiag.Location = new System.Drawing.Point(475, 112);
@@ -140,6 +135,8 @@
             // 
             // edtFecha
             // 
+            this.edtFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtFecha.Location = new System.Drawing.Point(95, 83);
             this.edtFecha.Name = "edtFecha";
             this.edtFecha.Size = new System.Drawing.Size(175, 20);
@@ -156,6 +153,8 @@
             // 
             // edtIdDetalleServ
             // 
+            this.edtIdDetalleServ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtIdDetalleServ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtIdDetalleServ.Location = new System.Drawing.Point(164, 112);
             this.edtIdDetalleServ.Name = "edtIdDetalleServ";
             this.edtIdDetalleServ.Size = new System.Drawing.Size(223, 20);

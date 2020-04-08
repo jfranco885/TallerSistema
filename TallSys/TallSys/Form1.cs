@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using MiLibreria;
+using System.Resources;
+using TallSys.Properties;
 
 namespace TallSys
 {
@@ -38,9 +40,9 @@ namespace TallSys
             try
             {
                     
-                      //  SqlConnection con = Utilidades.con;
+                        SqlConnection conn = Utilidades.con;
 
-                     using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True"))
+                    // using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True"))
 
                     using (SqlCommand cmd = new SqlCommand("dbo.loginUsuario", conn))
                     {
@@ -54,6 +56,7 @@ namespace TallSys
                         cmd.Parameters.Add("@rol", SqlDbType.Int).Direction = ParameterDirection.Output;
                         cmd.Parameters.Add("@nombre", SqlDbType.VarChar,50).Direction = ParameterDirection.Output;
                         cmd.Parameters.Add("@idempleado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("@iduser", SqlDbType.Int).Direction = ParameterDirection.Output;
 
 
                         // open connection and execute stored procedure
@@ -126,5 +129,20 @@ namespace TallSys
             }
             return vacio;
         }//fin validar campo vacío
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            if(txtclave.UseSystemPasswordChar == false)
+            {
+                txtclave.UseSystemPasswordChar = true;
+                btnMostrar.Image = Resources.ver;
+            }
+            else
+            {
+                txtclave.UseSystemPasswordChar = false;
+                btnMostrar.Image = Resources.nover;
+            }
+            
+        }
     }//fin clase
 }//fin proyecto

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MiLibreria;
+using TallSys.Properties;
 
 namespace TallSys
 {
@@ -126,6 +127,10 @@ namespace TallSys
                     cboxRol.Text = (dt.Tables[0].Rows[0]["Rol"].ToString().Trim());
                     edtNombreEmpleado.Text = (dt.Tables[0].Rows[0]["Empleado"].ToString().Trim());
                     edtIdEmpleado.Text = (dt.Tables[0].Rows[0]["idEmpleado"].ToString().Trim());
+
+                    //ocultando contraseña
+                    edtClave.UseSystemPasswordChar = true;
+                    btnMostrar.Image = Resources.ver;
 
                     activarControlesE();
                     btnEditar.Enabled = true;
@@ -270,6 +275,20 @@ namespace TallSys
             if (tieneItems(cboxRol) == false)
             {
                 MessageBox.Show("No hay opciones de Rol");
+            }
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            if (edtClave.UseSystemPasswordChar == false)
+            {
+                edtClave.UseSystemPasswordChar = true;
+                btnMostrar.Image = Resources.ver;
+            }
+            else
+            {
+                edtClave.UseSystemPasswordChar = false;
+                btnMostrar.Image = Resources.nover;
             }
         }
     }

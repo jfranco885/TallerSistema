@@ -56,11 +56,6 @@
             this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
-            this.txtUsuario.Text = "";
-            // 
             // edtMarca
             // 
             this.edtMarca.Location = new System.Drawing.Point(354, 228);
@@ -80,6 +75,8 @@
             // 
             // edtIdMarca
             // 
+            this.edtIdMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtIdMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtIdMarca.Location = new System.Drawing.Point(354, 168);
             this.edtIdMarca.Name = "edtIdMarca";
             this.edtIdMarca.Size = new System.Drawing.Size(283, 20);

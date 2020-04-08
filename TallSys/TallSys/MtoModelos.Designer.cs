@@ -58,11 +58,6 @@
             this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
-            this.txtUsuario.Text = "";
-            // 
             // cboxMarca
             // 
             this.cboxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -75,6 +70,8 @@
             // 
             // edtId
             // 
+            this.edtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtId.Location = new System.Drawing.Point(373, 132);
             this.edtId.Name = "edtId";
             this.edtId.Size = new System.Drawing.Size(227, 20);

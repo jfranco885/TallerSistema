@@ -60,11 +60,6 @@
             this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
-            this.txtUsuario.Text = "";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -76,6 +71,8 @@
             // 
             // edtidCambio
             // 
+            this.edtidCambio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtidCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtidCambio.Location = new System.Drawing.Point(368, 145);
             this.edtidCambio.Name = "edtidCambio";
             this.edtidCambio.Size = new System.Drawing.Size(270, 20);

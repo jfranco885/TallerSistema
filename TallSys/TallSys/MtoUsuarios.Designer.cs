@@ -42,6 +42,7 @@
             this.edtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.edtNombreEmpleado = new System.Windows.Forms.TextBox();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -64,11 +65,6 @@
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
-            this.txtUsuario.Text = "";
             // 
             // cboxRol
             // 
@@ -93,9 +89,12 @@
             this.edtClave.Name = "edtClave";
             this.edtClave.Size = new System.Drawing.Size(222, 20);
             this.edtClave.TabIndex = 25;
+            this.edtClave.UseSystemPasswordChar = true;
             // 
             // edtId
             // 
+            this.edtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtId.Location = new System.Drawing.Point(124, 131);
             this.edtId.Name = "edtId";
             this.edtId.Size = new System.Drawing.Size(222, 20);
@@ -169,6 +168,8 @@
             // 
             // edtIdEmpleado
             // 
+            this.edtIdEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtIdEmpleado.Location = new System.Drawing.Point(124, 207);
             this.edtIdEmpleado.Name = "edtIdEmpleado";
             this.edtIdEmpleado.Size = new System.Drawing.Size(222, 20);
@@ -185,16 +186,29 @@
             // 
             // edtNombreEmpleado
             // 
+            this.edtNombreEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtNombreEmpleado.Location = new System.Drawing.Point(124, 167);
             this.edtNombreEmpleado.Name = "edtNombreEmpleado";
             this.edtNombreEmpleado.Size = new System.Drawing.Size(222, 20);
             this.edtNombreEmpleado.TabIndex = 36;
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Image = global::TallSys.Properties.Resources.ver;
+            this.btnMostrar.Location = new System.Drawing.Point(745, 163);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(31, 21);
+            this.btnMostrar.TabIndex = 37;
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // MtoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 492);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.edtNombreEmpleado);
             this.Controls.Add(this.edtIdEmpleado);
             this.Controls.Add(this.label9);
@@ -234,6 +248,7 @@
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.edtIdEmpleado, 0);
             this.Controls.SetChildIndex(this.edtNombreEmpleado, 0);
+            this.Controls.SetChildIndex(this.btnMostrar, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -258,5 +273,6 @@
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox edtIdEmpleado;
         public System.Windows.Forms.TextBox edtNombreEmpleado;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }

@@ -54,6 +54,7 @@
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridEncabezados = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -61,8 +62,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEncabezados)).BeginInit();
             this.SuspendLayout();
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
+            // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.edtIdVehiculo);
             this.groupBox4.Controls.Add(this.label7);
@@ -73,7 +80,6 @@
             this.groupBox4.Controls.Add(this.btnGuardar);
             this.groupBox4.Controls.Add(this.edtVehiculo);
             this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(463, 49);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(432, 247);
@@ -92,6 +98,8 @@
             // 
             // edtIdVehiculo
             // 
+            this.edtIdVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtIdVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtIdVehiculo.Location = new System.Drawing.Point(322, 85);
             this.edtIdVehiculo.Name = "edtIdVehiculo";
             this.edtIdVehiculo.Size = new System.Drawing.Size(84, 20);
@@ -108,6 +116,8 @@
             // 
             // edtIdCliente
             // 
+            this.edtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtIdCliente.Location = new System.Drawing.Point(322, 33);
             this.edtIdCliente.Name = "edtIdCliente";
             this.edtIdCliente.Size = new System.Drawing.Size(84, 20);
@@ -131,6 +141,8 @@
             // 
             // edtCliente
             // 
+            this.edtCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtCliente.Location = new System.Drawing.Point(75, 33);
             this.edtCliente.Name = "edtCliente";
             this.edtCliente.Size = new System.Drawing.Size(181, 20);
@@ -148,6 +160,8 @@
             // 
             // edtVehiculo
             // 
+            this.edtVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtVehiculo.Location = new System.Drawing.Point(75, 85);
             this.edtVehiculo.Name = "edtVehiculo";
             this.edtVehiculo.Size = new System.Drawing.Size(181, 20);
@@ -310,6 +324,15 @@
             this.dataGridEncabezados.Size = new System.Drawing.Size(442, 137);
             this.dataGridEncabezados.TabIndex = 30;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(7, 36);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(39, 13);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Cliente";
+            // 
             // ServicioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +367,7 @@
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.dataGridEncabezados, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -383,5 +407,6 @@
         public System.Windows.Forms.TextBox edtCodigoServicio;
         public System.Windows.Forms.Label label9;
         public System.Windows.Forms.DataGridView dataGridEncabezados;
+        private System.Windows.Forms.Label label12;
     }
 }

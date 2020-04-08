@@ -61,6 +61,7 @@
             this.btnTipoServicio = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -68,7 +69,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(865, 10);
+            this.btnSalir.Location = new System.Drawing.Point(815, 10);
             // 
             // txtUsuario
             // 
@@ -77,6 +78,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.btnMecAsig);
             this.groupBox2.Controls.Add(this.btnMarcas);
@@ -112,35 +114,6 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mantenimientos";
-            this.groupBox2.Controls.SetChildIndex(this.btnTipoServicio, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnEmpleados, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnNaves, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnClientes, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnEspecialidad, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnUsuarios, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnCargos, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnEstadoServicio, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnServicios, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label2, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label3, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label4, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label5, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label6, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label7, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label8, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label9, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnFacturas, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnVehiculos, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label10, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label11, 0);
-            this.groupBox2.Controls.SetChildIndex(this.button1, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnCambioPieza, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label12, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label14, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnModelos, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnMarcas, 0);
-            this.groupBox2.Controls.SetChildIndex(this.btnMecAsig, 0);
-            this.groupBox2.Controls.SetChildIndex(this.label13, 0);
             // 
             // label13
             // 
@@ -437,6 +410,15 @@
             this.button4.TabIndex = 29;
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(60, 33);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 13);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Tipo de Servicios";
+            // 
             // MenuMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,5 +473,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnMecAsig;
+        private System.Windows.Forms.Label label15;
     }
 }

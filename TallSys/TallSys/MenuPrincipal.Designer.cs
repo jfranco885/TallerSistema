@@ -34,7 +34,7 @@
             this.txtUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnMantenimientos = new System.Windows.Forms.Button();
             this.btnAgregarServ = new System.Windows.Forms.Button();
@@ -94,16 +94,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button4
+            // btnPerfil
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(712, 301);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 87);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "PERFIL";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
+            this.btnPerfil.Location = new System.Drawing.Point(712, 301);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(93, 87);
+            this.btnPerfil.TabIndex = 19;
+            this.btnPerfil.Text = "PERFIL";
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnReportes
             // 
@@ -148,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 498);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnMantenimientos);
             this.Controls.Add(this.btnAgregarServ);
@@ -170,7 +171,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnMantenimientos;
         private System.Windows.Forms.Button btnAgregarServ;

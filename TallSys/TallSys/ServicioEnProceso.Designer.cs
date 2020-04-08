@@ -65,10 +65,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).BeginInit();
             this.SuspendLayout();
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 78);
+            this.label1.Location = new System.Drawing.Point(21, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 2;
@@ -77,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 105);
+            this.label2.Location = new System.Drawing.Point(13, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 4;
@@ -85,7 +90,9 @@
             // 
             // edtTiempoEstablecido
             // 
-            this.edtTiempoEstablecido.Location = new System.Drawing.Point(141, 155);
+            this.edtTiempoEstablecido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtTiempoEstablecido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtTiempoEstablecido.Location = new System.Drawing.Point(152, 155);
             this.edtTiempoEstablecido.Name = "edtTiempoEstablecido";
             this.edtTiempoEstablecido.Size = new System.Drawing.Size(256, 20);
             this.edtTiempoEstablecido.TabIndex = 7;
@@ -93,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 158);
+            this.label3.Location = new System.Drawing.Point(12, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 13);
             this.label3.TabIndex = 6;
@@ -102,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 190);
+            this.label4.Location = new System.Drawing.Point(13, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 8;
@@ -111,7 +118,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 237);
+            this.label5.Location = new System.Drawing.Point(13, 232);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 10;
@@ -120,7 +127,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 307);
+            this.label6.Location = new System.Drawing.Point(13, 306);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 12;
@@ -128,7 +135,9 @@
             // 
             // edtCliente
             // 
-            this.edtCliente.Location = new System.Drawing.Point(141, 346);
+            this.edtCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtCliente.Location = new System.Drawing.Point(152, 346);
             this.edtCliente.Name = "edtCliente";
             this.edtCliente.Size = new System.Drawing.Size(256, 20);
             this.edtCliente.TabIndex = 15;
@@ -136,7 +145,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 349);
+            this.label7.Location = new System.Drawing.Point(13, 348);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 14;
@@ -222,21 +231,25 @@
             // 
             // edtTiempoReal
             // 
-            this.edtTiempoReal.Location = new System.Drawing.Point(141, 187);
+            this.edtTiempoReal.Location = new System.Drawing.Point(152, 187);
             this.edtTiempoReal.Name = "edtTiempoReal";
             this.edtTiempoReal.Size = new System.Drawing.Size(256, 20);
             this.edtTiempoReal.TabIndex = 27;
             // 
             // edtEstadoActual
             // 
-            this.edtEstadoActual.Location = new System.Drawing.Point(141, 230);
+            this.edtEstadoActual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtEstadoActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtEstadoActual.Location = new System.Drawing.Point(152, 230);
             this.edtEstadoActual.Name = "edtEstadoActual";
             this.edtEstadoActual.Size = new System.Drawing.Size(256, 20);
             this.edtEstadoActual.TabIndex = 31;
             // 
             // edtNave
             // 
-            this.edtNave.Location = new System.Drawing.Point(141, 304);
+            this.edtNave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtNave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtNave.Location = new System.Drawing.Point(152, 304);
             this.edtNave.Name = "edtNave";
             this.edtNave.Size = new System.Drawing.Size(256, 20);
             this.edtNave.TabIndex = 32;
@@ -245,7 +258,7 @@
             // 
             this.cboxEstadoNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEstadoNuevo.FormattingEnabled = true;
-            this.cboxEstadoNuevo.Location = new System.Drawing.Point(141, 267);
+            this.cboxEstadoNuevo.Location = new System.Drawing.Point(152, 267);
             this.cboxEstadoNuevo.Name = "cboxEstadoNuevo";
             this.cboxEstadoNuevo.Size = new System.Drawing.Size(256, 21);
             this.cboxEstadoNuevo.TabIndex = 33;
@@ -253,7 +266,9 @@
             // 
             // edtTipoServicio
             // 
-            this.edtTipoServicio.Location = new System.Drawing.Point(142, 105);
+            this.edtTipoServicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtTipoServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtTipoServicio.Location = new System.Drawing.Point(153, 105);
             this.edtTipoServicio.Name = "edtTipoServicio";
             this.edtTipoServicio.Size = new System.Drawing.Size(256, 20);
             this.edtTipoServicio.TabIndex = 34;
@@ -261,7 +276,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(36, 270);
+            this.label10.Location = new System.Drawing.Point(13, 270);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 13);
             this.label10.TabIndex = 35;
@@ -279,21 +294,27 @@
             // txtEncabezado
             // 
             this.txtEncabezado.AutoSize = true;
+            this.txtEncabezado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEncabezado.Location = new System.Drawing.Point(139, 46);
             this.txtEncabezado.Name = "txtEncabezado";
-            this.txtEncabezado.Size = new System.Drawing.Size(67, 13);
+            this.txtEncabezado.Size = new System.Drawing.Size(79, 15);
             this.txtEncabezado.TabIndex = 37;
             this.txtEncabezado.Text = "Encabezado";
             // 
             // edtIdTipoServNave
             // 
-            this.edtIdTipoServNave.Location = new System.Drawing.Point(163, 129);
+            this.edtIdTipoServNave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtIdTipoServNave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtIdTipoServNave.Location = new System.Drawing.Point(153, 129);
             this.edtIdTipoServNave.Name = "edtIdTipoServNave";
             this.edtIdTipoServNave.Size = new System.Drawing.Size(134, 20);
             this.edtIdTipoServNave.TabIndex = 38;
             // 
             // edtDescripcion
             // 
+            this.edtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtDescripcion.Location = new System.Drawing.Point(465, 346);
             this.edtDescripcion.Multiline = true;
             this.edtDescripcion.Name = "edtDescripcion";

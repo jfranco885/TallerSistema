@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.edtDescripcion = new System.Windows.Forms.TextBox();
             this.btnGenerar = new System.Windows.Forms.Button();
@@ -65,8 +66,14 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
+            // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.cboxEstado);
             this.groupBox4.Controls.Add(this.edtDescripcion);
             this.groupBox4.Controls.Add(this.btnGenerar);
@@ -76,13 +83,21 @@
             this.groupBox4.Controls.Add(this.cboxTipoServicio);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(551, 49);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(408, 319);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Solicitud Servicio";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 38);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 13);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Tipo Servicio";
             // 
             // cboxEstado
             // 
@@ -202,9 +217,11 @@
             // 
             // edtPlacaVehiculo
             // 
+            this.edtPlacaVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtPlacaVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtPlacaVehiculo.Location = new System.Drawing.Point(145, 56);
             this.edtPlacaVehiculo.Name = "edtPlacaVehiculo";
-            this.edtPlacaVehiculo.Size = new System.Drawing.Size(153, 20);
+            this.edtPlacaVehiculo.Size = new System.Drawing.Size(193, 20);
             this.edtPlacaVehiculo.TabIndex = 7;
             this.edtPlacaVehiculo.TextChanged += new System.EventHandler(this.edtPlacaVehiculo_TextChanged);
             // 
@@ -219,6 +236,8 @@
             // 
             // edtIdServicioEncabezado
             // 
+            this.edtIdServicioEncabezado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtIdServicioEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtIdServicioEncabezado.Location = new System.Drawing.Point(145, 23);
             this.edtIdServicioEncabezado.Name = "edtIdServicioEncabezado";
             this.edtIdServicioEncabezado.Size = new System.Drawing.Size(140, 20);
@@ -274,9 +293,11 @@
             // 
             // edtNombreCliente
             // 
+            this.edtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtNombreCliente.Location = new System.Drawing.Point(145, 108);
             this.edtNombreCliente.Name = "edtNombreCliente";
-            this.edtNombreCliente.Size = new System.Drawing.Size(170, 20);
+            this.edtNombreCliente.Size = new System.Drawing.Size(193, 20);
             this.edtNombreCliente.TabIndex = 45;
             // 
             // label8
@@ -290,7 +311,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(321, 17);
+            this.btnModificar.Location = new System.Drawing.Point(370, 14);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 31;
@@ -300,7 +321,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(321, 85);
+            this.btnGuardar.Location = new System.Drawing.Point(370, 82);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 46;
@@ -325,7 +346,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(16, 49);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(421, 161);
+            this.groupBox2.Size = new System.Drawing.Size(462, 161);
             this.groupBox2.TabIndex = 47;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Encabezado";
@@ -341,16 +362,20 @@
             // 
             // edtAsignacion
             // 
+            this.edtAsignacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtAsignacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtAsignacion.Location = new System.Drawing.Point(183, 132);
             this.edtAsignacion.Name = "edtAsignacion";
-            this.edtAsignacion.Size = new System.Drawing.Size(140, 20);
+            this.edtAsignacion.Size = new System.Drawing.Size(155, 20);
             this.edtAsignacion.TabIndex = 51;
             // 
             // edtDui
             // 
+            this.edtDui.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtDui.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtDui.Location = new System.Drawing.Point(145, 82);
             this.edtDui.Name = "edtDui";
-            this.edtDui.Size = new System.Drawing.Size(153, 20);
+            this.edtDui.Size = new System.Drawing.Size(193, 20);
             this.edtDui.TabIndex = 49;
             this.edtDui.TextChanged += new System.EventHandler(this.edtDui_TextChanged);
             // 
@@ -396,6 +421,7 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -438,5 +464,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox edtAsignacion;
+        private System.Windows.Forms.Label label12;
     }
 }

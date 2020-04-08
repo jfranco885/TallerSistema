@@ -73,5 +73,11 @@ namespace TallSys
 
 
         }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            Perfil perfil = new Perfil();
+            perfil.ShowDialog();
+        }
     }
 }

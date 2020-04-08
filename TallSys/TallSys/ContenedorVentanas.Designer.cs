@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtUsuario = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1user = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -53,16 +53,12 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label1user);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(976, 43);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // txtUsuario
             // 
@@ -74,15 +70,19 @@
             this.txtUsuario.TabIndex = 14;
             this.txtUsuario.Text = "Nombre del usuario";
             // 
-            // label1
+            // label1user
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Usuario:";
+            this.label1user.AutoSize = true;
+            this.label1user.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1user.Location = new System.Drawing.Point(12, 9);
+            this.label1user.Name = "label1user";
+            this.label1user.Size = new System.Drawing.Size(87, 24);
+            this.label1user.TabIndex = 13;
+            this.label1user.Text = "Usuario:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ContenedorVentanas
             // 
@@ -107,6 +107,6 @@
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ErrorProvider errorProvider1;
         public System.Windows.Forms.Label txtUsuario;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label1user;
     }
 }

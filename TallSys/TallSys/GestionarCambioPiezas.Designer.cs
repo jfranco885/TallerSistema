@@ -50,8 +50,15 @@
             // 
             this.btnSalir.Location = new System.Drawing.Point(616, 12);
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtUsuario.Text = "";
+            // 
             // edtServicio
             // 
+            this.edtServicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtServicio.Location = new System.Drawing.Point(39, 73);
             this.edtServicio.Name = "edtServicio";
             this.edtServicio.Size = new System.Drawing.Size(161, 20);
@@ -85,6 +92,8 @@
             // 
             // edtidCambio
             // 
+            this.edtidCambio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtidCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edtidCambio.Location = new System.Drawing.Point(229, 118);
             this.edtidCambio.Name = "edtidCambio";
             this.edtidCambio.Size = new System.Drawing.Size(270, 20);
@@ -172,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 450);
+            this.ClientSize = new System.Drawing.Size(758, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label);
             this.Controls.Add(this.edtCantidad);
@@ -203,6 +212,7 @@
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).EndInit();
             this.ResumeLayout(false);
