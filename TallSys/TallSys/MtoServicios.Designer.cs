@@ -50,13 +50,21 @@
             this.edtIdNaveServ = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cboxNav = new System.Windows.Forms.ComboBox();
+            this.edtCantidad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(285, 56);
+            // 
             // btnBuscar
             // 
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Location = new System.Drawing.Point(639, 44);
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // btnNuevo
@@ -66,12 +74,14 @@
             // btnEditar
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
-            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
-            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
+            // 
+            // edtBuscar
+            // 
+            this.edtBuscar.Location = new System.Drawing.Point(411, 50);
             // 
             // edtDiag
             // 
-            this.edtDiag.Location = new System.Drawing.Point(475, 112);
+            this.edtDiag.Location = new System.Drawing.Point(475, 119);
             this.edtDiag.Multiline = true;
             this.edtDiag.Name = "edtDiag";
             this.edtDiag.Size = new System.Drawing.Size(251, 48);
@@ -81,7 +91,7 @@
             // 
             this.cboxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEstado.FormattingEnabled = true;
-            this.cboxEstado.Location = new System.Drawing.Point(164, 238);
+            this.cboxEstado.Location = new System.Drawing.Point(476, 92);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(223, 21);
             this.cboxEstado.TabIndex = 47;
@@ -100,7 +110,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(57, 241);
+            this.label11.Location = new System.Drawing.Point(408, 95);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(40, 13);
             this.label11.TabIndex = 45;
@@ -109,7 +119,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(57, 176);
+            this.label9.Location = new System.Drawing.Point(57, 205);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(33, 13);
             this.label9.TabIndex = 43;
@@ -127,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(406, 127);
+            this.label4.Location = new System.Drawing.Point(406, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 36;
@@ -137,7 +147,7 @@
             // 
             this.edtFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.edtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtFecha.Location = new System.Drawing.Point(95, 83);
+            this.edtFecha.Location = new System.Drawing.Point(95, 80);
             this.edtFecha.Name = "edtFecha";
             this.edtFecha.Size = new System.Drawing.Size(175, 20);
             this.edtFecha.TabIndex = 35;
@@ -145,7 +155,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 86);
+            this.label3.Location = new System.Drawing.Point(15, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 34;
@@ -180,7 +190,7 @@
             // 
             // edtActivida
             // 
-            this.edtActivida.Location = new System.Drawing.Point(476, 176);
+            this.edtActivida.Location = new System.Drawing.Point(476, 181);
             this.edtActivida.Multiline = true;
             this.edtActivida.Name = "edtActivida";
             this.edtActivida.Size = new System.Drawing.Size(251, 48);
@@ -189,7 +199,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(407, 191);
+            this.label10.Location = new System.Drawing.Point(407, 196);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 55;
@@ -197,7 +207,7 @@
             // 
             // edtIdEncabezado
             // 
-            this.edtIdEncabezado.Location = new System.Drawing.Point(127, 53);
+            this.edtIdEncabezado.Location = new System.Drawing.Point(133, 50);
             this.edtIdEncabezado.Name = "edtIdEncabezado";
             this.edtIdEncabezado.Size = new System.Drawing.Size(115, 20);
             this.edtIdEncabezado.TabIndex = 58;
@@ -206,7 +216,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 56);
+            this.label12.Location = new System.Drawing.Point(15, 53);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(117, 13);
             this.label12.TabIndex = 57;
@@ -239,7 +249,7 @@
             // 
             // edtIdNaveServ
             // 
-            this.edtIdNaveServ.Location = new System.Drawing.Point(164, 209);
+            this.edtIdNaveServ.Location = new System.Drawing.Point(164, 238);
             this.edtIdNaveServ.Name = "edtIdNaveServ";
             this.edtIdNaveServ.Size = new System.Drawing.Size(223, 20);
             this.edtIdNaveServ.TabIndex = 63;
@@ -247,7 +257,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(57, 211);
+            this.label13.Location = new System.Drawing.Point(57, 240);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 13);
             this.label13.TabIndex = 62;
@@ -257,17 +267,46 @@
             // 
             this.cboxNav.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxNav.FormattingEnabled = true;
-            this.cboxNav.Location = new System.Drawing.Point(164, 173);
+            this.cboxNav.Location = new System.Drawing.Point(164, 202);
             this.cboxNav.Name = "cboxNav";
             this.cboxNav.Size = new System.Drawing.Size(223, 21);
             this.cboxNav.TabIndex = 64;
             this.cboxNav.Click += new System.EventHandler(this.eventocboxNave);
+            // 
+            // edtCantidad
+            // 
+            this.edtCantidad.Location = new System.Drawing.Point(164, 171);
+            this.edtCantidad.Name = "edtCantidad";
+            this.edtCantidad.Size = new System.Drawing.Size(223, 20);
+            this.edtCantidad.TabIndex = 66;
+            this.edtCantidad.TextChanged += new System.EventHandler(this.edtCantidad_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(57, 174);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Cantidad";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(331, 56);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 13);
+            this.label14.TabIndex = 67;
+            this.label14.Text = "id Servicio";
             // 
             // MtoServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 492);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.edtCantidad);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cboxNav);
             this.Controls.Add(this.edtIdNaveServ);
             this.Controls.Add(this.label13);
@@ -323,6 +362,9 @@
             this.Controls.SetChildIndex(this.label13, 0);
             this.Controls.SetChildIndex(this.edtIdNaveServ, 0);
             this.Controls.SetChildIndex(this.cboxNav, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.edtCantidad, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -354,5 +396,8 @@
         private System.Windows.Forms.TextBox edtIdNaveServ;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cboxNav;
+        private System.Windows.Forms.TextBox edtCantidad;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label14;
     }
 }

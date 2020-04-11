@@ -46,7 +46,7 @@ namespace TallSys
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (validarCombox(cboxEstadoNuevo))
+            if (validarCombox(cboxEstadoNuevo) | !validarSoloNumeros(edtCantidad))
             {
 
             }
@@ -65,6 +65,8 @@ namespace TallSys
                     String diagnostico = edtDiagnostico.Text.Trim();
                     int estado = int.Parse(cboxEstadoNuevo.SelectedValue.ToString());
                     String tiempoReal = edtTiempoReal.Text.Trim();
+                        int cantidad = Convert.ToInt32(edtCantidad.Text);
+
 
                     if (tiempoReal == "")
                     {
@@ -74,7 +76,7 @@ namespace TallSys
                     int idnavetipo = int.Parse(edtIdTipoServNave.Text.Trim());
                     int idEncabezadoServicio = int.Parse(txtEncabezado.Text.Trim());
 
-                    String consulta = String.Format("EXEC insertarDatosElMecanico '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}'", idDetalleServicio, descripcion, diagnostico, estado, tiempoReal, actividad, idnavetipo, idEncabezadoServicio);
+                    String consulta = String.Format("EXEC insertarDatosElMecanico '{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}'", idDetalleServicio, descripcion, diagnostico, estado, tiempoReal, actividad, idnavetipo, idEncabezadoServicio,cantidad);
 
                     Utilidades.Ejecutar(consulta);
 
@@ -161,6 +163,11 @@ namespace TallSys
             asignarMecanicos.dataGridMecanicoAsignado.DataSource = Utilidades.datasetConsultarProcedure("listarMecanicosAsignados", Convert.ToInt16(txtServicio.Text.Trim())).Tables[0];
 
             asignarMecanicos.ShowDialog();
+        }
+
+        private void edtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }//fin clase
 }//fin proyecto

@@ -60,6 +60,8 @@
             this.btnDardeBaja = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.btnMecanicos = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.edtCantidad = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRepuesto)).BeginInit();
@@ -92,7 +94,7 @@
             // 
             this.edtTiempoEstablecido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.edtTiempoEstablecido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtTiempoEstablecido.Location = new System.Drawing.Point(152, 155);
+            this.edtTiempoEstablecido.Location = new System.Drawing.Point(152, 185);
             this.edtTiempoEstablecido.Name = "edtTiempoEstablecido";
             this.edtTiempoEstablecido.Size = new System.Drawing.Size(256, 20);
             this.edtTiempoEstablecido.TabIndex = 7;
@@ -100,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 157);
+            this.label3.Location = new System.Drawing.Point(12, 187);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 13);
             this.label3.TabIndex = 6;
@@ -109,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 190);
+            this.label4.Location = new System.Drawing.Point(13, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 8;
@@ -118,7 +120,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 232);
+            this.label5.Location = new System.Drawing.Point(13, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 10;
@@ -127,7 +129,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 306);
+            this.label6.Location = new System.Drawing.Point(13, 313);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 12;
@@ -231,7 +233,7 @@
             // 
             // edtTiempoReal
             // 
-            this.edtTiempoReal.Location = new System.Drawing.Point(152, 187);
+            this.edtTiempoReal.Location = new System.Drawing.Point(152, 217);
             this.edtTiempoReal.Name = "edtTiempoReal";
             this.edtTiempoReal.Size = new System.Drawing.Size(256, 20);
             this.edtTiempoReal.TabIndex = 27;
@@ -240,7 +242,7 @@
             // 
             this.edtEstadoActual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.edtEstadoActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtEstadoActual.Location = new System.Drawing.Point(152, 230);
+            this.edtEstadoActual.Location = new System.Drawing.Point(152, 243);
             this.edtEstadoActual.Name = "edtEstadoActual";
             this.edtEstadoActual.Size = new System.Drawing.Size(256, 20);
             this.edtEstadoActual.TabIndex = 31;
@@ -249,7 +251,7 @@
             // 
             this.edtNave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.edtNave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtNave.Location = new System.Drawing.Point(152, 304);
+            this.edtNave.Location = new System.Drawing.Point(152, 311);
             this.edtNave.Name = "edtNave";
             this.edtNave.Size = new System.Drawing.Size(256, 20);
             this.edtNave.TabIndex = 32;
@@ -258,7 +260,7 @@
             // 
             this.cboxEstadoNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEstadoNuevo.FormattingEnabled = true;
-            this.cboxEstadoNuevo.Location = new System.Drawing.Point(152, 267);
+            this.cboxEstadoNuevo.Location = new System.Drawing.Point(152, 274);
             this.cboxEstadoNuevo.Name = "cboxEstadoNuevo";
             this.cboxEstadoNuevo.Size = new System.Drawing.Size(256, 21);
             this.cboxEstadoNuevo.TabIndex = 33;
@@ -276,7 +278,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 270);
+            this.label10.Location = new System.Drawing.Point(13, 277);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 13);
             this.label10.TabIndex = 35;
@@ -306,7 +308,7 @@
             // 
             this.edtIdTipoServNave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.edtIdTipoServNave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtIdTipoServNave.Location = new System.Drawing.Point(153, 129);
+            this.edtIdTipoServNave.Location = new System.Drawing.Point(152, 131);
             this.edtIdTipoServNave.Name = "edtIdTipoServNave";
             this.edtIdTipoServNave.Size = new System.Drawing.Size(134, 20);
             this.edtIdTipoServNave.TabIndex = 38;
@@ -353,7 +355,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 132);
+            this.label13.Location = new System.Drawing.Point(11, 134);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(131, 13);
             this.label13.TabIndex = 43;
@@ -369,11 +371,32 @@
             this.btnMecanicos.UseVisualStyleBackColor = true;
             this.btnMecanicos.Click += new System.EventHandler(this.btnMecanicos_Click);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(11, 160);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 13);
+            this.label14.TabIndex = 46;
+            this.label14.Text = "Cantidad";
+            // 
+            // edtCantidad
+            // 
+            this.edtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtCantidad.Location = new System.Drawing.Point(152, 157);
+            this.edtCantidad.Name = "edtCantidad";
+            this.edtCantidad.Size = new System.Drawing.Size(254, 20);
+            this.edtCantidad.TabIndex = 45;
+            this.edtCantidad.TextChanged += new System.EventHandler(this.edtCantidad_TextChanged);
+            // 
             // txtIdServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 458);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.edtCantidad);
             this.Controls.Add(this.btnMecanicos);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnDardeBaja);
@@ -442,6 +465,8 @@
             this.Controls.SetChildIndex(this.btnDardeBaja, 0);
             this.Controls.SetChildIndex(this.label13, 0);
             this.Controls.SetChildIndex(this.btnMecanicos, 0);
+            this.Controls.SetChildIndex(this.edtCantidad, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -485,5 +510,7 @@
         private System.Windows.Forms.Button btnDardeBaja;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnMecanicos;
+        private System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox edtCantidad;
     }
 }

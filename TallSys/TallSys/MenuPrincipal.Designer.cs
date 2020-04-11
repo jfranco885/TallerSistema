@@ -34,6 +34,7 @@
             this.txtUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnFacturar = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnMantenimientos = new System.Windows.Forms.Button();
@@ -86,19 +87,30 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(712, 395);
+            this.btnSalir.Location = new System.Drawing.Point(712, 373);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(93, 65);
+            this.btnSalir.Size = new System.Drawing.Size(93, 87);
             this.btnSalir.TabIndex = 20;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnFacturar
+            // 
+            this.btnFacturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturar.Location = new System.Drawing.Point(620, 301);
+            this.btnFacturar.Name = "btnFacturar";
+            this.btnFacturar.Size = new System.Drawing.Size(185, 71);
+            this.btnFacturar.TabIndex = 21;
+            this.btnFacturar.Text = "FACTURAR";
+            this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
+            // 
             // btnPerfil
             // 
             this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(712, 301);
+            this.btnPerfil.Location = new System.Drawing.Point(620, 373);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(93, 87);
             this.btnPerfil.TabIndex = 19;
@@ -112,7 +124,7 @@
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.Location = new System.Drawing.Point(417, 301);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(279, 159);
+            this.btnReportes.Size = new System.Drawing.Size(202, 159);
             this.btnReportes.TabIndex = 18;
             this.btnReportes.Text = "REPORTES";
             this.btnReportes.UseVisualStyleBackColor = true;
@@ -148,6 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 498);
+            this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnReportes);
@@ -176,5 +189,6 @@
         private System.Windows.Forms.Button btnMantenimientos;
         private System.Windows.Forms.Button btnAgregarServ;
         public System.Windows.Forms.Label txtUsuario;
+        private System.Windows.Forms.Button btnFacturar;
     }
 }

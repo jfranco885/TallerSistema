@@ -59,6 +59,8 @@
             this.edtDui = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.edtCantidad = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -73,6 +75,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.edtCantidad);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.cboxEstado);
             this.groupBox4.Controls.Add(this.edtDescripcion);
@@ -156,7 +160,7 @@
             this.cboxNave.Items.AddRange(new object[] {
             "Nave No I",
             "Nave No II"});
-            this.cboxNave.Location = new System.Drawing.Point(107, 82);
+            this.cboxNave.Location = new System.Drawing.Point(107, 88);
             this.cboxNave.Name = "cboxNave";
             this.cboxNave.Size = new System.Drawing.Size(235, 21);
             this.cboxNave.TabIndex = 14;
@@ -178,7 +182,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 85);
+            this.label5.Location = new System.Drawing.Point(18, 91);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 4;
@@ -397,6 +401,25 @@
             this.label9.TabIndex = 47;
             this.label9.Text = "Id Encabezado";
             // 
+            // edtCantidad
+            // 
+            this.edtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtCantidad.Location = new System.Drawing.Point(107, 62);
+            this.edtCantidad.Name = "edtCantidad";
+            this.edtCantidad.Size = new System.Drawing.Size(235, 20);
+            this.edtCantidad.TabIndex = 52;
+            this.edtCantidad.TextChanged += new System.EventHandler(this.edtCantidad_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(18, 64);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.TabIndex = 53;
+            this.label13.Text = "Cantidad";
+            // 
             // AgregarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -465,5 +488,7 @@
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox edtAsignacion;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox edtCantidad;
     }
 }

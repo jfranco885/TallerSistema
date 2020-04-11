@@ -79,5 +79,11 @@ namespace TallSys
             Perfil perfil = new Perfil();
             perfil.ShowDialog();
         }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            Facturar facturar = new Facturar();
+            facturar.ShowDialog();
+        }
     }
 }

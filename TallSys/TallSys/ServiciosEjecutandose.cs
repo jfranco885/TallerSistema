@@ -66,6 +66,7 @@ namespace TallSys
                         servicioEnProceso.edtDescripcion.Text = (dt.Tables[0].Rows[0]["Descripcion"].ToString().Trim());
 
                         servicioEnProceso.txtEncabezado.Text = (dt.Tables[0].Rows[0]["IdEncabezadoServicio"].ToString().Trim());
+                        servicioEnProceso.edtCantidad.Text = (dt.Tables[0].Rows[0]["Cantidad"].ToString().Trim());
 
 
 

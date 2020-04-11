@@ -104,6 +104,12 @@
     <Compile Include="AsignarMecanicos.Designer.cs">
       <DependentUpon>AsignarMecanicos.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCliente.Designer.cs">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="ContenedorVentanas.Designer.cs">
       <DependentUpon>ContenedorVentanas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturar.Designer.cs">
+      <DependentUpon>Facturar.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -250,6 +262,12 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeleccionarServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionarServicios.Designer.cs">
+      <DependentUpon>SeleccionarServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeleccionServicios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +304,9 @@
     <EmbeddedResource Include="AsignarMecanicos.resx">
       <DependentUpon>AsignarMecanicos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuscarEmpleado.resx">
       <DependentUpon>BuscarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContenedorVentanas.resx">
       <DependentUpon>ContenedorVentanas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturar.resx">
+      <DependentUpon>Facturar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -367,6 +391,9 @@
     </Compile>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionarServicios.resx">
+      <DependentUpon>SeleccionarServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeleccionServicios.resx">
       <DependentUpon>SeleccionServicios.cs</DependentUpon>

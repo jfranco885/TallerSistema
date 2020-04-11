@@ -44,7 +44,7 @@ namespace TallSys
         {
 
             //  MessageBox.Show(cboxcargo = cboxCargo.SelectedValue.ToString());
-            if (validarCampo(edtIdEncabezado)|validarCombox(cboxTipoServicio)|validarCombox(cboxNav)|validarCombox(cboxEstado))
+            if (validarCampo(edtIdEncabezado)|validarCombox(cboxTipoServicio)|!validarSoloNumeros(edtCantidad)|validarCombox(cboxNav)|validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -89,6 +89,7 @@ namespace TallSys
                             int nave = Convert.ToInt32(cboxNav.SelectedValue);
                             String estadoNave = "Ocupada";
                             int tipoServicio = Convert.ToInt32(cboxTipoServicio.SelectedValue);
+                            int cantidad = Convert.ToInt32(edtCantidad.Text);
                             //Validando que si tiempo lleva datos no sean letras
                             if (!string.IsNullOrEmpty(edtTiempo.Text) & !validarSoloNumeros(edtTiempo))//Si no es nullo y a la vez no son numeros
                             {
@@ -99,8 +100,8 @@ namespace TallSys
                                 try
                                 {
                                     String consulta = String.Format("EXEC insertarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
-                                        ",'{4}','{5}','{6}','{7}','{8}'", idEncabezado, descripcion, diagnostico, estado, tiempo,
-                                        actividad, nave, estadoNave, tipoServicio);
+                                        ",'{4}','{5}','{6}','{7}','{8}','{9}'", idEncabezado, descripcion, diagnostico, estado, tiempo,
+                                        actividad, nave, estadoNave, tipoServicio,cantidad);
                                     Utilidades.Ejecutar(consulta);
 
                                     errorProvider1.Clear();
@@ -182,8 +183,9 @@ namespace TallSys
                     //cboxNav.DisplayMember = dt.Tables[0].Rows[0]["Nave"].ToString().Trim();
 
                     cboxTipoServicio.Text= dt.Tables[0].Rows[0]["TipoServicio"].ToString().Trim();
+                    edtCantidad.Text = dt.Tables[0].Rows[0]["Cantidad"].ToString().Trim();
 
-                    naveActual= dt.Tables[0].Rows[0]["Nave"].ToString().Trim();//para validar cuando haya cambios al editar
+                    naveActual = dt.Tables[0].Rows[0]["Nave"].ToString().Trim();//para validar cuando haya cambios al editar
 
 
                     activarControles();
@@ -203,7 +205,7 @@ namespace TallSys
         }
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            if (validarCampo(edtIdEncabezado) | validarCombox(cboxTipoServicio) | validarCombox(cboxNav) | validarCombox(cboxEstado))
+            if (validarCampo(edtIdEncabezado) | validarCombox(cboxTipoServicio)| !validarSoloNumeros(edtCantidad) | validarCombox(cboxNav) | validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -257,14 +259,15 @@ namespace TallSys
 
 
                             int tipoServicio = Convert.ToInt32(cboxTipoServicio.SelectedValue);
+                            int cantidad = Convert.ToInt32(edtCantidad.Text);
                             String idNaveTipoServicio = edtIdNaveServ.Text.Trim();
                             if (naveActual == cboxNav.Text.Trim())
                             {//Si la nave no ha cambiado solo insertar
                                 try
                                 {
                                     String consulta = String.Format("EXEC actualizarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
-                                            ",'{4}','{5}','{6}','{7}','{8}','{9}','{10}'", idDetalleServicio, descripcion, diagnostico,
-                                            estado, tiempo, actividad, nave, estadoNave, tipoServicio, idEncabezado, idNaveTipoServicio);
+                                            ",'{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}'", idDetalleServicio, descripcion, diagnostico,
+                                            estado, tiempo, actividad, nave, estadoNave, tipoServicio, idEncabezado, idNaveTipoServicio,cantidad);
                                     Utilidades.Ejecutar(consulta);
                                     MessageBox.Show("Se actualizaron los datos");
                                     desactivarControles();
@@ -290,8 +293,8 @@ namespace TallSys
                                     try
                                     {
                                         String consulta = String.Format("EXEC actualizarMtoDetalleServicio '{0}','{1}','{2}','{3}'" +
-                                                ",'{4}','{5}','{6}','{7}','{8}','{9}','{10}'", idDetalleServicio, descripcion, diagnostico,
-                                                estado, tiempo, actividad, nave, estadoNave, tipoServicio, idEncabezado, idNaveTipoServicio);
+                                                ",'{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}'", idDetalleServicio, descripcion, diagnostico,
+                                                estado, tiempo, actividad, nave, estadoNave, tipoServicio, idEncabezado, idNaveTipoServicio,cantidad);
                                         Utilidades.Ejecutar(consulta);
                                         MessageBox.Show("Se actualizaron los datos");
                                         desactivarControles();
@@ -356,6 +359,7 @@ namespace TallSys
             edtActivida.Text = "";
             edtFecha.Text = "";
             edtIdNaveServ.Text = "";
+            edtCantidad.Text = "";
                         
         }
         private void activarControles()
@@ -368,7 +372,8 @@ namespace TallSys
             edtActivida.Enabled = true;
             cboxEstado.Enabled = true;
             cboxNav.Enabled = true;
-            cboxTipoServicio.Enabled = true;           
+            cboxTipoServicio.Enabled = true;
+            edtCantidad.Enabled = true;
 
         }
         private void desactivarControles()
@@ -382,6 +387,7 @@ namespace TallSys
             cboxEstado.Enabled = false;
             cboxNav.Enabled = false;
             cboxTipoServicio.Enabled = false;
+            edtCantidad.Enabled = false;
 
         }
         private void cargarTablaMtoServicios()
@@ -419,6 +425,11 @@ namespace TallSys
         }
 
         private void edtIdEncabezado_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void edtCantidad_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.Clear();
         }

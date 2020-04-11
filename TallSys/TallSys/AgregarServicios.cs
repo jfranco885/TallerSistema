@@ -84,7 +84,7 @@ namespace TallSys
         {
 
            
-            if (validarCombox(cboxTipoServicio)|validarCombox(cboxNave)|validarCombox(cboxEstado))
+            if (validarCombox(cboxTipoServicio)|!validarSoloNumeros(edtCantidad)|validarCombox(cboxNave)|validarCombox(cboxEstado))
             {
                 //solo mandara el error provider si está vacío
             }
@@ -100,9 +100,12 @@ namespace TallSys
                     String descripcion = edtDescripcion.Text.Trim();
                     int idEstado = Convert.ToInt16(cboxEstado.SelectedValue);
                     String idServicioEncabezado = edtIdServicioEncabezado.Text.Trim();
+                    int cantidad = Convert.ToInt16(edtCantidad.Text.Trim());
 
 
-                    String consulta = String.Format("EXEC insertarDetalleServicio '{0}','{1}','{2}','{3}','{4}'",idtipoServicio,idNave,descripcion,idEstado,idServicioEncabezado );
+
+
+                    String consulta = String.Format("EXEC insertarDetalleServicio '{0}','{1}','{2}','{3}','{4}','{5}'", idtipoServicio,idNave,descripcion,idEstado,idServicioEncabezado,cantidad );
                         Utilidades.Ejecutar(consulta);
                         MessageBox.Show("Se han guardado los datos");
                    
@@ -301,6 +304,11 @@ namespace TallSys
             cboxNave.ValueMember = "idnave";
 
 
+        }
+
+        private void edtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
         }
     }//fin clase
 }//fin proyec
