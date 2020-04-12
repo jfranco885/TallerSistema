@@ -50,11 +50,12 @@
             // 
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnEliminar
+            // 
+            // 
             // btnEditar
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
-            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
-            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
             // 
             // edtCargo
             // 

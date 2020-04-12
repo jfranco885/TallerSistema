@@ -185,5 +185,7 @@ namespace TallSys
             edtIdCargo.Text = ("");
             edtCargo.Text = ("");
         }
+
+       
     }//final class
 }//final tallsys
