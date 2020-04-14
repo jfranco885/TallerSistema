@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiLibreria;
 
 namespace TallSys
 {
@@ -140,5 +141,69 @@ namespace TallSys
 
             total = 0.0;
         }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            if (datagridFacturar.Rows.Count > 0)
+            {
+                String idEncabezadoFactura="";
+                foreach (DataGridViewRow fila in datagridFacturar.Rows) {
+
+                    int iddetalleServicio =Convert.ToInt32(fila.Cells[0].Value.ToString());
+                    int idcliente = Convert.ToInt32(txtIdCliente.Text);
+                    Double total =Convert.ToDouble(txtTotal.Text);
+                    Double cantidad = Convert.ToDouble(fila.Cells[3].Value.ToString());
+                    Double precio = Convert.ToDouble(fila.Cells[4].Value.ToString());
+                    Double descuento = Convert.ToDouble(fila.Cells[5].Value.ToString());
+                    Double subtot = Convert.ToDouble(fila.Cells[6].Value.ToString());
+
+                    //Hacer la inserción
+                    try
+                    {
+                        DataSet dtInsertar;
+                        String consultaInsertar = String.Format("exec insertarFactura '{0}','{1}','{2}','{3}','{4}','{5}','{6}'", idcliente, total, cantidad, precio, descuento, subtot, iddetalleServicio);
+
+                        dtInsertar = Utilidades.Ejecutar(consultaInsertar);
+                        //obtener el ecabezado
+                        idEncabezadoFactura = (dtInsertar.Tables[0].Rows[0]["idfactura_encabezado"].ToString().Trim());
+
+                    }
+                    catch(Exception err)
+                    {
+                        MessageBox.Show("Error al insertar factura"+err.Message);
+                    }  
+
+                }//fin del foreach
+
+                //Traer los datos para el reporte de factura
+                if (idEncabezadoFactura != ""){
+                    try
+                    {
+
+                        DataSet dtConsultaFactura;
+                        String consultaFactura = String.Format("exec listarPorEncabezadoFactura '{0}'", idEncabezadoFactura);
+                        dtConsultaFactura = Utilidades.Ejecutar(consultaFactura);
+
+
+                        HacerFactura hacerFactura = new HacerFactura();
+                        hacerFactura.reportViewer1.LocalReport.DataSources[0].Value = dtConsultaFactura.Tables[0];
+                        hacerFactura.ShowDialog();
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Error al traer datos para la factura" + err.Message);
+                    }
+                }
+               
+
+            }//fin verificando si hay datos para insertar
+            else
+            {
+                MessageBox.Show("Debe agregar servicios!");
+                    
+            }
+        }
+
+        
     }//fin clase
 }//fin proyec

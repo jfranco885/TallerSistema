@@ -230,6 +230,7 @@
             this.btnFacturar.TabIndex = 13;
             this.btnFacturar.Text = "Facturar";
             this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // btnAgregar
             // 
