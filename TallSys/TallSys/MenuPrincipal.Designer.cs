@@ -128,6 +128,7 @@
             this.btnReportes.TabIndex = 18;
             this.btnReportes.Text = "REPORTES";
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnMantenimientos
             // 

@@ -85,5 +85,11 @@ namespace TallSys
             Facturar facturar = new Facturar();
             facturar.ShowDialog();
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ReporteClientes rcli = new ReporteClientes();
+            rcli.ShowDialog();
+        }
     }
 }
