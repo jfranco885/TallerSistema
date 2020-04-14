@@ -80,8 +80,8 @@ namespace TallSys
 
         private void btnFacturas_Click(object sender, EventArgs e)
         {
-            MtoFacturacion mtoFacturacion = new MtoFacturacion();
-            mtoFacturacion.ShowDialog();
+            MtoFacturaciones mtoFacturaciones = new MtoFacturaciones();
+            mtoFacturaciones.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

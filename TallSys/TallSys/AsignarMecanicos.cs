@@ -28,7 +28,7 @@ namespace TallSys
 
         private void btnElegir_Click(object sender, EventArgs e)
         {
-            if (validarCampo(edtEmpleado))
+            if (!validarSoloNumeros(edtEmpleado))
             {
 
             }

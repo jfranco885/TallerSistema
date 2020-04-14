@@ -50,7 +50,7 @@ namespace TallSys
 
         private void btnAsignarMecanico_Click(object sender, EventArgs e)
         {
-            if (validarCampo(edtidServicioDetalle))
+            if (!validarSoloNumeros(edtidServicioDetalle))
             {
                 
 

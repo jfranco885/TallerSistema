@@ -220,6 +220,10 @@ namespace TallSys
             }
         }
 
-        
+        private void btnFacturadas_Click(object sender, EventArgs e)
+        {
+            BuscarFactura buscarFactura = new BuscarFactura();
+            buscarFactura.ShowDialog();
+        }
     }//fin clase
 }//fin proyec

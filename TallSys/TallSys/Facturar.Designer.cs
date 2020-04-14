@@ -51,6 +51,7 @@
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.Label();
+            this.btnFacturadas = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridFacturar)).BeginInit();
@@ -272,11 +273,23 @@
             this.txtTotal.TabIndex = 17;
             this.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnFacturadas
+            // 
+            this.btnFacturadas.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnFacturadas.Location = new System.Drawing.Point(757, 80);
+            this.btnFacturadas.Name = "btnFacturadas";
+            this.btnFacturadas.Size = new System.Drawing.Size(89, 57);
+            this.btnFacturadas.TabIndex = 18;
+            this.btnFacturadas.Text = "Facturadas";
+            this.btnFacturadas.UseVisualStyleBackColor = false;
+            this.btnFacturadas.Click += new System.EventHandler(this.btnFacturadas_Click);
+            // 
             // Facturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 488);
+            this.Controls.Add(this.btnFacturadas);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscarCliente);
@@ -313,6 +326,7 @@
             this.Controls.SetChildIndex(this.btnBuscarCliente, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtTotal, 0);
+            this.Controls.SetChildIndex(this.btnFacturadas, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -347,5 +361,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
+        private System.Windows.Forms.Button btnFacturadas;
     }
 }

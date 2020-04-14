@@ -24,6 +24,7 @@ namespace TallSys
             edtCliente.Enabled = false;
             edtIdCliente.Enabled = false;
             edtIdVehiculo.Enabled = false;
+            edtCodigoSer.Enabled = false;
             cargarTabla();
 
 
@@ -204,7 +205,7 @@ namespace TallSys
         {
 
 
-            if (validarCampo(edtCodigoServicio))
+            if (!validarSoloNumeros(edtCodigoServicio))
             {
                 //solo mandara el error provider si está vacío
             }

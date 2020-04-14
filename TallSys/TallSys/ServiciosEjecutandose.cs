@@ -26,7 +26,7 @@ namespace TallSys
 
         private void btnGestionar_Click(object sender, EventArgs e)
         {
-            if (validarCampo(edtIdServicio) == true)
+            if (!validarSoloNumeros(edtIdServicio) == true)
             {
 
             }

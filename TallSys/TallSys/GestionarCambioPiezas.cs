@@ -54,7 +54,7 @@ namespace TallSys
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (validarCampo(edtRepuesto)| validarCampo(edtCantidad))
+            if (validarCampo(edtRepuesto)| !validarSoloNumeros(edtCantidad))
             {
                 //solo mandara el error provider si está vacío
             }
