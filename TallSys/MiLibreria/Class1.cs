@@ -13,7 +13,7 @@ namespace MiLibreria
        
         //Prueba de conexion este mensaje fue agregado 31/03/2020  a las 11:31
 
-       public static SqlConnection con= new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");
+       public static SqlConnection con= new SqlConnection("Data Source=.;Initial Catalog=tallerdb;Integrated Security=True");
         public static DataSet Ejecutar(String consulta)
         {
             //  con = new SqlConnection("Data Source=DESKTOP-G2V0SUK\\SQLEXPRESS;Initial Catalog=tallerdb;Integrated Security=True");//DESKTOP-G2V0SUK\\SQLEXPRESS
