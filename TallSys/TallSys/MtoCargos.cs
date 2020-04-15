@@ -105,7 +105,7 @@ namespace TallSys
 
         private new void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (validarCampo(edtBuscar))
+            if (!validarSoloNumeros(edtBuscar))
             {
                 //solo mandara el error provider si está vacío
             }

@@ -237,6 +237,7 @@
             this.edtTiempoReal.Name = "edtTiempoReal";
             this.edtTiempoReal.Size = new System.Drawing.Size(256, 20);
             this.edtTiempoReal.TabIndex = 27;
+            this.edtTiempoReal.TextChanged += new System.EventHandler(this.edtTiempoReal_TextChanged);
             // 
             // edtEstadoActual
             // 

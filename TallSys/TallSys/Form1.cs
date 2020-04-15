@@ -144,5 +144,15 @@ namespace TallSys
             }
             
         }
+
+        private void txtusuario_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider2.Clear();
+        }
+
+        private void txtclave_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider2.Clear();
+        }
     }//fin clase
 }//fin proyecto

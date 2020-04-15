@@ -69,6 +69,7 @@
             this.txtclave.TabIndex = 9;
             this.txtclave.Text = "123";
             this.txtclave.UseSystemPasswordChar = true;
+            this.txtclave.TextChanged += new System.EventHandler(this.txtclave_TextChanged);
             // 
             // txtusuario
             // 
@@ -77,6 +78,7 @@
             this.txtusuario.Size = new System.Drawing.Size(125, 20);
             this.txtusuario.TabIndex = 8;
             this.txtusuario.Text = "jfranco";
+            this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             // 
             // label1
             // 

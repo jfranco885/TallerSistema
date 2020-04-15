@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuMantenimientos));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnMecAsig = new System.Windows.Forms.Button();
             this.btnMarcas = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnVehiculos = new System.Windows.Forms.Button();
-            this.btnFacturas = new System.Windows.Forms.Button();
+            this.btnFacturaciones = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.btnTipoServicio = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -90,7 +90,7 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.btnVehiculos);
-            this.groupBox2.Controls.Add(this.btnFacturas);
+            this.groupBox2.Controls.Add(this.btnFacturaciones);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -114,6 +114,15 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mantenimientos";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(60, 33);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 13);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Tipo de Servicios";
             // 
             // label13
             // 
@@ -205,10 +214,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(199, 242);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 20;
-            this.label10.Text = "Ventas";
-            this.label10.Visible = false;
+            this.label10.Text = "Facturaciones";
             // 
             // btnVehiculos
             // 
@@ -220,16 +228,15 @@
             this.btnVehiculos.UseVisualStyleBackColor = true;
             this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
             // 
-            // btnFacturas
+            // btnFacturaciones
             // 
-            this.btnFacturas.Image = global::TallSys.Properties.Resources.iconventa1;
-            this.btnFacturas.Location = new System.Drawing.Point(202, 257);
-            this.btnFacturas.Name = "btnFacturas";
-            this.btnFacturas.Size = new System.Drawing.Size(75, 72);
-            this.btnFacturas.TabIndex = 18;
-            this.btnFacturas.UseVisualStyleBackColor = true;
-            this.btnFacturas.Visible = false;
-            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
+            this.btnFacturaciones.Image = global::TallSys.Properties.Resources.iconventa1;
+            this.btnFacturaciones.Location = new System.Drawing.Point(202, 257);
+            this.btnFacturaciones.Name = "btnFacturaciones";
+            this.btnFacturaciones.Size = new System.Drawing.Size(75, 72);
+            this.btnFacturaciones.TabIndex = 18;
+            this.btnFacturaciones.UseVisualStyleBackColor = true;
+            this.btnFacturaciones.Click += new System.EventHandler(this.btnFacturas_Click);
             // 
             // label9
             // 
@@ -410,15 +417,6 @@
             this.button4.TabIndex = 29;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(60, 33);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 13);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "Tipo de Servicios";
-            // 
             // MenuMantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,7 +458,7 @@
         private System.Windows.Forms.Button btnNaves;
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button btnTipoServicio;
-        private System.Windows.Forms.Button btnFacturas;
+        private System.Windows.Forms.Button btnFacturaciones;
         private System.Windows.Forms.Button btnVehiculos;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

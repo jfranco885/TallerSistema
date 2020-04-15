@@ -169,5 +169,10 @@ namespace TallSys
         {
             errorProvider1.Clear();
         }
+
+        private void edtTiempoReal_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
     }//fin clase
 }//fin proyecto

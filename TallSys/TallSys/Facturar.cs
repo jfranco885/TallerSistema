@@ -147,11 +147,28 @@ namespace TallSys
             if (datagridFacturar.Rows.Count > 0)
             {
                 String idEncabezadoFactura="";
+
+                int idcliente = Convert.ToInt32(txtIdCliente.Text);
+                Double total = Convert.ToDouble(txtTotal.Text);
+                //insertar encabezado factura
+                try
+                {
+                    DataSet dtInsertarEncabezadoFactura;
+                    String consultaInsertar = String.Format("exec insertarEncabezadoFactura '{0}','{1}'", idcliente,total);
+
+                    dtInsertarEncabezadoFactura = Utilidades.Ejecutar(consultaInsertar);
+                    //obtener el ecabezado
+                    idEncabezadoFactura = (dtInsertarEncabezadoFactura.Tables[0].Rows[0]["idfactura_encabezado"].ToString().Trim());
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Error al insertar Encabezado factura" + err.Message);
+                }
+                //Para insertar el detalle
                 foreach (DataGridViewRow fila in datagridFacturar.Rows) {
 
-                    int iddetalleServicio =Convert.ToInt32(fila.Cells[0].Value.ToString());
-                    int idcliente = Convert.ToInt32(txtIdCliente.Text);
-                    Double total =Convert.ToDouble(txtTotal.Text);
+                    int iddetalleServicio =Convert.ToInt32(fila.Cells[0].Value.ToString());                    
                     Double cantidad = Convert.ToDouble(fila.Cells[3].Value.ToString());
                     Double precio = Convert.ToDouble(fila.Cells[4].Value.ToString());
                     Double descuento = Convert.ToDouble(fila.Cells[5].Value.ToString());
@@ -161,11 +178,10 @@ namespace TallSys
                     try
                     {
                         DataSet dtInsertar;
-                        String consultaInsertar = String.Format("exec insertarFactura '{0}','{1}','{2}','{3}','{4}','{5}','{6}'", idcliente, total, cantidad, precio, descuento, subtot, iddetalleServicio);
+                        String consultaInsertar = String.Format("exec insertarFactura '{0}','{1}','{2}','{3}','{4}','{5}'",idEncabezadoFactura, cantidad, precio, descuento, subtot, iddetalleServicio);
 
                         dtInsertar = Utilidades.Ejecutar(consultaInsertar);
-                        //obtener el ecabezado
-                        idEncabezadoFactura = (dtInsertar.Tables[0].Rows[0]["idfactura_encabezado"].ToString().Trim());
+                        
 
                     }
                     catch(Exception err)
@@ -204,6 +220,10 @@ namespace TallSys
             }
         }
 
-        
+        private void btnFacturadas_Click(object sender, EventArgs e)
+        {
+            BuscarFactura buscarFactura = new BuscarFactura();
+            buscarFactura.ShowDialog();
+        }
     }//fin clase
 }//fin proyec

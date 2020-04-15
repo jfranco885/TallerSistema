@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetFactura = new TallSys.DataSetFactura();
             this.listarPorEncabezadoFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetFactura = new TallSys.DataSetFactura();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.listarPorEncabezadoFacturaTableAdapter = new TallSys.DataSetFacturaTableAdapters.listarPorEncabezadoFacturaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listarPorEncabezadoFacturaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetFactura)).BeginInit();
             this.SuspendLayout();
+            // 
+            // listarPorEncabezadoFacturaBindingSource
+            // 
+            this.listarPorEncabezadoFacturaBindingSource.DataMember = "listarPorEncabezadoFactura";
+            this.listarPorEncabezadoFacturaBindingSource.DataSource = this.DataSetFactura;
+            // 
+            // DataSetFactura
+            // 
+            this.DataSetFactura.DataSetName = "DataSetFactura";
+            this.DataSetFactura.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataSetFactura
-            // 
-            this.DataSetFactura.DataSetName = "DataSetFactura";
-            this.DataSetFactura.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listarPorEncabezadoFacturaBindingSource
-            // 
-            this.listarPorEncabezadoFacturaBindingSource.DataMember = "listarPorEncabezadoFactura";
-            this.listarPorEncabezadoFacturaBindingSource.DataSource = this.DataSetFactura;
-            // 
             // listarPorEncabezadoFacturaTableAdapter
             // 
             this.listarPorEncabezadoFacturaTableAdapter.ClearBeforeFill = true;
@@ -72,10 +72,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "HacerFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HacerFactura";
             this.Load += new System.EventHandler(this.HacerFactura_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listarPorEncabezadoFacturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetFactura)).EndInit();
             this.ResumeLayout(false);
 
         }
