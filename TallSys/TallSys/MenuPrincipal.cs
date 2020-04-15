@@ -88,7 +88,7 @@ namespace TallSys
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            ReporteClientes rcli = new ReporteClientes();
+            Reportes rcli = new Reportes();
             rcli.ShowDialog();
         }
     }

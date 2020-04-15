@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace TallSys
 {
-    public partial class ReporteClientes : Form
-    { ReportedeClientes rcli = new ReportedeClientes();
-        public ReporteClientes()
+    public partial class ReporteFacturas : Form
+    {ReportedeFacturas rfac = new ReportedeFacturas();
+        public ReporteFacturas()
         {
             InitializeComponent();
         }
 
-        private void ReporteClientes_Load(object sender, EventArgs e)
+        private void ReporteFacturas_Load(object sender, EventArgs e)
         {
-            crclientes.ReportSource=rcli;
-            
+
+            crfacturas.ReportSource = rfac;
         }
     }
 }
