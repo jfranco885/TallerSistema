@@ -39,6 +39,8 @@
             this.edtFecha = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.edtId = new System.Windows.Forms.TextBox();
+            this.btnCrearMarca = new System.Windows.Forms.Button();
+            this.btnCrearModelo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -64,8 +66,6 @@
             // edtBuscar
             // 
             this.edtBuscar.Location = new System.Drawing.Point(353, 59);
-            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
-            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
             // 
             // label2
             // 
@@ -167,11 +167,33 @@
             this.edtId.Size = new System.Drawing.Size(222, 20);
             this.edtId.TabIndex = 28;
             // 
+            // btnCrearMarca
+            // 
+            this.btnCrearMarca.Location = new System.Drawing.Point(581, 134);
+            this.btnCrearMarca.Name = "btnCrearMarca";
+            this.btnCrearMarca.Size = new System.Drawing.Size(75, 29);
+            this.btnCrearMarca.TabIndex = 42;
+            this.btnCrearMarca.Text = "Crear";
+            this.btnCrearMarca.UseVisualStyleBackColor = true;
+            this.btnCrearMarca.Click += new System.EventHandler(this.btnCrearMarca_Click);
+            // 
+            // btnCrearModelo
+            // 
+            this.btnCrearModelo.Location = new System.Drawing.Point(581, 170);
+            this.btnCrearModelo.Name = "btnCrearModelo";
+            this.btnCrearModelo.Size = new System.Drawing.Size(75, 29);
+            this.btnCrearModelo.TabIndex = 43;
+            this.btnCrearModelo.Text = "Crear";
+            this.btnCrearModelo.UseVisualStyleBackColor = true;
+            this.btnCrearModelo.Click += new System.EventHandler(this.btnCrearModelo_Click);
+            // 
             // MtoVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 492);
+            this.Controls.Add(this.btnCrearModelo);
+            this.Controls.Add(this.btnCrearMarca);
             this.Controls.Add(this.edtId);
             this.Controls.Add(this.edtFecha);
             this.Controls.Add(this.label7);
@@ -205,6 +227,8 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.edtFecha, 0);
             this.Controls.SetChildIndex(this.edtId, 0);
+            this.Controls.SetChildIndex(this.btnCrearMarca, 0);
+            this.Controls.SetChildIndex(this.btnCrearModelo, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -226,5 +250,7 @@
         private System.Windows.Forms.TextBox edtFecha;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox edtId;
+        private System.Windows.Forms.Button btnCrearMarca;
+        private System.Windows.Forms.Button btnCrearModelo;
     }
 }

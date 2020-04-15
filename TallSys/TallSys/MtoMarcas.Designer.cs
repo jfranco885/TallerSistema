@@ -32,7 +32,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.edtIdMarca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -53,8 +53,6 @@
             // btnEditar
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
-            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
-            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
             // 
             // edtMarca
             // 
@@ -91,21 +89,21 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Id";
             // 
-            // label4
+            // txtBuscar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(272, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Por marca";
+            this.txtBuscar.AutoSize = true;
+            this.txtBuscar.Location = new System.Drawing.Point(272, 79);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(55, 13);
+            this.txtBuscar.TabIndex = 24;
+            this.txtBuscar.Text = "Por marca";
             // 
             // MtoMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 492);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.edtMarca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.edtIdMarca);
@@ -124,7 +122,7 @@
             this.Controls.SetChildIndex(this.edtIdMarca, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.edtMarca, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.txtBuscar, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -134,11 +132,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox edtMarca;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox edtIdMarca;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label txtBuscar;
+        public System.Windows.Forms.TextBox edtMarca;
     }
 }

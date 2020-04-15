@@ -34,7 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.edtModelo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtBuscarModel = new System.Windows.Forms.Label();
+            this.btnCrearMarca = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -55,8 +56,6 @@
             // btnEditar
             // 
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
-            this.groupBox1.Controls.SetChildIndex(this.btnSalir, 0);
-            this.groupBox1.Controls.SetChildIndex(this.txtUsuario, 0);
             // 
             // cboxMarca
             // 
@@ -112,21 +111,32 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Marca";
             // 
-            // label5
+            // txtBuscarModel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(284, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "por modelo";
+            this.txtBuscarModel.AutoSize = true;
+            this.txtBuscarModel.Location = new System.Drawing.Point(284, 79);
+            this.txtBuscarModel.Name = "txtBuscarModel";
+            this.txtBuscarModel.Size = new System.Drawing.Size(59, 13);
+            this.txtBuscarModel.TabIndex = 24;
+            this.txtBuscarModel.Text = "por modelo";
+            // 
+            // btnCrearMarca
+            // 
+            this.btnCrearMarca.Location = new System.Drawing.Point(606, 204);
+            this.btnCrearMarca.Name = "btnCrearMarca";
+            this.btnCrearMarca.Size = new System.Drawing.Size(75, 29);
+            this.btnCrearMarca.TabIndex = 42;
+            this.btnCrearMarca.Text = "Crear";
+            this.btnCrearMarca.UseVisualStyleBackColor = true;
+            this.btnCrearMarca.Click += new System.EventHandler(this.btnCrearMarca_Click);
             // 
             // MtoModelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 492);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnCrearMarca);
+            this.Controls.Add(this.txtBuscarModel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.edtModelo);
@@ -150,7 +160,8 @@
             this.Controls.SetChildIndex(this.edtModelo, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtBuscarModel, 0);
+            this.Controls.SetChildIndex(this.btnCrearMarca, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -167,6 +178,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox edtModelo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label txtBuscarModel;
+        private System.Windows.Forms.Button btnCrearMarca;
     }
 }

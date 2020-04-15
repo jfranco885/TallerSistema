@@ -198,5 +198,22 @@ namespace TallSys
                 MessageBox.Show("No hay opciones de Marca");
             }
         }
+
+        private void btnCrearMarca_Click(object sender, EventArgs e)
+        {
+            MtoMarcas mtoMarcas = new MtoMarcas();
+            mtoMarcas.btnBuscar.Visible = false;
+            mtoMarcas.btnEliminar.Visible = false;
+            mtoMarcas.btnEditar.Visible = false;
+            mtoMarcas.btnNuevo.Visible = true;
+            mtoMarcas.edtBuscar.Visible = false;
+            mtoMarcas.txtBuscar.Visible = false;
+            mtoMarcas.label1.Visible = false;
+                       
+            mtoMarcas.ShowDialog();
+            cboxMarca.DataSource = Utilidades.llenarComboBox("select idmarca,marca from marca");
+            cboxMarca.DisplayMember = "marca";
+            cboxMarca.ValueMember = "idmarca";
+        }
     }//fin clase
 }//fin proyecto

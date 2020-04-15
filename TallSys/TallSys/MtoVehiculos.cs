@@ -25,13 +25,7 @@ namespace TallSys
 
         private void MtoVehiculos_Load(object sender, EventArgs e)
         {
-            cboxMarca.DataSource = Utilidades.llenarComboBox("select idmarca,marca from marca");
-            cboxMarca.DisplayMember = "marca";
-            cboxMarca.ValueMember = "idmarca";
-
-            cboxModelo.DataSource = Utilidades.llenarComboBox("select idmodelo,modelo from modelo");
-            cboxModelo.DisplayMember = "modelo";
-            cboxModelo.ValueMember = "idmodelo";
+            llenarCombox();
 
         }
 
@@ -221,6 +215,53 @@ namespace TallSys
             {
                 MessageBox.Show("No hay opciones de modelo");
             }
+        }
+
+        private void btnCrearMarca_Click(object sender, EventArgs e)
+        {
+            MtoMarcas mtoMarcas = new MtoMarcas();
+            mtoMarcas.btnBuscar.Visible = false;
+            mtoMarcas.btnEliminar.Visible = false;
+            mtoMarcas.btnEditar.Visible = false;
+            mtoMarcas.btnNuevo.Visible = true;
+            mtoMarcas.edtBuscar.Visible = false;
+            mtoMarcas.txtBuscar.Visible = false;
+            mtoMarcas.label1.Visible = false;
+
+
+
+            mtoMarcas.ShowDialog();
+            llenarCombox();
+        }
+
+        private void btnCrearModelo_Click(object sender, EventArgs e)
+        {
+            MtoModelos mtoModelos = new MtoModelos();
+            mtoModelos.btnBuscar.Visible = false;
+            mtoModelos.btnEliminar.Visible = false;
+            mtoModelos.btnEditar.Visible = false;
+            mtoModelos.btnNuevo.Visible = true;
+            mtoModelos.edtBuscar.Visible = false;
+
+            mtoModelos.txtBuscarModel.Visible = false;
+            mtoModelos.label1.Visible = false;
+
+
+
+
+            mtoModelos.ShowDialog();
+            llenarCombox();
+        }
+
+        private void llenarCombox()
+        {
+            cboxMarca.DataSource = Utilidades.llenarComboBox("select idmarca,marca from marca");
+            cboxMarca.DisplayMember = "marca";
+            cboxMarca.ValueMember = "idmarca";
+
+            cboxModelo.DataSource = Utilidades.llenarComboBox("select idmodelo,modelo from modelo");
+            cboxModelo.DisplayMember = "modelo";
+            cboxModelo.ValueMember = "idmodelo";
         }
     }//fin clase
 }//fin proyect
