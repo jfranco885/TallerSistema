@@ -29,22 +29,21 @@
         private void InitializeComponent()
         {
             this.crfacturas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ReportedeFacturas1 = new TallSys.ReportedeFacturas();
             this.SuspendLayout();
             // 
             // crfacturas
             // 
-            this.crfacturas.ActiveViewIndex = 0;
+            this.crfacturas.ActiveViewIndex = -1;
             this.crfacturas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crfacturas.Cursor = System.Windows.Forms.Cursors.Default;
             this.crfacturas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crfacturas.Location = new System.Drawing.Point(0, 0);
             this.crfacturas.Name = "crfacturas";
-            this.crfacturas.ReportSource = this.ReportedeFacturas1;
             this.crfacturas.ShowLogo = false;
             this.crfacturas.Size = new System.Drawing.Size(1406, 643);
             this.crfacturas.TabIndex = 0;
             this.crfacturas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.ParameterPanel;
+            this.crfacturas.Load += new System.EventHandler(this.crfacturas_Load);
             // 
             // ReporteFacturas
             // 
@@ -53,6 +52,7 @@
             this.ClientSize = new System.Drawing.Size(1406, 643);
             this.Controls.Add(this.crfacturas);
             this.Name = "ReporteFacturas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteFacturas";
             this.Load += new System.EventHandler(this.ReporteFacturas_Load);
             this.ResumeLayout(false);
@@ -62,6 +62,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crfacturas;
-        private ReportedeFacturas ReportedeFacturas1;
+       // private ReportedeFacturas ReportedeFacturas1;
     }
 }

@@ -29,22 +29,21 @@
         private void InitializeComponent()
         {
             this.crSalidas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ReportedeSalidas1 = new TallSys.ReportedeSalidas();
             this.SuspendLayout();
             // 
             // crSalidas
             // 
-            this.crSalidas.ActiveViewIndex = 0;
+            this.crSalidas.ActiveViewIndex = -1;
             this.crSalidas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crSalidas.Cursor = System.Windows.Forms.Cursors.Default;
             this.crSalidas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crSalidas.Location = new System.Drawing.Point(0, 0);
             this.crSalidas.Name = "crSalidas";
-            this.crSalidas.ReportSource = this.ReportedeSalidas1;
             this.crSalidas.ShowLogo = false;
             this.crSalidas.Size = new System.Drawing.Size(1338, 690);
             this.crSalidas.TabIndex = 0;
             this.crSalidas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.ParameterPanel;
+            this.crSalidas.Load += new System.EventHandler(this.crSalidas_Load);
             // 
             // ReporteSalidas
             // 
@@ -62,6 +61,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crSalidas;
-        private ReportedeSalidas ReportedeSalidas1;
+        //private ReportedeSalidas ReportedeSalidas1;
     }
 }

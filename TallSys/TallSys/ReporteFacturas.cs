@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace TallSys
 {
     public partial class ReporteFacturas : Form
-    {ReportedeFacturas rfac = new ReportedeFacturas();
+    {
+        ReportedeFacturas rfac = new ReportedeFacturas();
+        
         public ReporteFacturas()
         {
             InitializeComponent();
@@ -20,7 +22,12 @@ namespace TallSys
         private void ReporteFacturas_Load(object sender, EventArgs e)
         {
 
-            crfacturas.ReportSource = rfac;
+          crfacturas.ReportSource = rfac;
+        }
+
+        private void crfacturas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
