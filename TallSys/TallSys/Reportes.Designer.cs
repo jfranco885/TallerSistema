@@ -78,9 +78,10 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(218, 321);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 16);
+            this.label4.Size = new System.Drawing.Size(169, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Reporte Movimientos";
+            this.label4.Text = "Reporte de Empleados";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -161,6 +162,7 @@
             this.button1.Size = new System.Drawing.Size(118, 79);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Reportes
             // 

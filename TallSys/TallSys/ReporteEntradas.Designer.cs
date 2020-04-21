@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crvEntradas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crEntradas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // crvEntradas
+            // crEntradas
             // 
-            this.crvEntradas.ActiveViewIndex = -1;
-            this.crvEntradas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crvEntradas.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvEntradas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crvEntradas.Location = new System.Drawing.Point(0, 0);
-            this.crvEntradas.Name = "crvEntradas";
-            this.crvEntradas.ShowLogo = false;
-            this.crvEntradas.Size = new System.Drawing.Size(1353, 657);
-            this.crvEntradas.TabIndex = 0;
-            this.crvEntradas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.ParameterPanel;
+            this.crEntradas.ActiveViewIndex = -1;
+            this.crEntradas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crEntradas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.crEntradas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crEntradas.Location = new System.Drawing.Point(0, 0);
+            this.crEntradas.Name = "crEntradas";
+            this.crEntradas.ShowLogo = false;
+            this.crEntradas.Size = new System.Drawing.Size(1353, 657);
+            this.crEntradas.TabIndex = 0;
+            this.crEntradas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.ParameterPanel;
             // 
             // ReporteEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 657);
-            this.Controls.Add(this.crvEntradas);
+            this.Controls.Add(this.crEntradas);
             this.Name = "ReporteEntradas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteEntradas";
             this.Load += new System.EventHandler(this.ReporteEntradas_Load);
             this.ResumeLayout(false);
@@ -59,6 +60,6 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvEntradas;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crEntradas;
     }
 }

@@ -12,6 +12,7 @@ namespace TallSys
 {
     public partial class ReporteEntradas : Form
     {
+
         ReportedeEntradas rentradas = new ReportedeEntradas();
 
         public ReporteEntradas()
@@ -21,7 +22,7 @@ namespace TallSys
 
         private void ReporteEntradas_Load(object sender, EventArgs e)
         {
-            crvEntradas.ReportSource = rentradas;
+          crEntradas.ReportSource = rentradas;
         }
     }
 }

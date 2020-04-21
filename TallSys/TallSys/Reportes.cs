@@ -40,5 +40,16 @@ namespace TallSys
             ReporteFacturas rfacturas = new ReporteFacturas();
             rfacturas.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReporteEmpleados remp = new ReporteEmpleados();
+            remp.ShowDialog();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

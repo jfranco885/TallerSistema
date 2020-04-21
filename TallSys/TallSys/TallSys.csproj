@@ -316,6 +316,12 @@
       <DependentUpon>ReportedeClientes.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReportedeEmpleados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportedeEmpleados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReportedeEntradas.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -333,6 +339,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportedeSalidas.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteEmpleados.Designer.cs">
+      <DependentUpon>ReporteEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="ReporteEntradas.cs">
       <SubType>Form</SubType>
@@ -500,6 +512,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportedeClientes.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportedeEmpleados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportedeEmpleados.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportedeEntradas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportedeEntradas.cs</LastGenOutput>
@@ -511,6 +527,9 @@
     <EmbeddedResource Include="ReportedeSalidas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportedeSalidas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEmpleados.resx">
+      <DependentUpon>ReporteEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteEntradas.resx">
       <DependentUpon>ReporteEntradas.cs</DependentUpon>
