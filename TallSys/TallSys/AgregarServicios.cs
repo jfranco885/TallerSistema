@@ -310,5 +310,11 @@ namespace TallSys
         {
             errorProvider1.Clear();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            edtCantidad.Text = "";
+            edtDescripcion.Text = "";
+        }
     }//fin clase
 }//fin proyec

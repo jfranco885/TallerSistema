@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.edtCantidad = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.edtDescripcion = new System.Windows.Forms.TextBox();
@@ -59,8 +61,6 @@
             this.edtDui = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.edtCantidad = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -93,6 +93,25 @@
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Solicitud Servicio";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(18, 64);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.TabIndex = 53;
+            this.label13.Text = "Cantidad";
+            // 
+            // edtCantidad
+            // 
+            this.edtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.edtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edtCantidad.Location = new System.Drawing.Point(107, 62);
+            this.edtCantidad.Name = "edtCantidad";
+            this.edtCantidad.Size = new System.Drawing.Size(235, 20);
+            this.edtCantidad.TabIndex = 52;
+            this.edtCantidad.TextChanged += new System.EventHandler(this.edtCantidad_TextChanged);
             // 
             // label12
             // 
@@ -143,6 +162,7 @@
             this.btnNuevo.TabIndex = 5;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // label15
             // 
@@ -400,25 +420,6 @@
             this.label9.Size = new System.Drawing.Size(79, 13);
             this.label9.TabIndex = 47;
             this.label9.Text = "Id Encabezado";
-            // 
-            // edtCantidad
-            // 
-            this.edtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.edtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edtCantidad.Location = new System.Drawing.Point(107, 62);
-            this.edtCantidad.Name = "edtCantidad";
-            this.edtCantidad.Size = new System.Drawing.Size(235, 20);
-            this.edtCantidad.TabIndex = 52;
-            this.edtCantidad.TextChanged += new System.EventHandler(this.edtCantidad_TextChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 64);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 13);
-            this.label13.TabIndex = 53;
-            this.label13.Text = "Cantidad";
             // 
             // AgregarServicios
             // 
